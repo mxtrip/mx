@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="img/favicon.ico" rel="shortcut icon"type="image/x-icon">
+    <script  src="js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="js/artTemplate.js"></script>
+    <style>
+        *{  margin: 0;  padding: 0;  text-decoration: none;  list-style-type: none;  }
+        body{
+            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+            font-size: 14px;
+            color: #333;
+        }
+        h2, h3, h4, h5, h6{
+            font-weight: 100;
+        }
+        i,em{
+            font-style: normal;
+        }
+        a {
+            cursor: pointer;
+        }
+        .clearfix:after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+        /*                       header                */
+        .header{
+            width: 100%;
+            height: 78px;
+            border-bottom: 1px solid #ddd;
+
+        }
+        .top-bar {
+            margin: 0 auto;
+            height: 100%;
+            width: 1200px;
+        }
+        .logo{
+            float: left;
+            margin-right: 10px;
+            width: 155px;
+            height: 45px;
+            padding: 17px 0 16px;
+        }
+        .logo img{
+            display: block;
+            width: 155px;
+            height: 45px;
+        }
+        .top-nav{
+            float: right;
+            width: 835px;
+            height: 78px;
+        }
+        .top-nav li{
+            float: right;
+            padding: 0 22px;
+            line-height: 78px;
+            font-size: 16px;
+        }
+        .top-nav .edit_zhongbao{
+            position: relative;
+            z-index: 100085;
+            padding-right: 0;
+        }
+        .top-nav a{
+            color: #888;
+        }
+        .top-nav li a:hover{
+            color: #00b7a8;
+        }
+        .edit_zhongbao span{
+            float: right;
+            margin: 23px 5px 10px 13px;
+            height: 20px;
+            padding: 0 6px;
+            border-radius: 4px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+            background: red;
+            text-align: center;
+        }
+        .tips-zhongbao{
+            position: absolute;
+            z-index: 10086;
+            top: 59px;
+            right: -50px;
+            width: 277px;
+            height: 45px;
+            padding-top: 5px;
+            line-height: 45px;
+            background: url(img/textbox.png) no-repeat;
+            text-align: center;
+        }
+
+        /*                    center                    */
+        .center{
+            width: 100%;
+            background-color: rgb(242,242,242);
+        }
+        .home-focus{
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: url(img/home-focus-bg.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .search-cont{
+            z-index: 999;
+            bottom: 200px;
+            width: 520px;
+            margin-left: -260px;
+            position: absolute;
+            left: 50%;
+        }
+        .search-cont form input{
+            right: 0;
+            top: 0;
+            width: 418px;
+            height: 38px;
+            line-height: 38px;
+            border: 1px solid #efefef;
+            background: #fff;
+            font-size: 16px;
+            color: #333;
+            text-indent: 10px;
+        }
+        .search-cont form a{
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            top: 0;
+            width: 58px;
+            height: 40px;
+            padding-left: 42px;
+            line-height: 40px;
+            color: #fff;
+            font-size: 15px;
+            background: url(img/search_default.png) 16px 11px no-repeat #00b7a8;
+        }
+        .search-cont form p{
+            position: absolute;
+            z-index: 100;
+            left: 108px;
+            top: 52px;
+            width: 410px;
+            height: 16px;
+            line-height:16px;
+            color: #698eb3;
+        }
+        .search-cont form p span{
+            white-space: nowrap;
+            margin-right: 21px;
+        }
+        .app-download{
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .app-download img{
+            display: block;
+            width: 100%;
+        }
+        .app-download .ios{
+            top: 51%;
+            height: 13.5%;
+            position: absolute;
+            z-index: 99;
+            left: 38%;
+            width: 13.5%;
+        }
+        .app-download .android{
+            top: 69.5%;
+            left: 38%;
+            height: 13.7%;
+            position: absolute;
+            z-index: 99;
+            left: 38%;
+            width: 13.5%;
+        }
+        .place-nav-wrap{
+            width: 100%;
+            border-top: 1px solid #dcdcdc;
+            border-bottom: 1px solid #dcdcdc;
+            background: #fff;
+        }
+        .place-nav{
+            margin: 0 auto;
+            width: 1100px;
+            overflow: hidden;
+
+        }
+        .place-nav li {
+            float: left;
+            position: relative;
+            margin: 0 20px 0 15px;
+            width: 100px;
+            height: 65px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .place-nav li a{
+            display: inline-block;
+            height: 64px;
+            line-height: 64px;
+            color: #555;
+        }
+        .place-nav li.active a{
+            color: #00b7a8;
+            border-bottom: 1px solid #0ebdac;
+        }
+        .place-nav li.active span{
+            color: #00b7a8;
+        }
+        .place-nav li a span{
+            padding-left: 3px;
+            color: #aaa;
+            font-size: 13px;
+        }
+        .place-nav li i{
+            position: absolute;
+            z-index: 100;
+            top: 16px;
+            right: -25px;
+            height: 16px;
+            padding: 0 3px;
+            line-height: 16px;
+            font-size: 10px;
+            color: #fff;
+            background: red;
+            text-align: center;
+        }
+        .place-nav li:hover a{
+            color: #00b7a8;
+            border-bottom: 1px solid #0ebdac;
+        }
+        .place-nav li:hover span{
+            color: #00b7a8;
+        }
+        /*                         list-city                 */
+        .list-city-wrap{
+            margin: 0 auto;
+            padding-bottom: 35px;
+            width: 1200px;
+            clear: both;
+        }
+        /*.list-city-wrap:after{*/
+        /*content: "";*/
+        /*clear: both;*/
+        /*display: block;*/
+        /*}*/
+        /*.list-city dl:after{*/
+        /*content: "";*/
+        /*clear: both;*/
+        /*display: block;*/
+        /*}*/
+        /*.list-city:after{*/
+        /*content: "";*/
+        /*clear: both;*/
+        /*display: block;*/
+        /*}*/
+        .list-city {
+            margin: 0 auto;
+            width: 1240px;
+            overflow: hidden;
+            clear: both;
+        }
+
+        .list-city dl {
+            float: left;
+            position: relative;
+            margin: 35px 40px 0 0;
+            width: 270px;
+            height: 350px;
+            overflow: hidden;
+        }
+        /*.list-city dl dt{*/
+        /*display: block;*/
+        /*margin: 0 auto;*/
+        /*width: 270px;*/
+        /*height: 350px;*/
+        /*}*/
+        .list-city dl dt a{
+            display: block;
+            width: 270px;
+            height: 350px;
+        }
+        .list-city dl dt a p{
+            position: absolute;
+            z-index: 10;
+            top: 84px;
+            margin: 0 auto;
+            width: 100%;
+            line-height: 20px;
+            color: #fff;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .list-city dl dt a p strong{
+            display: block;
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+        .list-city dl dt a p span{
+            display: block;
+            line-height: 12px;
+            padding-bottom: 13px;
+            font-size: 12px;
+        }
+        .list-city dl dt a p i{
+            display: inline-block;
+            height: 18px;
+            padding: 0 5px;
+            line-height: 18px;
+            border: 1px solid #fff;
+        }
+        .list-city dt .city-mask{
+            position: absolute;
+            z-index: 9;
+            top: 0;
+            left: 0;
+            width: 270px;
+            height: 350px;
+            background: #000;
+            opacity: .2;
+        }
+        .list-city dd{
+            position: absolute;
+            z-index: 12;
+            bottom: 0;
+            height: 16px;
+            padding: 9px 10px 16px;
+            line-height: 16px;
+        }
+        .list-city dd ul{
+            width: 100%;
+            overflow: hidden;
+        }
+        .list-city dd li{
+            float: left;
+            margin: 0 8px;
+            width: 46px;
+            height: 16px;
+            line-height: 16px;
+            text-align: left;
+            overflow: hidden;
+        }
+        .list-city dd li i{
+            float: left;
+            margin-right: 3px;
+            width: 16px;
+            height: 16px;
+            background: url(img/list-city-icon.png) no-repeat;
+        }
+        .list-city dd li a{
+            color: #fff;
+        }
+        .list-city dd .shopping i{
+            background-position: -16px 0;
+        }
+        .list-city dd .scenic i{
+            background-position: -32px 0;
+        }
+        .list-city dd .hotel i{
+            background-position: -48px 0;
+        }
+        /*                                 footer                        */
+        .footer{
+            padding-top: 10px;
+            color: #fff;
+            background: #333;
+            clear: both;
+        }
+        .ft-cont{
+            margin: 0 auto;
+            width: 1200px;
+            clear: both;
+        }
+
+
+        /*                      解决无法被子元素撑开高度          */
+        .ft-cont:after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .ft-links{
+            float: left;
+            width: 800px;
+        }
+        .ft-links dl {
+            float: left;
+            margin: 17px 75px 0 12px;
+            font-size: 15px;
+        }
+        .ft-links dl dt {
+            padding-bottom: 6px;
+            line-height: 28px;
+        }
+        .ft-links dl dd {
+            line-height: 28px;
+        }
+        .ft-links dl dd a {
+            color: #aaa;
+        }
+        .follow-us {
+            float: right;
+            position: relative;
+            margin-left: 10px;
+            width: 200px;
+            padding: 17px 0 16px;
+
+        }
+        .follow-us dd {
+            float: left;
+            margin-top: 27px;
+            margin-right: 14px;
+
+        }
+        .follow-us .wechat_share{
+            position: absolute;
+            z-index:9999;
+            top: -210px;
+            left: -110px;
+            width: 264px;
+            height: 264px;
+        }
+        .follow-us dd img {
+            display: block;
+            width: 48px;
+            height: 48px;
+        }
+        .follow-us .wechat_share img{
+            display: block;
+            width: 264px;
+            height: 264px;
+        }
+        .footer .copyright {
+            margin: 15px auto 0;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px 0;
+            border-top: 1px solid #000;
+            line-height: 22px;
+            color: #757575;
+            font-size: 13px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="top-bar">
+        <h2 class="logo">
+            <a href="#" title="梦想旅行">
+                <img src="img/logo.png" alt="梦想旅行">
+            </a>
+        </h2>
+        <ul class="top-nav">
+            <li class="edit_zhongbao">
+                <a href="zhongbao.html" class="login-layer">内容众包</a>
+                <span>赚钱</span>
+                <div class="tips-zhongbao" style="display:none">写旅游地信息，做赚钱小编</div>
+            </li>
+            <li>
+                <a href="joinUs.html">加入我们</a>
+            </li>
+            <li>
+                <a href="support.html">帮助支持</a>
+            </li>
+            <li>
+                <a href="about.html">关于我们</a>
+            </li>
+            <li>
+                <a href="productsIntro.html">产品介绍</a>
+            </li>
+            <li>
+                <a href="index.html">目的地</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="center">
+    <div class="home-focus">
+        <div class="search-cont">
+            <form action="" class="searchForm">
+                <input type="text" placeholder="寻找目的地及吃喝玩乐" id="autocomplete_ajax"style="position: absolute; z-index: 2;">
+                <a href="#" class="search_form_btn_all">搜索</a>
+                <p>
+                    <span>免税店</span><span>博物馆</span><span>中国菜</span><span>烹饪</span><span>连锁酒店</span><span>韩国</span><span>曼谷</span>
+                </p>
+            </form>
+
+        </div>
+    </div>
+    <div class="app-download">
+        <img src="img/downbanner.jpg">
+        <a href="#"target="_blank" class="ios"></a>
+        <a href="#"target="_blank" class="android"></a>
+    </div>
+    <div class="place-nav-wrap"id="place-nav-wrap" >
+        <ul class="place-nav" id="place_nav">
+            <li>
+                <a href="index.html#place_nav">热门旅游
+                    <span>20</span>
+                </a>
+                <i>HOT</i>
+            </li>
+            <li>
+                <a href="Asia.html#place_nav">亚洲
+                    <span>432</span>
+                </a>
+            </li>
+            <li>
+                <a href="Europe.html#place_nav">欧洲
+                    <span>349</span>
+                </a>
+            </li>
+            <li>
+                <a href="Oceania.html#place_nav">大洋洲
+                    <span>71</span>
+                </a>
+            </li>
+            <li>
+                <a href="NorthAmerica.html#place_nav">北美洲
+                    <span>182</span>
+                </a>
+            </li>
+            <li>
+                <a href="SouthAmerica.html#place_nav">南美洲
+                    <span>86</span></a>
+            </li>
+            <li>
+                <a href="Africa.html#place_nav">非洲<span>63</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="Antarctica.html#place_nav">南极洲
+                    <span>2</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="list-city-wrap">
+        <div class="list-city">
+            <!--<dl>-->
+            <!--<dt>-->
+            <!--<a href="javascript:;" title="纽约" target="_blank">-->
+            <!--<img src="img/hot/niuyue.jpg" alt="">-->
+            <!--<p>-->
+            <!--<strong>纽约</strong>-->
+            <!--<span>New York</span>-->
+            <!--<i>美国</i>-->
+            <!--</p>-->
+            <!--<div class="city-mask"></div>-->
+            <!--</a>-->
+            <!--</dt>-->
+            <!--<dd style="display: none">-->
+            <!--<ul>-->
+            <!--<li class="food">-->
+            <!--<i></i>-->
+            <!--<a href="javascript:;" target="_blank">65k</a>-->
+            <!--</li>-->
+            <!--<li class="shopping">-->
+            <!--<i></i>-->
+            <!--<a href="javascript:;" target="_blank">66k</a>-->
+            <!--</li>-->
+            <!--<li class="scenic">-->
+            <!--<i></i>-->
+            <!--<a href="javascript:;" target="_blank">47k</a>-->
+            <!--</li>-->
+            <!--<li class="hotel">-->
+            <!--<i></i>-->
+            <!--<a href="javascript:;" target="_blank">2k</a>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</dd>-->
+            <!--</dl>-->
+
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="ft-cont">
+        <div class="ft-links">
+            <dl>
+                <dt>关于我们</dt>
+                <dd>
+                    <a href="productsIntro.html" target="_blank">梦想旅行简介</a>
+                </dd>
+                <dd>
+                    <a href="about.html#team" target="_blank">关于团队</a>
+                </dd>
+                <dd>
+                    <a href="about.html#development" target="_blank">发展历程</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>帮助支持</dt>
+                <dd>
+                    <a href="support.html#feedback" target="_blank">意见反馈</a>
+                </dd>
+                <dd>
+                    <a href="support.html" target="_blank">联系我们</a>
+                </dd>
+                <dd>
+                    <a href="webMap.html" target="_blank">网站地图</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>网站条款</dt>
+                <dd>
+                    <a href="usage.html" target="_blank">使用条款</a>
+                </dd>
+                <dd>
+                    <a href="privacy.html" target="_blank">隐私政策</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>加入我们</dt>
+                <dd>
+                    <a href="http://www.lagou.com/gongsi/62565.html" target="_blank">招聘职位</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="follow-us">
+            <dt>关注我们:</dt>
+            <dd >
+                <div class="wechat_share" style="display:none">
+                    <img src="img/wechat_code.png">
+                </div>
+                <a href="javascript:;">
+                    <img src="img/wechat.png">
+                </a>
+            </dd>
+            <dd>
+                <a href="http://weibo.com/mxtrip">
+                    <img src="img/weibo.png">
+                </a>
+            </dd>
+            <dd>
+                <a href="http://qzone.qq.com/?s_url=http://user.qzone.qq.com/2935785166/main">
+                    <img src="img/qqzone.png">
+                </a>
+            </dd>
+        </div>
+    </div>
+    <p class="copyright">
+        版权所有 ： 北京梦想智联科技有限公司 Copyright © 2015, mxtrip.cn. All rights reserved.<br>
+        京ICP备15012301号-1
+    </p>
+
+</div>
+
+<script id="listCityTemp" type="text/html">
+    <dl>
+        <dt>
+            <a href="javascript:;" title="{{city}}" target="_blank">
+                <img src="img/Antarctica/{{img}}" alt="">
+                <p>
+                    <strong>{{city}}</strong>
+                    <span>{{cityEnglishName}}</span>
+                    <i>{{country}}</i>
+                </p>
+                <div class="city-mask"></div>
+            </a>
+        </dt>
+        <dd style="display: none">
+            <ul>
+                <li class="food">
+                    <i></i>
+                    <a href="javascript:;" target="_blank">{{food}}</a>
+                </li>
+                <li class="shopping">
+                    <i></i>
+                    <a href="javascript:;" target="_blank">{{shopping}}</a>
+                </li>
+                <li class="scenic">
+                    <i></i>
+                    <a href="javascript:;" target="_blank">{{scenic}}</a>
+                </li>
+                <li class="hotel">
+                    <i></i>
+                    <a href="javascript:;" target="_blank">{{hotel}}</a>
+                </li>
+            </ul>
+        </dd>
+    </dl>
+</script>
+<script>
+    $.ajax({
+        async:false,
+        url: "json/Antarcticajson.json",
+        dataType: "json",
+        success: function (data){
+            $.each(data, function (i, value) {
+                $(template('listCityTemp',value))
+                        .appendTo(".list-city");
+            });
+
+//                   解决异步加载mouseenter不显示问题
+            $(".list-city dl").mouseenter(function () {
+                $(this).children("dd").css("display","block");
+                $(this).find(".city-mask").animate({
+                    opacity:0
+                },500,function () {
+                    $(this).find(".city-mask").css("display","none")
+                })
+            }).mouseleave(function () {
+                $(this).children("dd").css("display","none");
+                $(this).find(".city-mask").animate({
+                    opacity: .2
+                },500,function () {
+                    $(this).find(".city-mask").css("display","block")
+                })
+            })
+
+        }
+
+    });
+</script>
+<script>
+    $(function () {
+
+        /*              header内容众包mouseenter事件                */
+        $(".edit_zhongbao").mouseenter(function () {
+            $(".tips-zhongbao").css("display","block")
+        }).mouseleave(function () {
+            $(".tips-zhongbao").css("display","none")
+        })
+
+
+        /*        footer 微信点击出现二维码           */
+        $(".follow-us dd").eq(0).find("a").click(function () {
+            $(".follow-us dd").eq(0).find("a").siblings("div").css({
+                "display":"block",
+                opacity:1
+            })
+        })
+        $(".follow-us dd").eq(0).find("a").mouseleave(function () {
+            $(".follow-us dd").eq(0).find("a").siblings("div").animate({
+                opacity:0
+            },1000,function () {
+                $(this).css("display","none")
+            })
+        })
+    })
+
+</script>
+</body>
+</html>

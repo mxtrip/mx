@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐私政策–梦想旅行</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+        }
+        body {
+            font-size: 14px;
+            line-height: 14px;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+        }
+        .center, .footer, .header, .wrap {
+            width: 100%;
+        }
+        .wrap {
+            padding-top: 79px;
+            background: url(img/background_1x.jpg) center top no-repeat;
+        }
+        .header {
+            position: fixed;
+            z-index: 10000;
+            top: 0;
+            height: 79px;
+            border-bottom: 1px solid #ddd;
+        }
+        .header .header-wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .header .hd-logo img {
+            display: block;
+            margin-top: 16px;
+            width: 155px;
+            height: 45px;
+        }
+        .header .hd-nav {
+            float: right;
+            margin-top: -29px;
+        }
+        .header .hd-nav ul {
+            list-style-type: none;
+        }
+        .hd-nav ul li {
+            display: inline-block;
+            margin-right: 35px;
+        }
+        .hd-nav ul li a {
+            text-decoration: none;
+            color: #888;
+            font-size: 16px;
+        }
+        .hd-nav ul li a:hover {
+            color: #00b7a8;
+        }
+        .hd-nav ul li .red {
+            float: right;
+            margin: -4px 10px;
+            height: 20px;
+            padding: 0 6px;
+            line-height: 20px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: white;
+            background-color: red;
+            text-align: center;
+        }
+        .header-wrap .edit-zhongbao {
+            position: relative;
+            margin-right: 20px;
+        }
+        .tips-zhongbao {
+            position: absolute;
+            top: 26px;
+            right: -45px;
+            width: 277px;
+            height: 45px;
+            padding-top: 7px;
+            text-align: center;
+            line-height: 45px;
+            background: url(img/title1_1x.png) no-repeat;
+        }
+        /*-----------------center-------------------*/
+        .service-wrap {
+            width: 1200px;
+            margin: 55px auto;
+            overflow: hidden;
+        }
+        .service-wrap h1 {
+            padding-bottom: 20px;
+            line-height: 26px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .service-wrap p,
+        .service-wrap dl dt,
+        .service-wrap dl dd {
+            margin: 10px 0;
+            line-height: 22px;
+            font-size: 14px;
+            color: #888;
+        }
+        .service-wrap p,
+        .service-wrap dl dd {
+            text-indent: 2em;
+        }
+        .service-wrap p a {
+            color: #00b7a8;
+        }
+        .service-wrap h2 {
+            height: 40px;
+            padding: 20px 0 10px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+        .service-wrap h3 {
+            height: 60px;
+            line-height: 60px;
+            color: #333;
+            font-size: 14px;
+        }
+        .service-wrap dl {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .service-wrap dl dt {
+            font-weight: 700;
+        }
+        .service-wrap dl.contact dt {
+            color: #454545;
+        }
+        .service-wrap h5 {
+            height: 30px;
+            margin-top: 40px;
+            padding: 10px 20px 0 0;
+            border-top: 1px solid #81888e;
+            line-height: 30px;
+            font-size: 14px;
+            font-style: italic;
+            color: #565e6a;
+            text-align: right;
+        }
+        /*--------------------footer------------------*/
+        .footer {
+            min-width: 1200px;
+            padding-top: 10px;
+            color: #fff;
+            background: #333;
+        }
+        .ft-cont {
+            position: relative;
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .ft-cont .ft-links {
+            float: left;
+            width: 800px;
+        }
+        .ft-cont .ft-links dl {
+            float: left;
+            margin: 17px 75px 0 12px;
+            font-size: 15px;
+        }
+        .ft-cont .ft-links dl dt {
+            padding-bottom: 6px;
+            line-height: 28px;
+        }
+        .ft-cont .ft-links dl dd {
+            line-height: 28px;
+        }
+        .ft-cont .ft-links dl dd a {
+            color: #aaa;
+        }
+        .ft-cont .follow-us {
+            float: right;
+            position: relative;
+            margin-left: 10px;
+            width: 200px;
+            padding: 17px 0 16px;
+        }
+        .ft-cont .follow-us dd {
+            float: left;
+            margin-top: 27px;
+            margin-right: 14px;
+        }
+        .ft-cont .follow-us dd img {
+            display: block;
+            width: 48px;
+            height: 48px;
+        }
+        #wechat_share {
+            position: absolute;
+            z-index: 999;
+            top: -210px;
+            left: -110px;
+            width: 264px;
+            height: 264px;
+        }
+        #wechat_share img {
+            display: block;
+            width: 264px;
+            height: 264px;
+        }
+        .footer .copyright {
+            margin: 15px auto 0;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px 0;
+            border-top: 1px solid #000;
+            line-height: 22px;
+            color: #757575;
+            font-size: 13px;
+            text-align: center;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="header-wrap">
+                <div class="hd-logo">
+                    <a href="#"><img src="img/nav_logo_2x.png" alt=""></a>
+                </div>
+                <div class="hd-nav">
+                    <ul>
+                        <li><a href="index.html">目的地</a></li>
+                        <li><a href="productsIntro.html">产品介绍</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="support.html">帮助支持</a></li>
+                        <li><a href="joinUs.html">加入我们</a></li>
+                        <li class="edit-zhongbao">
+                            <a href="zhongbao.html">内容众包</a>
+                            <span class="red">赚钱</span>
+                            <div class="tips-zhongbao" style="display: none">
+                                写旅游地信息，做赚钱小编
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="service-wrap">
+                <h1>MXTRIP梦想旅行隐私政策</h1>
+                <p>Mxtrip.cn（Mxtrip梦想旅行）提供酒店、度假胜地、旅馆、旅行地、旅行计划、旅行指南以及其他内容的网络服务，由北京梦想智联科技有限公司
+                    （下称“梦想旅行”）运营。Mxtrip梦想旅行向您提供本网络站点或移动产品,包括相关的应用程序（统称为“我们的网站”）。
+                </p>
+                <p>
+                    我们理解，您通过网络向我们提供信息是建立在您对我们信任的基础上。我们重视这种信任，并将优先考虑确保您在访问本网站或使用我们服务过程中提供给我们的个人信息的安全性与保密性。在您向本网站提交您的个人信息之前，请您仔细阅读本隐私政策以了解我们保护隐私权的作法。通过访问本网站www.mxtrip.cn，或者在移动电话、平板电脑和其他类似设备（下称“设备”）、或其他相关站点或服务中使用梦想旅行应用程序（下称“应用程序”或“应用”）时，即代表您确认了解并接受本隐私政策。
+                </p>
+                <p><br/></p>
+                <p><a href="#1">• 我们向您收集哪些信息</a></p>
+                <p><a href="#2">• 我们如何使用您的信息</a></p>
+                <p><a href="#3">• 我们与谁共享您的信息</a></p>
+                <p><a href="#4">• 您如何查看您的信息</a></p>
+                <p><a href="#information">• 关于收集和使用您的信息的选择</a></p>
+                <p><a href="#6">• 我们如何保护您的隐私</a></p>
+                <p><a href="#7">• 儿童的隐私</a></p>
+                <p><a href="#8">• 外部链接</a></p>
+                <p id="1"><a href="#9">• 从中国大陆以外的地区访问我们的网站</a></p>
+                <p><a href="#10">• 本隐私政策的修改</a></p>
+                <p><a href="#11">• 您如何与我们联系</a></p>
+                <h2>我们向您收集哪些信息</h2>
+                <h3>概述</h3>
+                <p>我们接收并储存您在我们网站输入的所有信息，或以任何其他方式提供给我们的信息，包括可以识别您身份的信息（下称“个人信息”），如您的姓氏和名字、
+                    电话号码、邮寄和电子邮件地址、用户名和密码、以及账单信息（如信用卡号码，持卡人姓名及信用卡有效期）。我们也可能了解您的旅行计划、风格和
+                    喜好，包括膳食要求、选择座位、常用乘客/酒店/租车程序信息，以及航班舱位、行李和票务选择信息。您可以选择不向我们提供信息，但一般情况下，
+                    关于您的一些信息是必要的，以便您接收本网站及本网站合作伙伴提供的相关信息或服务，并享受作为注册会员的益处。例如，只有注册会员可以发布
+                    旅游评论，参与论坛讨论，将本网站内容电邮给自己和他人，访问仅限会员通讯和旅游规划的内容，并参与调查、竞赛或抽奖活动。此外，有些信息也
+                    是必要的，以便您能够向我们提问或在我们的网站上进行其他交易活动。
+                </p>
+                <h3>其他人的信息</h3>
+                <p>您将有机会通过我们的网站向其他人提供联系信息和旅游相关信息。您若通过我们的网站为他人预订，您将需要提交相关他人的个人信息。向我们提供个
+                    人信息之前，您必须获得他们的同意，因为其信息只能通过您的账户进行查看或修改。
+                </p>
+                <h3>从其他来源获得的信息</h3>
+                <p>我们还可能定期从梦想旅行的关联实体、业务伙伴及其他独立第三方来源获得关于您的个人和非个人信息，并把它添加到有关您的其他信息中。例如，您
+                    若从我们的一个业务合作伙伴运营的网站点击链接来访问我们的网站，并且您已经在该合作伙伴处注册，则该合作伙伴可能会与我们分享您已提供给该
+                    合作伙伴的信息，如联系信息和人口统计信息。再比如，您若通过我们的网站或者在登录我们的网站之前访问了第三方服务，如社交媒体服务，则我们
+                    可能会收集信息，如用户名、密码、以及通过这些服务提供给我们的其他信息。我们将与我们现有的合作伙伴和潜在的未来合作伙伴，按照本条和相关
+                    政策中概述的做法，来改善您对我们网站的使用并实现个性化。
+                </p>
+                <h3>自动收集的信息</h3>
+                <p>当您访问本网站时，我们将自动收集有关您电脑或设备的信息。例如，我们将会获取您的IP地址，网页浏览器软件类型，以及正在浏览的网站等。我们也
+                    可能会收集有关您上网活动的信息，例如浏览的内容、访问的网页和检索和/或作出的预订等。我们自动收集上述信息的目的之一是帮助我们理解您的兴
+                    趣所在并且为您提供个性化服务。
+                </p>
+                <h3>付款信息</h3>
+                <p>您若通过本网站向第三方供应商预订旅行服务，我们将收集您的付款信息，包括您的信用卡号码、持卡人姓名、卡片有效期、验证码和账单地址。我们会
+                    将这些信息安全地传送给旅行预订的供应商来完成交易。请注意，除非另有规定，供应商而非本网站将负责处理您的付款。通过本网站进行预订之前，
+                    您同意查阅并接受相关供应商的政策和程序的约束。
+                </p>
+                <p>我们可能让会员选择是否将有关付款的方法和选择的信息保存在我们的网站上。您若在本网站上保留这样的付款细节，您就可以随时在账户设置里面添加、删除或修改这些信息。
+                </p>
+                <h3>位置信息以及来自设备的其他信息</h3>
+                <p>当您使用设备上的一个应用程序时，我们将收集和使用您的信息，与您使用本网站时的方式和用途大致相似。此外，您若已指示您的设备通过该设备的隐私
+                    设置将此类信息发送到应用程序，或者您若已经上传了有位置标记的照片，我们可能会收集有关您的位置信息。我们可能会借助从您的设备或照片中收集的
+                    位置信息，通过为您提供相关的内容和广告，来增进您对应用程序的使用。例如，在您旅行过程中，我们可能会使用您的位置，向您展示您附近酒店或餐厅
+                    的点评。您可以随时更改您的设备的隐私设置，以关闭与应用程序分享位置信息的功能和/或将照片标记位置的功能。请注意，关闭位置分享可能影响我们
+                    应用程序的某些功能。您若对您的设备的隐私设置有任何疑问，我们建议您联系您的设备的制造商或您的移动服务提供商来寻求帮助。
+                </p>
+                <h3>Cookies和其他网页技术</h3>
+                <p>当您访问本网站时，我们将会向您的电脑分配一个cookie文本文件（一个小型的、唯一识别的文本文件）。Cookie可以存储在您的计算机的硬盘驱动器或
+                    设备（若您的网页浏览器允许）上。本网站及关联网站和应用程序使用cookies的一般目的如下：
+                </p>
+                <p>• 帮助我们识别您的浏览器，以判断是不是以前的访客，保存和记住您的浏览器访问我们的网站时可能已设置的任何偏好。例如，您若已在我们的网站上注册，我们可使用cookie记住您的注册信息，所以您不需要每次访问都登录。您若选中标题框“保存此密码自动登录”，我们也可以在Cookie中记录您的密码。请注意，为了安全起见，会员ID、密码以及包含在这些cookies中的任何其他账户相关数据都予以加密。
+                </p>
+                <p>• 帮助我们定制我们的网站、应用程序以及互联网上的其他网站所提供给您的内容、体验和广告。例如，当您访问某一网页，我们、我们的服务供应商或者我们的合作伙伴会自动设置一个cookie，以便您在使用互联网时识别您的浏览器，并根据您的兴趣为您提供信息和广告。
+                </p>
+                <p>• 帮助评估和研究功能和产品、广告以及电子邮件通讯（通过确定您打开和处理哪些邮件）的有效性。
+                </p>
+                <p>大多数浏览器上工具栏的“帮助”部分会告诉您怎样防止您的浏览器接受新的cookie，当您收到一个新的Cookie时如何让浏览器通知您，或如何禁用大部分类型的cookie。请注意，您若拒绝接受cookie，您可能无法访问我们网站上提供的诸多旅游工具。
+                </p>
+                <p>我们的网站也可以使用网络信标（也称为透明影像图档、像素标签或网页虫），它们是具有唯一的标识符的微小图形，功能与cookie类似，被放置在网页的代
+                    码中。我们使用网络信标来监控用户从我们站点的一个网页到另一个网页的流量模式，通过cookie传送或沟通，以便了解您是否从第三方网站上显示的在线
+                    广告来到我们的网站，从而提高网站性能。我们也可能让我们的服务提供商使用网络信标来帮助我们了解哪些电子邮件已被收件人打开，并跟踪我们网站的
+                    访客流量和访客行为。这有助于我们评估内容和其他产品的功效。
+                </p>
+                <h3>显示广告/您的选择</h3>
+                <h4>收集数据为您提供相关广告服务</h4>
+                <p>梦想旅行及其关联网站致力于通过我们的各个网站为您提供相关的内容和信息。为此目的，我们可能会收集有关您的旅行相关搜索和其他访问行为，比如您是否正在查找
+                    飞机航班或酒店，并利用这些信息和根据您的明显兴趣，通过我们网站上的广告或其他线上媒介为您提供相关服务。举例说，您若在本网站搜索一个到佛罗里达州的航班，
+                    您可能会在本网站上或在您访问的另一个网站时看到一个佛罗里达州旅游套票的广告。</p>
+                <p>我们不会与无关联的第三方分享您的个人信息（如电子邮件地址）以协助它们向您发送广告。</p>
+                <p>业务合作伙伴和其他广告网络收集的数据，以便为您提供相关广告服务</p>
+                <p id="2">您在本网站所属各网站看到的很多广告是由梦想旅行或其服务提供商提供的。但是，我们也允许第三方通过cookie和其他技术来收集有关您的在线活动的信息。这些第三方包括：（1）业务合作伙伴，当您在我们网站上查看或与他们在我们网站上的一个广告互动时，您的信息会被收集，（2）广告网络，当您查看或与他们放在互联网上的多个网站上的一个广告互动时，您的兴趣信息会被收集。这些第三方收集到的信息用于对您的性格、兴趣或偏好进行预测，以便根据您的兴趣在我们的网站上和整个互联网上显示为您量身打造的广告。
+                </p>
+                <p>请注意，我们无权访问或控制第三方旨在收集与您兴趣有关的信息的cookie或的其他技术，而这些第三方的信息政策并不受本隐私政策的约束。</p>
+                <h2>我们如何使用您的信息</h2>
+                <p>梦想旅行将收集的关于您信息用于以下用途：用于注册和管理您的帐户，包括允许您对我们网站的访问和使用；与您沟通，一般而言包括提供有关梦想旅行的信息，
+                    及来自梦想旅行的社群的邀请；<span id="3"></span>让我们在梦想旅行社群发布您的评论，论坛贴文及其他内容；回答您的问题和意见；衡量您对本网站的兴趣喜好并改进我们的
+                    产品、服务和网站；将在我们或我们的合作伙伴网站上您可能会感兴趣的特别优惠、产品或服务通知您；以及定制化您在梦想旅行的体验包括个性化向您展示的
+                    广告；向您征集信息，包括问卷调查；解决争端或解决问题；用以防范可能被禁止或非法的活动；执行我们的使用条款；和在收集信息时向您描述的其他情况。
+                </p>
+                <p>请阅读以下<a href="#information"> “关于收集和使用您的信息的选择”</a>一栏。</p>
+                <h2>我们与谁共享您的信息</h2>
+                <dl>
+                    <dt>本网站可能与下列实体（可能包括中国境内实体和中国境外实体）分享您的信息：</dt>
+                    <dd>•	供应商。包括但不限于旨在满足您的预订需求的酒店、航空公司、邮轮、汽车租赁、活动提供商、或度假租赁管理人或所有者。在本网站以及其关联网站上，
+                        所有由第三方供应商提供的产品和服务都会予以明确说明。除付款信息外，我们为了方便用户预订而与供应商共享的信息将根据适用的供应商隐私政策进行
+                        处理。只有当通过本网站或在本网站上进行旅行预订所必要的情况下，我们才会分享付款信息，并且我们限定供应商仅为了处理付款目的而使用付款信息。
+                        对于您可能通过本网站购买其产品和服务的任何旅游供应商，我们建议您查阅其隐私政策、使用条款、以及其他政策。请注意，这些供应商也可能视需要与
+                        您联系，以获取有关您或您旅行计划的额外信息，以促成您的旅行预订或为了其隐私政策和使用条款中所允许的其他目的。
+                    </dd>
+                    <dd>•	第三方服务商。第三方服务商代表我们向您提供服务，包括商业分析、付款处理、客户服务、市场推广、公共关系、开展调查或者抽奖活动，以及欺诈预防。
+                        我们也可能会授权第三方服务商代表我们向您收集信息，包括为实现我们网站的功能所必需的信息或者为发布符合您个人兴趣的网络广告所需的信息。只
+                        有在第三方服务商为履行其工作所需时，其才有权了解或者收集您的信息，并且他们不得为任何其他用途透露或者使用您的信息。
+                    </dd>
+                    <dd>•	推介网站。您若是从其他网站被推介至本网站，我们可能会与该网站分享您的注册信息，例如您的姓名、电子邮件地址、邮寄地址、电话号码和旅行
+                        喜好。对于推介网站如何使用您的个人信息，我们并未施加任何限制，因此我们建议您查看推荐您访问我们的网站的隐私政策。
+                    </dd>
+                    <dd>•	社交媒体服务。您可以选择通过我们的网站访问某些第三方社交媒体网站和服务。当您这样做时，您将与这些网站分享信息，您所共享的信息将受它们的
+                        隐私政策的约束。您可能也可以修改第三方社交媒体网站的隐私设置。
+                    </dd>
+                    <dd>•	合作伙伴。我们可能与合作伙伴一起为您提供产品或者服务。当有第三方参与提供您所希望获得的产品或服务时，您能轻易发现这一点，因为他们的名字
+                        将会与我们的名字一同或分别显示。如果您愿意接受该服务，我们将与相关合作伙伴共享您的信息，包括个人信息。请您注意，我们并不能控制第三方合
+                        作伙伴的隐私措施。
+                    </dd>
+                    <dd>•	本公司集团内部公司。我们可能会与我们的母公司以及关联公司共享您的个人信息。上述信息共享将使我们能够向您提供与旅行相关的或者其他的
+                        产品及服务的信息，您或许会对这些信息感兴趣。在我们的母公司以及关联公司获悉您信息的范围内，他们将会采取至少与本隐私政策同等严格的保密措施。
+                        此外，他们也将遵守可适用的有关促销信息传播的法律，并且至少在其发送的任何广告邮件中提供您不再接受类似邮件的选择。
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>我们也可能自行决定会在以下必要情况下与他人共享您的信息:</dt>
+                    <dd>•	为了回应合法并可执行的传票、法院命令或者其他法律程序；为了使我们的法律权利得以生效或实施；为了就诉讼进行抗辩；或者按照法律的规定披露。
+                        在上述情况下，我们保留行使或者放弃反对权和我们依法能够行使的任何其他权利的权利。
+                    </dd>
+                    <dd>•	为调查、防止或者采取措施以处理违法或者涉嫌违法的行为；为了保护及维护梦想旅行/本网站、我们的客户或他人的权利、财产及安全；以及与我们
+                        的服务条款和其他协议有关的情况。
+                    </dd>
+                    <dd>•	与公司交易有关的情形，例如强制转让股份、合并、兼并，或者资产出售，或未必发生的破产。
+                    </dd>
+                </dl>
+                <p>如果您选择在本网站建立档案，公众将会通过您的屏幕名称查看及获悉您档案中的部分信息。与成员公众一样，您也可以查看您的档案并且可以随时编辑您的
+                    档案。此外，如果您选择参与我们的会员对会员通讯方案，其他本网站会员可能以本网站作为媒介与您取得联系；但是本网站不会将您的电子邮件地址透露
+                    给其他会员，也不会加以公开。所有本网站会员有权在任何时间终止该会员对会员通讯方案功能。除了上述情形，当我们与第三方共享您的个人信息时，我
+                    们将会通知您，并且您有权拒绝该信息共享。
+                </p>
+                <p id="4">
+                    我们也可能与包括广告商及投资者在内的第三方共享统计或者匿名信息。例如，我们可能告知广告商我们网站的访问者人数，或者最受欢迎的酒店或者旅游地。
+                    这些信息不含有任何个人信息，我们将其用于开发您可能感兴趣的项目和服务。
+                </p>
+                <h2>您如何查看您的信息</h2>
+                <p id="information">我们将采取合理措施以确保您的信息准确、完整并且按照预定用途使用。如果您希望关闭会员账户，请联系我们。我们将向您发送一封电子邮件，
+                    来确认您的要求。请您注意：当您关闭账户后，您将无法登陆或者查看您的个人信息。但是，您可以在任何时间开立一个新账户。此外，我们也提醒您注意，
+                    我们可能会把与您帐户相关的信息保留在我们的档案中，用作分析、存档以及其他目的。
+                </p>
+                <h2>关于收集和使用您的信息的选择</h2>
+                <p>• 如上所述，尽管可能需要利用某些信息以提供本网站的某些功能，您可以选择不向我们提供任何信息。</p>
+                <p>• 如上所述，您还可以添加或更新信息，关闭您的账户。您若决定关闭您的本网站账户，我们将关闭您的账户，并从当前视图中删除您的个人资料。但请注意，我们能为了某些目的（包括备份、欺诈预防、争议解决、调查和符合法律要求等）而在我们的档案中保留与您的账户和以往交易有关的信息。</p>
+                <p>• 电子邮件通讯。本网站希望您借助我们网站轻松地利用好与旅游相关的机会。我们做到这一点的方法之一是向您发送电子邮件，其中包含与您的明显旅游兴趣相关的消息。例如，若你在本网站上搜索一个到纽约的航班，或者纽约的酒店或点评，我们会向您发送一封电子邮件，
+                    提醒您关于纽约的特价机票或酒店信息。同样，您若收到一封关于纽约旅游的电子邮件，并确定点击了电子邮件中一个关于纽约酒店的链接，这就证明您对纽约的酒店、机票或当地游点评感兴趣，您可能会收到一封关于纽约酒店或航班资讯的电子邮件。我们相信，这些电子邮件
+                    会为您提供我们网站特别提供的特惠旅游资讯。请注意，在我们发送的任何此类邮件中，您将有机会选择不接收这些电子邮件。</p>
+                <p id="6">• 大多数浏览器上工具栏的“帮助”部分会告诉您怎样防止您的浏览器接受新的cookie，当您收到一个新的Cookie时如何让浏览器通知您，或如何完全
+                    禁用Cookie。请注意，您若拒绝接受本网站的cookie，您可能无法访问我们网站上提供的部分内容。</p>
+                <h2>我们如何保护您的信息</h2>
+                <p id="7">我们希望您使用本网站时能感到放心，并且我们致力于保护我们收集的信息。尽管没有一家网站能够保证完全安全，我们已经采取了合适的管理、技术以及
+                    物理安全措施以保护您提供给我们的个人信息。例如，只有经授权的员工能够查看个人信息，并且只能用于经许可的工作目的。此外，在我们的系统与您
+                    的系统之间传输敏感的个人信息时，我们将采取加密措施。我们也设置了防火墙以及入侵侦查系统以防止未经授权的人员获取您的信息。
+                </p>
+                <h2 id="8">儿童的隐私</h2>
+                <p>本网站是面向大众的网站，并非提供专门面向儿童的服务。如果我们了解到一名16岁以下儿童将其个人信息发送给我们，对于该信息，我们将尽可能快的删
+                    除该儿童的信息。
+                </p>
+                <h2 id="9">外部链接</h2>
+                <p>如果本网站上的任何部分将您链接至其他网站，这些网站并不受本隐私政策的限制。我们建议您仔细阅读在这些网站上公布的隐私申明以了解他们收集、
+                    使用、披露个人信息的程序。
+                </p>
+                <h2>从中国大陆以外地区访问我们网站</h2>
+                <p id="10">如果您从中国大陆以外地区访问我们网站，请您注意：您的信息可能被传送至、储存于中国大陆，并且在中国大陆进行处理，这是因为我们的服务器以及数据
+                    中心均位于中国大陆。中国及其他国家的数据保护以及其他法律可能未必如你所在国家相关法律那样健全，但是请相信我们将采取措施保护您的信息。在使
+                    用我们服务的同时，您理解您的信息可能被传送至我们的机构，并且如本隐私政策所述的与我们分享信息的第三方。
+                </p>
+                <h2>本隐私政策的修改</h2>
+                <p id="11">在未来梦想旅行可能会更新或修改本隐私政策。我们将在本页面底部标注本隐私政策最近修改的日期，修改将于发布时生效。我们将会通过向您提供给我们的
+                    电子邮箱发送通知或者在本网站上发布显著公告的方式将主要的修改内容告知于您。务必定期回访本隐私政策，以审阅最新版本。
+                </p>
+                <h2>您如何与我们联系</h2>
+                <dl class="contact">
+                    <dt>如您有关于本隐私政策的任何问题，请联系：</dt>
+                    <dd>北京梦想智联科技有限公司</dd>
+                    <dd>北京市朝阳区拂林路9号, 景龙国际B座10层</dd>
+                    <dd>邮 编：100020</dd>
+                </dl>
+                <p class="copyright">©2016 北京梦想智联科技有限公司。保留全部权利。</p>
+                <h5>2016.5.11修订</h5>
+            </div>
+        </div>
+        <div class="footer clearfix">
+            <div class="ft-cont clearfix">
+                <div class="ft-links">
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd><a href="productsIntro.html" target="_blank">梦想旅行简介</a></dd>
+                        <dd><a href="about.html#team" target="_blank">关于团队</a></dd>
+                        <dd><a href="about.html#development" target="_blank">发展历程</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>帮助支持</dt>
+                        <dd><a href="support.html#feedback" target="_blank">意见反馈</a></dd>
+                        <dd><a href="support.html" target="_blank">联系我们</a></dd>
+                        <dd><a href="webMap.html" target="_blank">网站地图</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>网站条款</dt>
+                        <dd><a href="usage.html" target="_blank">使用条款</a></dd>
+                        <dd><a href="privacy.html" target="_blank">隐私政策</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>加入我们</dt>
+                        <dd><a href="http://www.lagou.com/gongsi/62565.html" target="_blank">招聘职位</a></dd>
+                    </dl>
+                </div>
+                <dl class="follow-us">
+                    <dt>关注我们:</dt>
+                    <dd>
+                        <div id="wechat_share" style="display: none;">
+                            <img src="img/desktop_foot_share_wechat_code_2x.png" alt="">
+                        </div>
+                        <a href="javascript:;" id="ft_wechat">
+                            <img src="img/desktop_foot_share_wechat_2x.png" alt="微信公众号">
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="http://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=http%3A%2F%2Fweibo.com%2Fmxtrip&domain=.weibo.com&sudaref=http%3A%2F%2Fwww.mxtrip.cn%2F&ua=php-sso_sdk_client-0.6.16&_rand=1446035921.6235">
+                            <img src="img/desktop_foot_share_weibo_2x.png" alt="新浪微博">
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="http://qzone.qq.com/?s_url=http://user.qzone.qq.com/2935785166/main">
+                            <img src="img/desktop_foot_share_qqzone_2x.png" alt="QQ空间">
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+            <p class="copyright">
+                版权所有 ： 北京梦想智联科技有限公司 Copyright © 2015, mxtrip.cn. All rights reserved.<br/>京ICP备15012301号-1
+            </p>
+        </div>
+    </div>
+    <script>
+        $('.edit-zhongbao').mouseenter(function () {
+            $('.tips-zhongbao').css("display","block")
+        }).mouseleave(function () {
+            $('.tips-zhongbao').css("display","none")
+        });
+        //        header onscroll
+        window.onscroll = function() {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+//				console.log(t);
+            if(t>80){
+                $(".header").stop().animate({backgroundColor:"white"},600);
+            }else{
+                $(".header").stop().animate({backgroundColor:"transparent"},600);
+            }
+        };
+
+        //        wechat
+        $('#ft_wechat').click(function () {
+            $('#wechat_share').css({
+                "display":"block",
+                "opacity":"1"
+            });
+        }).mouseleave(function () {
+            $('#wechat_share').animate({
+                'opacity':'0'
+            },800,function () {
+                $(this).css("display","none")
+            })
+        });
+
+    </script>
+</body>
+</html>

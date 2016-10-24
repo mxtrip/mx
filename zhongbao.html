@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <style>
+        *{  margin: 0;  padding: 0;  text-decoration: none;  list-style-type: none;  }
+        body {
+            margin: 0 auto;
+            font-size: 14px;
+            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+            -webkit-text-size-adjust: none;
+            line-height: 14px;
+            color: #333;
+        }
+        .zhongbao {
+            height: 100%;
+            overflow: hidden;
+        }
+/*                             header                                      */
+        .header {
+            z-index: 101;
+            top: 0;
+            height: 120px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .clearfix{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .footer, .header {
+            position: fixed;
+            left: 0;
+        }
+        .top-wrap {
+            height: 60px;
+            background: #448aca;
+            width: 100%;
+            overflow: hidden;
+        }
+        .top {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            margin-top: 14px;
+            width: 440px;
+            height: 36px;
+        }
+        .logo img {
+            float: left;
+            width: 240px;
+        }
+        #use_protocol, #user_guide {
+            float: left;
+            margin-left: 10px;
+            margin-top: 2px;
+            width: 72px;
+            height: 28px;
+            border: 1px solid #a9d6ff;
+            border-radius: 5px;
+            line-height: 28px;
+            font-size: 14px;
+            color: #a9d6ff;
+            text-align: center;
+        }
+        .user-info {
+            width: 760px;
+            overflow: hidden;
+        }
+        .selection-wrap {
+            height: 60px;
+            background: #3373ad;
+            width: 100%;
+        }
+        .selection{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .selection form {
+            position: relative;
+            width: 1200px!important;
+            font-size: 14px;
+        }
+        .select-option .sele-item {
+            float: left;
+            padding: 17px 5px 0 10px;
+            overflow: hidden;
+        }
+        .sele-item .sele-city, .sele-item .sele-country {
+            float: left;
+            width: 315px;
+            position: relative;
+        }
+        .sele-item .sele-span {
+            float: left;
+            margin-right: 4px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            color: #98ceff;
+        }
+        .sele-item .select2 {
+            width: 200px!important;
+        }
+        .select2-container {
+            box-sizing: border-box;
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            vertical-align: middle;
+        }
+        .sele-item .select2-container .select2-selection--single {
+            width: 200px;
+            height: 26px;
+            border-radius: 0;
+            border: none;
+            background-color: #fff;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+        }
+        .sele-item .select2-container--default .select2-selection--single .select2-selection__rendered {
+            height: 26px;
+            line-height: 26px;
+            font-size: 14px;
+            color: #000;
+            display: block;
+            padding-left: 8px;
+            padding-right: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 26px;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            width: 20px;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color: #888 transparent  transparent;
+            border-style: solid;
+            border-width: 5px 4px 0;
+            height: 0;
+            left: 50%;
+            margin-left: -4px;
+            margin-top: -2px;
+            position: absolute;
+            top: 50%;
+            width: 0;
+        }
+        .select-option .sele-item {
+            float: left;
+            padding: 17px 5px 0 10px;
+
+        }
+        .sele-item .sele-span {
+            float: left;
+            margin-right: 4px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            color: #98ceff;
+        }
+        .sele-item ul {
+            float: left;
+        }
+        .sele-item ul li {
+            float: left;
+            margin-right: 36px;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+        }
+        .sele-item .icheckbox_minimal-grey {
+            float: left;
+            margin: 5px 8px 5px 0;
+            width: 20px;
+            height: 20px;
+        }
+        .icheckbox_minimal-grey{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            width: 18px;
+            height: 18px;
+            background: url(img/zhongbao/grey.png) no-repeat;
+            border: none;
+            cursor: pointer;
+        }
+        .icheckbox_minimal-grey.checked {
+            background-position: -40px 0;
+        }
+        .sele-item label {
+            float: right;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            font-size: 14px;
+        }
+        #submitBtn {
+            top: 17px;
+            right: 20px;
+            width: 82px;
+            height: 28px;
+            border: 1px solid #bfbfbf;
+            line-height: 28px;
+            color: #666;
+            background: #eee;
+            position: absolute;
+            font-size: 14px;
+            font-family: "Microsoft YaHei";
+            cursor: pointer;
+        }
+/*                            center       footer                            */
+        .tpl-blank {
+            height: 892px;
+        }
+        .center {
+            margin-top: 120px;
+            width: 100%;
+        }
+        .footer {
+            z-index: 100000000;
+            height: 39px;
+            border-top: 1px solid #ddd;
+            background: #eee;
+            font-size: 14px;
+            bottom: 0;
+            width: 100%;
+        }
+        .ft-cont {
+            position: relative;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .ft-cont p {
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            font-size: 14px;
+            color: #666;
+        }
+        .ft-cont p a {
+            float: left;
+            margin: 0 100px 0 30px;
+            color: #666;
+        }
+        #wechat_share {
+            position: absolute;
+            z-index: 10000001;
+            top: -107px;
+            right: 280px;
+            width: 100px;
+            height: 108px;
+        }
+        #wechat_share img {
+            display: block;
+            width: 100px;
+            height: 108px;
+        }
+        .ft-cont dl {
+            float: right;
+            width: 450px;
+        }
+        .ft-cont dl dt {
+            margin-right: 10px;
+            color: #666;
+        }
+        .ft-cont dl dd, .ft-cont dl dt {
+            float: left;
+            margin-top: 10px;
+            height: 18px;
+            line-height: 18px;
+            text-align: right;
+        }
+        .ft-cont dl dd a {
+            float: left;
+            height: 18px;
+            line-height: 18px;
+            color: #666;
+        }
+        .ft-cont dl dd span {
+            display: inline-block;
+            margin: 0 10px;
+            width: 1px;
+            height: 18px;
+            background: #929292;
+        }
+        /*                   select                */
+        .select2-container--open .select2-dropdown--below {
+            border-top: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .select2-container--open .select2-dropdown {
+            left: 0;
+        }
+        .select2-container .select2-dropdown {
+            z-index: 20150828!important;
+        }
+        .select2-dropdown {
+            background-color: #fff;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            left: -100000px;
+            width: 100%;
+            z-index: 1051;
+        }
+        .select2-search--dropdown {
+            display: block;
+            padding: 4px;
+            padding-top: 0!important;
+        }
+        .select2-results {
+            display: block;
+        }
+        .select2-container--default .select2-results>.select2-results__options{
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .select2-container--default .select2-results__option--highlighted[aria-selected] {
+            background-color: #5897fb;
+            color: #fff;
+        }
+        .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-results__option[aria-selected] {
+            height: 30px;
+            line-height: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 6px;
+        }
+        .layui-layer-loading {
+            border-radius: 100%;
+            background: 0 0;
+            box-shadow: none;
+            border: none;
+        }
+        .layui-layer{
+            position: fixed;
+            pointer-events: auto;
+        }
+        .layui-layer-loading .layui-layer-loading1 {
+            width: 37px;
+            height: 37px;
+            background: url(img/zhongbao/loading-1.gif) no-repeat;
+        }
+        .layui-layer-iframe{
+            margin: 0;
+            padding: 0;
+            position: fixed;
+        }
+        .layui-layer-iframe .layui-layer-content {
+            overflow: hidden;
+            position: relative;
+        }
+        .layui-layer-iframe iframe {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+ <div class="zhongbao clearfix">
+     <div class="header clearfix">
+         <div class="top-wrap">
+             <div class="top">
+                 <div class="logo">
+                     <img src="img/zhongbao/logo_1x.png" alt="梦想旅行">
+                     <a href="javascript:;" id="user_guide">系统帮助</a>
+                     <a href="javascript:;" id="use_protocol">使用协议</a>
+
+                 </div>
+                 <div class="user-info"></div>
+             </div>
+
+         </div>
+         <div class="selection-wrap">
+             <div class="selection">
+                 <form id="search_form" class="select-option">
+                     <div class="sele-item">
+                         <div class="sele-country">
+                             <div class="sele-span">选择国家：</div>
+                             <span class="select2 select2-container select2-container--default select2-container--below">
+                                 <span class="selection">
+                                     <span class="select2-selection select2-selection--single">
+                                             <span class="select2-selection__rendered" id="select2-country-container"
+                                                   title="请选择国家">
+                                                        请选择国家
+                                             </span>
+                                         <span class="select2-selection__arrow">
+                                             <b></b>
+                                         </span>
+                                     </span>
+                                 </span>
+                             </span>
+                         </div>
+                         <div class="sele-city">
+                             <div class="sele-span">选择城市：</div>
+                            <span class="select2 select2-container select2-container--default select2-container--below">
+                                 <span class="selection">
+                                     <span class="select2-selection select2-selection--single">
+                                             <span class="select2-selection__rendered" id="select2-city-container"
+                                                   title="请选择城市">
+                                                        请选择城市
+                                             </span>
+                                         <span class="select2-selection__arrow">
+                                             <b></b>
+                                         </span>
+                                     </span>
+                                 </span>
+                             </span>
+
+                         </span>
+                     </div>
+
+                     </div>
+                     <div class="skin skin-minimal sele-item">
+                         <div class="skin-section">
+                             <div class="sele-span">选择类型：</div>
+                             <ul class="list">
+                                 <li>
+                                     <div class="icheckbox_minimal-grey" style="position: relative;">
+                                         <input style="position: absolute;top: -20%;left: -20%;display: block;width: 140%;height:
+                                          140%;margin: 0px;padding: 0px;border: 0px;opacity: 0;background: rgb(255, 255, 255);z-index: -1">
+                                     </div>
+                                     <label class="minimal-checkbox-1">景点</label>
+                                 </li>
+                                 <li>
+                                     <div class="icheckbox_minimal-grey" style="position: relative;">
+                                         <input style="position: absolute;top: -20%;left: -20%;display: block;width: 140%;height:
+                                          140%;margin: 0px;padding: 0px;border: 0px;opacity: 0;background: rgb(255, 255, 255);z-index: -1">
+                                     </div>
+                                     <label class="minimal-checkbox-1">餐饮</label>
+                                 </li>
+                                 <li>
+                                     <div class="icheckbox_minimal-grey" style="position: relative;">
+                                         <input style="position: absolute;top: -20%;left: -20%;display: block;width: 140%;height:
+                                          140%;margin: 0px;padding: 0px;border: 0px;opacity: 0;background: rgb(255, 255, 255);z-index: -1">
+                                     </div>
+                                     <label class="minimal-checkbox-1">购物</label>
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
+                     <input type="submit" id="submitBtn" value="搜索">
+
+                 </form>
+             </div>
+
+         </div>
+     </div>
+     <div class="center tpl-blank clearfix"></div>
+     <div class="footer">
+         <div class="ft-cont">
+             <p><a href="javascript:;">++梦想旅行官方网站++</a>京ICP备13019645号－2  ©2015 www.mxtrip.cn, all rights reserved</p>
+             <div id="wechat_share" style="display: none">
+                 <img src="img/zhongbao/share_wechat_code_2x.png" alt="">
+             </div>
+             <dl>
+                 <dt>关注我们：</dt>
+                 <dd>
+                     <a href="javascript:;" id="ft_wechat">微信公众平台</a>
+                     <span></span>
+                 </dd>
+                 <dd>
+                     <a href="javascript:;">官方微博</a>
+                     <span></span>
+                 </dd>
+                 <dd>官网QQ群 132448869</dd>
+             </dl>
+         </div>
+     </div>
+
+ </div>
+<span class="select2-container select2-container--default select2-container--open" style="position: absolute; top: 103px;
+             left: 158.5px; display:none" id="select2-container--open1">
+        <span class="select2-dropdown select2-dropdown--below" dir="ltr" style="width: 200px;">
+             <span class="select2-search select2-search--dropdown"></span>
+            <span class="select2-results">
+                <ul class="select2-results__options" role="tree" id="select2-country-results">
+                     <li class="select2-results__option select2-results__option--highlighted" id="select2-country-result-w3c9-0" aria-selected="true">
+                         请选择国家
+                     </li>
+                </ul>
+            </span>
+        </span>
+</span>
+<span class="select2-container select2-container--default select2-container--open" style="position: absolute; top: 103px;
+             left: 473.5px;display: none" id="select2-container--open2">
+        <span class="select2-dropdown select2-dropdown--below" dir="ltr" style="width: 200px;">
+             <span class="select2-search select2-search--dropdown"></span>
+            <span class="select2-results">
+                <ul class="select2-results__options" role="tree" id="select2-city-results">
+                     <li class="select2-results__option select2-results__option--highlighted"
+                         id="select2-city-result-535r-0" aria-selected="true">
+                         请选择城市
+                     </li>
+                </ul>
+            </span>
+        </span>
+</span>
+ <div class="layui-layer layui-anim layui-layer-loading" id="layui-layer1" style="z-index: 19891015; width: 360px; top: 109.5px; left: 494.5px;">
+     <div class="layui-layer-content layui-layer-loading1"></div>
+ </div>
+ <div class="layui-layer-shade" id="layui-layer-shade2" style="position: fixed;top: 0; left: 0; width: 100%;height: 100%;
+           z-index:19891015; background-color:#000; opacity:0.3; filter:alpha(opacity=30);"></div>
+<div class="layui-layer layui-anim layui-layer-iframe" id="layui-layer2"
+     style="z-index: 19891016; width: 462px; height: 420px;">
+    <div class="layui-layer-content">
+        <iframe id="layui-layer-iframe2" src="zhongbaoLogin.html" scrolling="no" frameborder="0"
+                allowtransparency="true" style="height: 420px;" onload="this.className='';"></iframe>
+    </div>
+
+</div>
+
+<script>
+    $(function () {
+        $("#layui-layer2").css("left",$(window).width()/2-222)
+        $("#layui-layer2").css("top",$(window).height()/2-210)
+//        var judge=1;
+     /*   判断城市是否隐藏*/
+        var displayCity=0;
+       /* 判断国家是否隐藏*/
+        var displayCountry=0;
+      $(".select2-selection__arrow").click(function () {
+//          changeDirection($(this));
+          showHidden($(this));
+      })
+        
+//        改变三角形图标方向
+//        function changeDirection(a) {
+//            if(judge==1){
+//                a.find("b").css({
+//                    "border-color":"transparent transparent #888",
+//                    "border-width": "0 4px 5px"
+//                })
+//                judge=0;
+//            }else if(judge==0){
+//                a.find("b").css({
+//                    "border-color":"#888 transparent transparent ",
+//                    "border-width": "5px 4px 0"
+//                })
+//                judge=1;
+//            }
+//        }
+
+         /*        国家城市下拉菜单显示隐藏  */
+        function showHidden(b) {
+            if(b.siblings().attr("id")=="select2-city-container"){
+                if(displayCity==0){
+                    if(displayCountry=1){
+                        $(".select2-container.select2-container--default.select2-container--open").eq(0).css("display","none");
+                        displayCountry=0;
+                     $(".select2-selection__arrow").not(b).find("b").css({
+                            "border-color":"#888 transparent transparent ",
+                            "border-width": "5px 4px 0"
+                        });
+                    }
+                    $(".select2-container.select2-container--default.select2-container--open").eq(1).css("display","block");
+                    displayCity=1;
+                       b.find("b").css({
+                        "border-color":"transparent transparent #888  ",
+                        "border-width": "0 4px 5px"
+                    });
+                }else if(displayCity==1){
+                    $(".select2-container.select2-container--default.select2-container--open").eq(1).css("display","none");
+                    displayCity=0;
+                    b.find("b").css({
+                        "border-color":"#888 transparent transparent  ",
+                        "border-width": "5px 4px 0"
+                    });
+                }
+            }else if(b.siblings().attr("id")=="select2-country-container"){
+                if(displayCountry==0){
+                    if(displayCity==1){
+                        $(".select2-container.select2-container--default.select2-container--open").eq(1).css("display","none");
+                        displayCity=0;
+                        $(".select2-selection__arrow").not(b).find("b").css({
+                            "border-color":"#888 transparent transparent ",
+                            "border-width": "5px 4px 0"
+                        });
+                    }
+                    $(".select2-container.select2-container--default.select2-container--open").eq(0).css("display","block");
+                    displayCountry=1;
+                    b.find("b").css({
+                        "border-color":"transparent transparent #888  ",
+                        "border-width": "0 4px 5px"
+                    });
+                }else if(displayCountry==1){
+                    $(".select2-container.select2-container--default.select2-container--open").eq(0).css("display","none");
+                    displayCountry=0;
+                    b.find("b").css({
+                        "border-color":"#888 transparent transparent",
+                        "border-width": "5px 4px 0"
+                    });
+                }
+            }
+        }
+
+    /* city country下拉框相对于body定位 header是fixed 想过以下2个函数解决定位问题监听滚动事件跟浏览器窗口改变事件*/
+        $(window).resize(function(){
+            /* 全屏时 left初始值158.5跟473.5    offset().left是74.5 */
+            var iniLeft=74.5-$(".selection-wrap .selection").offset().left
+            var  left1=158.5-iniLeft;
+            var  left2=473.5-iniLeft;
+            $("#select2-container--open1").css("left",left1)
+            $("#select2-container--open2").css("left",left2)
+
+           /* iframe定位   全屏幕时width: 462px; height: 420px;;*/
+//               left父元素宽度的一半再减去本身宽度的一半 就是水平居中
+//            top父元素高度的一半再减去本身高度的一半 就是垂直居中
+          var iframeLeft=$(window).width()/2-222
+            var iframeTop=$(window).height()/2-210
+           $("#layui-layer2").css("left",iframeLeft)
+            $("#layui-layer2").css("top",iframeTop)
+
+        });
+        $(window).scroll(function(){
+           /* 全屏时 top初始值103   offset().top是0 */
+            var top=$(".header").offset().top+103;
+            $("#select2-container--open1").css("top",top)
+            $("#select2-container--open2").css("top",top)
+        });
+
+       /* 通过增加类增加类设置背景图片 加上勾*/
+        $(".icheckbox_minimal-grey").click(function () {
+            if($(this).hasClass("checked")){
+                $(this).removeClass("checked")
+            }else{
+                $(this).addClass("checked")
+            }
+        })
+
+
+        /*        footer 微信点击出现二维码           */
+        $("#ft_wechat").click(function () {
+            $("#wechat_share").css({
+                "display":"block",
+                opacity:1
+            })
+        })
+        $("#ft_wechat").mouseleave(function () {
+            $("#wechat_share").animate({
+                opacity:0
+            },1000,function () {
+                $(this).css("display","none")
+            })
+        })
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--制作三角形  -->
+<!--border-color: #888 red  blue ;  1、 上边框  2、左右边框 3、下边框-->
+<!--border-width: 5px 4px 0;  1、 上边框  2、左右边框 3、下边框为0-->
+
+<!--header选择类型  通过增加类增加类设置背景图片 加上勾-->

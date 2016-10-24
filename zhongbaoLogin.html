@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <style>
+        *{  margin: 0;  padding: 0;  text-decoration: none;  list-style-type: none;  }
+        body {
+            margin: 0 auto;
+            font-size: 14px;
+            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+            -webkit-text-size-adjust: none;
+            line-height: 14px;
+            color: #333;
+        }
+        em, i {
+            font-style: normal;
+        }
+        .loginWrap {
+            width: 462px;
+            height: 420px;
+            color: #333;
+            font-size: 14px;
+            overflow: hidden;
+            background: url(img/zhongbao/code_icon_1x.png) 198px 26px no-repeat #fff;
+        }
+        .login-content {
+            margin: 130px 51px 0;
+            border-top: 1px dashed #696969;
+        }
+        .login-content h1.title {
+            position: absolute;
+            z-index: 1001;
+            top: 120px;
+            left: 160px;
+            width: 135px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 18px;
+            color: #a0a0a0;
+            background: #fff;
+            text-align: center;
+        }
+        .login-content h1.title em {
+            color: #696969;
+        }
+        .login-content form#loginForm {
+            position: relative;
+            width: 360px;
+            padding: 20px 0 15px;
+        }
+        .login-user-item {
+            margin-top: 13px;
+            width: 358px;
+            height: 42px;
+            border: 1px solid #bababa;
+        }
+        .login-user-item label {
+            float: left;
+            margin: 9px 10px 8px 0;
+            width: 29px;
+            height: 25px;
+            padding-left: 10px;
+            border-right: 1px solid #bababa;
+        }
+        .login-user-item label img {
+            display: block;
+            margin-top: 3px;
+        }
+        .login-user-item input#username,.login-user-item input#password {
+            float: left;
+            width: 250px;
+            height: 30px;
+            padding: 6px 0;
+            font-size: 14px;
+            border: none;
+            outline: 0;
+        }
+
+        #tips {
+            width: 360px;
+            border: none;
+            overflow: hidden;
+        }
+        #tips, #tips p {
+            margin-top: 0;
+            height: 54px;
+        }
+        #tips p {
+            margin-left: 110px;
+            width: auto;
+            padding-left: 24px;
+            background: url(img/zhongbao/Tips_icon_1x.png) 0 18px no-repeat;
+            line-height: 54px;
+            color: #b82f0b;
+        }
+        #loginForm input#submit {
+            display: block;
+            width: 360px;
+            height: 44px;
+            line-height: 44px;
+            font-size: 16px;
+            color: #fff;
+            background: #50cd12;
+            text-align: center;
+            cursor: pointer;
+            outline: 0;
+            border: none;
+
+        }
+    </style>
+</head>
+<body>
+ <div class="loginWrap">
+     <div class="login-content">
+         <h1 class="title">
+             登录<em>梦想旅行</em>
+         </h1>
+         <form action="/user/login" id="loginForm">
+             <div class="login-user-item account">
+                 <label>
+                     <img src="img/zhongbao/icon_usename_default_1x.png">
+                 </label>
+                 <input type="text" id="username" class="login-form-text-input" name="username" placeholder="请输入您的帐号">
+             </div>
+             <div class="login-user-item password">
+                 <label>
+                     <img src="img/zhongbao/icon_password_default_1x.png">
+                 </label>
+                 <input type="password" id="password" class="login-form-text-input" name="password" placeholder="请输入密码">
+             </div>
+             <div id="tips" class="login-user-item ">
+                 <!--<p>帐号不能为空！</p>-->
+             </div>
+             <input  id="submit" class="submit" value="登录" onfocus=this.blur()>
+         </form>
+     </div>
+ </div>
+<script>
+    $(function () {
+        var uName=$("#username");
+        var upassword=$("#password");
+        var userNameJudge=false;
+        var passWordJudge=false;
+        uName.on('blur',function () {
+            var reg1=new RegExp(/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/);
+            userNameJudge=reg1.test(uName.val());
+            if(uName.val()==""){
+                $("#tips").children().remove()
+                $("<p>帐号不能为空！</p>").appendTo("#tips")
+            }else if(!userNameJudge){
+                $("#tips").children().remove()
+                $("<p>帐号格式不正确！</p>").appendTo("#tips")
+            }else {
+                $("#tips").children().remove();
+            }
+            $(".login-user-item img").eq(0).attr("src","img/zhongbao/icon_usename_activity_1x.png")
+        })
+        upassword.on('blur',function () {
+            var reg2=new RegExp(/^^[0-9A-Za-z]{6,20}$/);
+             passWordJudge=reg2.test(upassword.val())
+            if(upassword.val()==""){
+                $("#tips").children().remove()
+                $("<p>密码不能为空！</p>").appendTo("#tips")
+            }else if(!passWordJudge){
+                $("#tips").children().remove()
+                $("<p> 密码格式错误,6-20个字符！</p>").appendTo("#tips")
+            }else {
+                $("#tips").children().remove();
+            }
+            $(".login-user-item img").eq(1).attr("src","img/zhongbao/icon_password_activit_1x.png")
+        })
+          $("#submit").click(function () {
+              if(passWordJudge==true&&userNameJudge==true){
+                  $("html").css("display","none")
+                   $('#layui-layer-shade2',window.parent.document).css("display","none");
+                  $('#layui-layer2',window.parent.document).css("display","none");
+              }else if(uName.val()==""){
+                  $("#tips").children().remove()
+                  $("<p>帐号不能为空！</p>").appendTo("#tips")
+              }else if(upassword.val()==""){
+                  $("#tips").children().remove()
+                  $("<p>密码不能为空！</p>").appendTo("#tips")
+              }
+          })
+    })
+</script>
+</body>
+</html>
+<!--iframe 调用父页面方法-->
+<!--$('#layui-layer-shade2', window.parent.document)-->

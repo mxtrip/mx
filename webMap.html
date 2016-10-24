@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>出境旅游，境外游，自助游，自由行，旅游点评分享网站 - 梦想旅行</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+        }
+        body {
+            font-size: 14px;
+        }
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        ul, li {
+            list-style: none;
+        }
+        .center, .footer, .header, .wrap {
+            width: 100%;
+        }
+        .header {
+            height: 79px;
+            border-bottom: 1px solid #ddd;
+            background: #fff;
+        }
+        .header .header-wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .header .hd-logo img {
+            display: block;
+            padding-top: 16px;
+            width: 155px;
+            height: 45px;
+        }
+        .header .hd-nav {
+            float: right;
+            margin-top: -29px;
+        }
+        .header .hd-nav ul {
+            list-style-type: none;
+        }
+        .hd-nav ul li {
+            display: inline-block;
+            margin-right: 35px;
+        }
+        .hd-nav ul li a {
+            text-decoration: none;
+            color: #888;
+            font-size: 16px;
+        }
+        .hd-nav ul li a:hover {
+            color: #00b7a8;
+        }
+        .hd-nav ul li .red {
+            float: right;
+            margin: -4px 10px;
+            height: 20px;
+            padding: 0 6px;
+            line-height: 20px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: white;
+            background-color: red;
+            text-align: center;
+        }
+        .header-wrap .edit-zhongbao {
+            position: relative;
+            margin-right: 20px;
+        }
+        .tips-zhongbao {
+            position: absolute;
+            top: 26px;
+            right: -45px;
+            width: 277px;
+            height: 45px;
+            padding-top: 7px;
+            text-align: center;
+            line-height: 45px;
+            background: url(img/title1_1x.png) no-repeat;
+        }
+        /*--------------------center---------------------*/
+        .center {
+            background: #f2f2f2;
+            overflow: hidden;
+        }
+        .sitemap .main-crumb {
+            margin: 0 auto;
+            width: 1200px;
+            color: #555;
+            font-size: 14px;
+        }
+        .main-crumb dt,
+        .main-crumb dd {
+            float: left;
+            line-height: 50px;
+            color: #cac4d4;
+        }
+        .sitemap .main-crumb a {
+            color: #555;
+            padding: 0 4px;
+        }
+        .sub-nav {
+            height: 15px;
+            padding: 18px 0;
+            margin: 0 auto;
+            line-height: 15px;
+            font-size: 16px;
+            text-indent: 22px;
+        }
+        .sub-nav,
+        .sitemap-wrap {
+            width: 1200px;
+            background: #fff;
+        }
+        .sub-nav a {
+            margin-right: 35px;
+            color: #888;
+        }
+        .sub-nav a:hover,
+        .area-mod dl dd a:hover {
+            color: #00b7a8;
+        }
+        .sitemap-wrap {
+            margin: 30px auto 40px;
+            padding-bottom: 10px;
+            overflow: hidden;
+        }
+        .sitemap-wrap .title {
+            width: 100%;
+            height: 73px;
+            line-height: 73px;
+            border-bottom: 1px dotted #ccc;
+            font-size: 20px;
+            color: #555;
+            text-indent: 22px;
+        }
+        .sitemap-wrap .cont {
+            width: 1215px;
+            margin-left: -20px;
+        }
+        .sitemap-wrap ul li {
+            float: left;
+            width: 302px;
+            margin: 0 52px 0 51px;
+        }
+        .area-mod {
+            width: 100%;
+            overflow: hidden;
+        }
+        .area-mod .area-hd {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 20px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .area-mod .area-hd a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .area-mod .area-hd img {
+            width: 144px;
+            height: 16px;
+        }
+        .area-mod .area-bd,
+        .area-mod dl {
+            width: 100%;
+        }
+        .area-mod dl {
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .area-mod dl dt {
+            float: left;
+            width: 82px;
+        }
+        dt {
+            display: block;
+        }
+        .area-mod dl dd {
+            float: left;
+            width: 220px;
+        }
+        .area-mod dl dd a {
+            margin-right: 7px;
+            line-height: 25px;
+            color: #999;
+            font-size: 12px;
+            white-space: nowrap;  /* 规定文本不换行 */
+        }
+        .area-mod dl dd a.hot {
+            color: #ff5400;
+        }
+        /*-----------------footer---------------*/
+        .footer {
+            min-width: 1200px;
+            padding-top: 10px;
+            color: #fff;
+            background: #333;
+        }
+        .ft-cont {
+            position: relative;
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .ft-cont .ft-links {
+            float: left;
+            width: 800px;
+        }
+        .ft-cont .ft-links dl {
+            float: left;
+            margin: 17px 75px 0 12px;
+            font-size: 15px;
+        }
+        .ft-cont .ft-links dl dt {
+            padding-bottom: 6px;
+            line-height: 28px;
+        }
+        .ft-cont .ft-links dl dd {
+            line-height: 28px;
+        }
+        .ft-cont .ft-links dl dd a {
+            color: #aaa;
+        }
+        .ft-cont .follow-us {
+            float: right;
+            position: relative;
+            margin-left: 10px;
+            width: 200px;
+            padding: 17px 0 16px;
+        }
+        .ft-cont .follow-us dd {
+            float: left;
+            margin-top: 27px;
+            margin-right: 14px;
+        }
+        .ft-cont .follow-us dd img {
+            display: block;
+            width: 48px;
+            height: 48px;
+        }
+        #wechat_share {
+            position: absolute;
+            z-index: 999;
+            top: -210px;
+            left: -110px;
+            width: 264px;
+            height: 264px;
+        }
+        #wechat_share img {
+            display: block;
+            width: 264px;
+            height: 264px;
+        }
+        .footer .copyright {
+            margin: 15px auto 0;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px 0;
+            border-top: 1px solid #000;
+            line-height: 22px;
+            color: #757575;
+            font-size: 13px;
+            text-align: center;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header clearfix">
+            <div class="header-wrap">
+                <div class="hd-logo">
+                    <a href="#"><img src="img/nav_logo_2x.png" alt=""></a>
+                </div>
+                <div class="hd-nav">
+                    <ul>
+                        <li><a href="#">目的地</a></li>
+                        <li><a href="#">产品介绍</a></li>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">帮助支持</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li class="edit-zhongbao">
+                            <a href="#">内容众包</a>
+                            <span class="red">赚钱</span>
+                            <div class="tips-zhongbao" style="display: none">
+                                写旅游地信息，做赚钱小编
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="center sitemap">
+            <dl class="main-crumb clearfix">
+                <dt><a href="/">首页</a>&gt;&gt;</dt>
+                <dd><a href="/">梦想旅行网站地图</a></dd>
+            </dl>
+            <p class="sub-nav">
+                <a href="http://place.mxtrip.cn">目的地</a>
+                <a href="http://www.mxtrip.cn/product">产品介绍</a>
+                <a href="http://www.mxtrip.cn/about">关于我们</a>
+                <a href="http://www.mxtrip.cn/about/support">意见反馈</a>
+                <a href="http://www.lagou.com/gongsi/62565.html" target="_blank">加入我们</a>
+                <a href="http://zb.mxtrip.cn">内容众包</a>
+            </p>
+            <div class="sitemap-wrap">
+                <div class="title">目的地</div>
+                <div class="cont">
+                    <ul>
+                        <li>
+                            <div class="area-mod">
+                                <div class="area-hd">
+                                    <a href="http://place.mxtrip.cn/c1_kWXF#place_nav" target="_blank">
+                                        <img src="img/Asian_2x.png" alt="亚洲"></a>
+                                </div>
+                                <div class="area-bd">
+                                    <dl>
+                                        <dt>中国</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWZF/canyin/list" target="_blank">香港</a>
+                                            <a  href="http://place.mxtrip.cn/kWZ5ZS/canyin/list" target="_blank">澳门</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWZ8ZS/canyin/list" target="_blank">台北</a>
+                                            <a  href="http://place.mxtrip.cn/kWgSZS/canyin/list" target="_blank">台南</a>
+                                            <a  href="http://place.mxtrip.cn/kWgTZS/canyin/list" target="_blank">台中</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWgUZS/canyin/list" target="_blank">垦丁</a>
+                                            <a  href="http://place.mxtrip.cn/kWg2ZS/canyin/list" target="_blank">高雄</a>
+                                            <a  href="http://place.mxtrip.cn/kWg3ZS/canyin/list" target="_blank">淡水</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4ZS/canyin/list" target="_blank">花莲</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5ZS/canyin/list" target="_blank">台东</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6ZS/canyin/list" target="_blank">阿里山</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7ZS/canyin/list" target="_blank">新北</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4hFXF/canyin/list" target="_blank">南投</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7iWGF/canyin/list" target="_blank">基隆</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7ingF/canyin/list" target="_blank">嘉义</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7inwF/canyin/list" target="_blank">新竹</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8gWXF/canyin/list" target="_blank">桃园</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8gWoF/canyin/list" target="_blank">屏东</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8gWGF/canyin/list" target="_blank">彰化</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8gngF/canyin/list" target="_blank">鹿港</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8gnwF/canyin/list" target="_blank">金门</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8gFXF/canyin/list" target="_blank">宜兰</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8gFoF/canyin/list" target="_blank">苗栗</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8gFGF/canyin/list" target="_blank">云林</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8g2gF/canyin/list" target="_blank">澎湖列岛</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>日本</dt>
+                                        <dd>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWkF/canyin/list" target="_blank">札幌</a>
+                                            <a  href="http://place.mxtrip.cn/kWoF/canyin/list" target="_blank">小樽</a>
+                                            <a  href="http://place.mxtrip.cn/kWsF/canyin/list" target="_blank">仙台</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWwF/canyin/list" target="_blank">东京</a>
+                                            <a  href="http://place.mxtrip.cn/kW0F/canyin/list" target="_blank">横滨</a>
+                                            <a  href="http://place.mxtrip.cn/kWGF/canyin/list" target="_blank">箱根</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSZS/canyin/list" target="_blank">京都</a>
+                                            <a  href="http://place.mxtrip.cn/kWXTZS/canyin/list" target="_blank">神户</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWXUZS/canyin/list" target="_blank">大阪</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2ZS/canyin/list" target="_blank">奈良</a>
+                                            <a  href="http://place.mxtrip.cn/kWX3ZS/canyin/list" target="_blank">长崎</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4ZS/canyin/list" target="_blank">福冈</a>
+                                            <a  href="http://place.mxtrip.cn/kWX5ZS/canyin/list" target="_blank">广岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6ZS/canyin/list" target="_blank">冲绳</a>
+                                            <a  href="http://place.mxtrip.cn/kWX7ZS/canyin/list" target="_blank">富士山</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4hFoF/canyin/list" target="_blank">登别</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4hFGF/canyin/list" target="_blank">洞爷湖</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4h2gF/canyin/list" target="_blank">函馆</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4h2wF/canyin/list" target="_blank">富良野</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4iWXF/canyin/list" target="_blank">镰仓</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4iWoF/canyin/list" target="_blank">鹿儿岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4iWGF/canyin/list" target="_blank">别府</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4ingF/canyin/list" target="_blank">熊本</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4inwF/canyin/list" target="_blank">佐贺</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8g2wF/canyin/list" target="_blank">名古屋</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8hWXF/canyin/list" target="_blank">那霸</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8hWoF/canyin/list" target="_blank">旭川</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8hWGF/canyin/list" target="_blank">美瑛</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8hngF/canyin/list" target="_blank">宇治</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8hnwF/canyin/list" target="_blank">伊豆</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8hFXF/canyin/list" target="_blank">静冈</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8hFoF/canyin/list" target="_blank">高山</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8hFGF/canyin/list" target="_blank">宫古岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8h2gF/canyin/list" target="_blank">恩纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8h2wF/canyin/list" target="_blank">知床半岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8iWXF/canyin/list" target="_blank">川崎</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8iWoF/canyin/list" target="_blank">埼玉</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8iWGF/canyin/list" target="_blank">北九州</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8ingF/canyin/list" target="_blank">新潟</a>
+                                            <a  href="http://place.mxtrip.cn/kWg8inwF/canyin/list" target="_blank">冈山</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSgWXF/canyin/list" target="_blank">姬路</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSgWoF/canyin/list" target="_blank">大分</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSgWGF/canyin/list" target="_blank">日光</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSgngF/canyin/list" target="_blank">和歌山</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSgnwF/canyin/list" target="_blank">热海</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSgFXF/canyin/list" target="_blank">金泽</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSgFoF/canyin/list" target="_blank">网走</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSgFGF/canyin/list" target="_blank">钏路</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSg2gF/canyin/list" target="_blank">高松</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSg2wF/canyin/list" target="_blank">长野</a>
+                                            <a  href="http://place.mxtrip.cn/kWkShWXF/canyin/list" target="_blank">千叶市</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSiWXF/canyin/list" target="_blank">指宿市</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSiWGF/canyin/list" target="_blank">宫崎市</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3gWoF/canyin/list" target="_blank">伊势</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>韩国</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWZSZS/canyin/list" target="_blank">首尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWZTZS/canyin/list" target="_blank">仁川</a>
+                                            <a  href="http://place.mxtrip.cn/kWZUZS/canyin/list" target="_blank">济州岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWZ2ZS/canyin/list" target="_blank">釜山</a>
+                                            <a  href="http://place.mxtrip.cn/kWZ3ZS/canyin/list" target="_blank">大邱</a>
+                                            <a  href="http://place.mxtrip.cn/kWZ4ZS/canyin/list" target="_blank">光州</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5gWXF/canyin/list" target="_blank">江陵</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5gWoF/canyin/list" target="_blank">束草</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5gWGF/canyin/list" target="_blank">春川</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5gngF/canyin/list" target="_blank">水原</a>
+                                            <a  href="http://place.mxtrip.cn/kWkShFoF/canyin/list" target="_blank">安东</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSh2gF/canyin/list" target="_blank">蔚山</a>
+                                            <a  href="http://place.mxtrip.cn/kWkTg2wF/canyin/list" target="_blank">西归浦</a>
+                                            <a  href="http://place.mxtrip.cn/kWkThWoF/canyin/list" target="_blank">庆州</a>
+                                            <a  href="http://place.mxtrip.cn/kWkThngF/canyin/list" target="_blank">全州</a>
+                                            <a  href="http://place.mxtrip.cn/kWkThFXF/canyin/list" target="_blank">大田</a>
+                                            <a  href="http://place.mxtrip.cn/kWkThFGF/canyin/list" target="_blank">丽水</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSgFXF/canyin/list" target="_blank">清州</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSgFoF/canyin/list" target="_blank">富川</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSgFGF/canyin/list" target="_blank">木浦市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTh2gF/canyin/list" target="_blank">龙仁市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTh2wF/canyin/list" target="_blank">晋州市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTiWXF/canyin/list" target="_blank">昌原</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTiWoF/canyin/list" target="_blank">城南市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTiWGF/canyin/list" target="_blank">浦项市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTingF/canyin/list" target="_blank">天安市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTinwF/canyin/list" target="_blank">坡州</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUgWXF/canyin/list" target="_blank">金海市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUgWoF/canyin/list" target="_blank">原州市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUgWGF/canyin/list" target="_blank">忠州</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>新加坡</dt>
+                                        <dd>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWZ7ZS/canyin/list" target="_blank">新加坡</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>泰国</dt>
+                                        <dd>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWkSZS/canyin/list" target="_blank">曼谷</a>
+                                            <a  href="http://place.mxtrip.cn/kWkTZS/canyin/list" target="_blank">清迈</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWkUZS/canyin/list" target="_blank">芭堤雅</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWk2ZS/canyin/list" target="_blank">普吉岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3ZS/canyin/list" target="_blank">苏梅岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4ZS/canyin/list" target="_blank">甲米</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4hWGF/canyin/list" target="_blank">大城</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4hngF/canyin/list" target="_blank">清莱</a>
+                                            <a  href="http://place.mxtrip.cn/kWg4hnwF/canyin/list" target="_blank">华欣</a>
+                                            <a  href="http://place.mxtrip.cn/kWkShnwF/canyin/list" target="_blank">夜功府</a>
+                                            <a  href="http://place.mxtrip.cn/kWkSinwF/canyin/list" target="_blank">拜县</a>
+                                            <a  href="http://place.mxtrip.cn/kWkTgWoF/canyin/list" target="_blank">沙美岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWkTgngF/canyin/list" target="_blank">象岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWkTgFXF/canyin/list" target="_blank">素可泰</a>
+                                            <a  href="http://place.mxtrip.cn/kWkTgFGF/canyin/list" target="_blank">华富里</a>
+                                            <a  href="http://place.mxtrip.cn/kWkTh2wF/canyin/list" target="_blank">帕岸岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2gWoF/canyin/list" target="_blank">北碧府</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2gnwF/canyin/list" target="_blank">斯米兰群岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2g2wF/canyin/list" target="_blank">董里</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3gWGF/canyin/list" target="_blank">素叻他尼</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3gngF/canyin/list" target="_blank">合艾</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3gnwF/canyin/list" target="_blank">春蓬</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3gFXF/canyin/list" target="_blank">夜丰颂</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3gFoF/canyin/list" target="_blank">春武里府</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3gFGF/canyin/list" target="_blank">攀牙</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3g2gF/canyin/list" target="_blank">罗勇</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3g2wF/canyin/list" target="_blank">皮皮岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3hWXF/canyin/list" target="_blank">涛岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3hWoF/canyin/list" target="_blank">兰达岛</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>越南</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXSgWoF/canyin/list" target="_blank">河内</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSgWGF/canyin/list" target="_blank">岘港</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSgngF/canyin/list" target="_blank">胡志明市</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSgFXF/canyin/list" target="_blank">美奈</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSgFoF/canyin/list" target="_blank">大叻</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6iWGF/canyin/list" target="_blank">芽庄</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5hWXF/canyin/list" target="_blank">会安</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5hWoF/canyin/list" target="_blank">顺化</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSgngF/canyin/list" target="_blank">潘切市</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSgnwF/canyin/list" target="_blank">下龙湾</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>老挝</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXSg2gF/canyin/list" target="_blank">万象</a>
+                                            <a  href="http://place.mxtrip.cn/kWX7hnwF/canyin/list" target="_blank">万荣</a>
+                                            <a  href="http://place.mxtrip.cn/kWo5iWXF/canyin/list" target="_blank">琅勃拉邦 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5iWoF/canyin/list" target="_blank">巴色 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5iWGF/canyin/list" target="_blank">琅南塔  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5ingF/canyin/list" target="_blank">沙湾拿吉  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5inwF/canyin/list" target="_blank">丰沙湾 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6gWXF/canyin/list" target="_blank">会晒 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6gWoF/canyin/list" target="_blank">北宾 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6gWGF/canyin/list" target="_blank">琅多  </a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>柬埔寨</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXShWoF/canyin/list" target="_blank">金边</a>
+                                            <a  href="http://place.mxtrip.cn/kWXShWGF/canyin/list" target="_blank">暹粒</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5gnwF/canyin/list" target="_blank">西哈努克</a>
+                                            <a  href="http://place.mxtrip.cn/kWo5hngF/canyin/list" target="_blank">马德望  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5hnwF/canyin/list" target="_blank">贡布  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5hFXF/canyin/list" target="_blank">柏威夏 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5hFoF/canyin/list" target="_blank">白马市 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5hFGF/canyin/list" target="_blank">波贝 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5h2gF/canyin/list" target="_blank">磅湛  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5h2wF/canyin/list" target="_blank">戈公 </a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>缅甸</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXShnwF/canyin/list" target="_blank">仰光</a>
+                                            <a  href="http://place.mxtrip.cn/kWX7hFGF/canyin/list" target="_blank">蒲甘</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6gngF/canyin/list" target="_blank">曼德勒  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6gnwF/canyin/list" target="_blank">内比都  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6gFXF/canyin/list" target="_blank">眉谬  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6gFoF/canyin/list" target="_blank">良瑞</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6gFGF/canyin/list" target="_blank">勃固  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6g2gF/canyin/list" target="_blank">东枝  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6g2wF/canyin/list" target="_blank">丹老  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo6hWXF/canyin/list" target="_blank">卡劳  </a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>马来西亚</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXShFGF/canyin/list" target="_blank">吉隆坡</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSh2wF/canyin/list" target="_blank">亚庇</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSiWXF/canyin/list" target="_blank">兰卡威</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSiWoF/canyin/list" target="_blank">槟城</a>
+                                            <a  href="http://place.mxtrip.cn/kWXSiWGF/canyin/list" target="_blank">仙本那</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6hFoF/canyin/list" target="_blank">沙巴</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2gWGF/canyin/list" target="_blank">哥打巴鲁</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2gFoF/canyin/list" target="_blank">热浪岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2hWGF/canyin/list" target="_blank">马六甲</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8gFXF/canyin/list" target="_blank">新山</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8gFoF/canyin/list" target="_blank">怡保</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8gFGF/canyin/list" target="_blank">山打根</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8g2gF/canyin/list" target="_blank">瓜拉登嘉楼</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8g2wF/canyin/list" target="_blank">关丹</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8hWXF/canyin/list" target="_blank">八打灵再也</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8hWoF/canyin/list" target="_blank">古晋</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8hWGF/canyin/list" target="_blank">美里</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8hngF/canyin/list" target="_blank">巴生</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8hnwF/canyin/list" target="_blank">斗湖</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8hFXF/canyin/list" target="_blank">丰盛港 </a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>印尼</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXSinwF/canyin/list" target="_blank">雅加达</a>
+                                            <a  href="http://place.mxtrip.cn/kWXTgWXF/canyin/list" target="_blank">爪哇岛</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWXTgWoF/canyin/list" target="_blank">巴厘岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWXTgWGF/canyin/list" target="_blank">日惹</a>
+                                            <a  href="http://place.mxtrip.cn/kWXTgngF/canyin/list" target="_blank">民丹岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWX8gnwF/canyin/list" target="_blank">蓝梦岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWsShngF/canyin/list" target="_blank">登巴萨</a>
+                                            <a  href="http://place.mxtrip.cn/kWsShnwF/canyin/list" target="_blank">万隆</a>
+                                            <a  href="http://place.mxtrip.cn/kWsShFXF/canyin/list" target="_blank">泗水</a>
+                                            <a  href="http://place.mxtrip.cn/kWsShFoF/canyin/list" target="_blank">棉兰</a>
+                                            <a  href="http://place.mxtrip.cn/kWsShFGF/canyin/list" target="_blank">乌布</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSh2gF/canyin/list" target="_blank">库塔</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSh2wF/canyin/list" target="_blank">玛琅</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSiWXF/canyin/list" target="_blank">沙努尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSiWoF/canyin/list" target="_blank">巴厘巴板</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSiWGF/canyin/list" target="_blank">金巴兰</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSingF/canyin/list" target="_blank">巴东</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSinwF/canyin/list" target="_blank">万鸦老</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTgWXF/canyin/list" target="_blank">龙目岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTgWoF/canyin/list" target="_blank">巴淡岛</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>菲律宾</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXTgFoF/canyin/list" target="_blank">马尼拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWXThWXF/canyin/list" target="_blank">薄荷岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWXThWoF/canyin/list" target="_blank">巴拉望</a>
+                                            <a  href="http://place.mxtrip.cn/kWXThWGF/canyin/list" target="_blank">宿雾</a>
+                                            <a  href="http://place.mxtrip.cn/kWX3gWXF/canyin/list" target="_blank">长滩岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWX7hWXF/canyin/list" target="_blank">杜马盖地</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2gWXF/canyin/list" target="_blank">公主港</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2gFGF/canyin/list" target="_blank">爱妮岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8hFoF/canyin/list" target="_blank">达沃</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8hFGF/canyin/list" target="_blank">邦劳</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8h2gF/canyin/list" target="_blank">马卡蒂</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8h2wF/canyin/list" target="_blank">科隆</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8iWXF/canyin/list" target="_blank">碧瑶</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8iWoF/canyin/list" target="_blank">锡基霍尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8iWGF/canyin/list" target="_blank">克拉克</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8ingF/canyin/list" target="_blank">黎牙实比</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8inwF/canyin/list" target="_blank">安吉利斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSgWXF/canyin/list" target="_blank">拉瓦格</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSgWoF/canyin/list" target="_blank">维甘</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSgWGF/canyin/list" target="_blank">栋索尔</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>马尔代夫</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXThnwF/canyin/list" target="_blank">马尔代夫</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>斯里兰卡</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXThFoF/canyin/list" target="_blank">科伦坡</a>
+                                            <a  href="http://place.mxtrip.cn/kWXTh2gF/canyin/list" target="_blank">康提</a>
+                                            <a  href="http://place.mxtrip.cn/kWXTh2wF/canyin/list" target="_blank">尼甘布</a>
+                                            <a  href="http://place.mxtrip.cn/kWX8gFoF/canyin/list" target="_blank">挪日利亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5gFGF/canyin/list" target="_blank">加勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gWZF/canyin/list" target="_blank">美蕊沙</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gWoF/canyin/list" target="_blank">丹布勒 </a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gW0F/canyin/list" target="_blank">乌纳瓦图纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gnCF/canyin/list" target="_blank">阿努拉德普勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gnXF/canyin/list" target="_blank">蒂瑟默哈拉默</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gngF/canyin/list" target="_blank">亭可马里</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gnsF/canyin/list" target="_blank">马特勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gnGF/canyin/list" target="_blank">波隆纳鲁沃</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gFZF/canyin/list" target="_blank">贾夫纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gFoF/canyin/list" target="_blank">瓦勒迦玛</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2gFwF/canyin/list" target="_blank">埃勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2g2CF/canyin/list" target="_blank">马特莱</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2g2gF/canyin/list" target="_blank">锡吉里耶 </a>
+                                            <a  href="http://place.mxtrip.cn/kWs2g2sF/canyin/list" target="_blank">坦加勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2g20F/canyin/list" target="_blank">本托特</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>尼泊尔</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXTiWGF/canyin/list" target="_blank">加德满都</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5gFXF/canyin/list" target="_blank">博卡拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5gFoF/canyin/list" target="_blank">蓝毗尼</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUg2wF/canyin/list" target="_blank">帕坦</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUhngF/canyin/list" target="_blank">纳加阔特</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUhFXF/canyin/list" target="_blank">本迪布尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUhFoF/canyin/list" target="_blank">苏拉哈</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUh2gF/canyin/list" target="_blank">巴德岗</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUh2wF/canyin/list" target="_blank">卢卡拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUiWXF/canyin/list" target="_blank">南池市场</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>土耳其</dt>
+                                        <dd>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWXUgWoF/canyin/list" target="_blank">伊斯坦布尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWXUgWGF/canyin/list" target="_blank">安塔利亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWX8gWoF/canyin/list" target="_blank">棉花堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5g2gF/canyin/list" target="_blank">格雷梅</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5g2wF/canyin/list" target="_blank">阿瓦诺斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSg2gF/canyin/list" target="_blank">伊兹密尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWsSg2wF/canyin/list" target="_blank">费特希耶</a>
+                                            <a  href="http://place.mxtrip.cn/kWsShWXF/canyin/list" target="_blank">安卡拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWsShWoF/canyin/list" target="_blank">厄吕代尼兹</a>
+                                            <a  href="http://place.mxtrip.cn/kWsShWGF/canyin/list" target="_blank">番红花城</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>卡塔尔</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXUgnwF/canyin/list" target="_blank">多哈</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gWoF/canyin/list" target="_blank">豪尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gWsF/canyin/list" target="_blank">赖扬</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gWwF/canyin/list" target="_blank">朱迈利耶</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gnCF/canyin/list" target="_blank">古韦里耶</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>阿联酋</dt>
+                                        <dd>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWXUgFoF/canyin/list" target="_blank">迪拜</a>
+                                            <a  href="http://place.mxtrip.cn/kWXUgFGF/canyin/list" target="_blank">阿布扎比</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUgngF/canyin/list" target="_blank">沙迦</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUgFXF/canyin/list" target="_blank">艾恩</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUg2gF/canyin/list" target="_blank">阿吉曼</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUhWXF/canyin/list" target="_blank">拉斯海马</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUhWoF/canyin/list" target="_blank">富吉拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUhWGF/canyin/list" target="_blank">乌姆盖万</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUhnwF/canyin/list" target="_blank">利瓦绿洲</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUhFGF/canyin/list" target="_blank">赫达</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>沙特</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX7ingF/canyin/list" target="_blank">利雅得</a>
+                                            <a  href="http://place.mxtrip.cn/kWX8gWXF/canyin/list" target="_blank">麦加</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUgnwF/canyin/list" target="_blank">吉达</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUgFoF/canyin/list" target="_blank">塔伊夫</a>
+                                            <a  href="http://place.mxtrip.cn/kWsUgFGF/canyin/list" target="_blank">麦地那</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>以色列</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg6hnwF/canyin/list" target="_blank">耶路撒冷</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6hFXF/canyin/list" target="_blank">特拉维夫</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6hFoF/canyin/list" target="_blank">海法</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6hFGF/canyin/list" target="_blank">拿撒勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6h2gF/canyin/list" target="_blank">拉姆拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6h2wF/canyin/list" target="_blank">埃拉特</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6iWXF/canyin/list" target="_blank">阿卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6iWoF/canyin/list" target="_blank">凯萨莉亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gngF/canyin/list" target="_blank">提比里亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gnoF/canyin/list" target="_blank">内坦亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gn0F/canyin/list" target="_blank">采法特</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gFXF/canyin/list" target="_blank">纳哈里亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gFkF/canyin/list" target="_blank">米茨佩拉蒙</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gFsF/canyin/list" target="_blank">贝尔谢巴</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gFwF/canyin/list" target="_blank">罗什平纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3gFGF/canyin/list" target="_blank">马萨达</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3g2XF/canyin/list" target="_blank">恩戈地 </a>
+                                            <a  href="http://place.mxtrip.cn/kWs3g2ZF/canyin/list" target="_blank">贝特谢安</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3g2gF/canyin/list" target="_blank">里雄莱锡安</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3g2oF/canyin/list" target="_blank">卡法萨巴</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="area-mod">
+                                <div class="area-hd">
+                                    <a href="http://place.mxtrip.cn/c1_kWoF#place_nav" target="_blank">
+                                        <img src="img/Europe_2x.png" alt="欧洲">
+                                    </a>
+                                </div>
+                                <div class="area-bd">
+                                    <dl>
+                                        <dt>比利时</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX2gWGF/canyin/list" target="_blank">布鲁塞尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2gngF/canyin/list" target="_blank">布鲁日</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTiWoF/canyin/list" target="_blank">安特卫普</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTiWGF/canyin/list" target="_blank">根特</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTingF/canyin/list" target="_blank">鲁汶</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTinwF/canyin/list" target="_blank">列日</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUgWXF/canyin/list" target="_blank">那慕尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUgWoF/canyin/list" target="_blank">迪南</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUgWGF/canyin/list" target="_blank">奥斯坦德</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUgngF/canyin/list" target="_blank">图尔奈</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUgnwF/canyin/list" target="_blank">滑铁卢</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUgFXF/canyin/list" target="_blank">休伊</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUgFoF/canyin/list" target="_blank">斯帕</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUgFGF/canyin/list" target="_blank">梅赫伦</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUg2gF/canyin/list" target="_blank">沙勒罗瓦</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUg2wF/canyin/list" target="_blank">哈瑟尔特</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>德国</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX2g2gF/canyin/list" target="_blank">慕尼黑</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2g2wF/canyin/list" target="_blank">法兰克福</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWX2hWXF/canyin/list" target="_blank">柏林</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2hWoF/canyin/list" target="_blank">科隆</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2hWGF/canyin/list" target="_blank">汉堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3gFGF/canyin/list" target="_blank">福森</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3g2gF/canyin/list" target="_blank">海德堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3g2wF/canyin/list" target="_blank">斯图加特</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3hWXF/canyin/list" target="_blank">德累斯顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3hWoF/canyin/list" target="_blank">波恩</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3hWGF/canyin/list" target="_blank">纽伦堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3hngF/canyin/list" target="_blank">杜塞尔多夫</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3hnwF/canyin/list" target="_blank">罗腾堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3hFXF/canyin/list" target="_blank">巴登-巴登</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3hFoF/canyin/list" target="_blank">波茨坦</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8g2gF/canyin/list" target="_blank">贝希特斯加登 </a>
+                                            <a  href="http://place.mxtrip.cn/kWk8g2wF/canyin/list" target="_blank">维尔茨堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8hWXF/canyin/list" target="_blank">汉诺威</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8hWoF/canyin/list" target="_blank">不莱梅</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8hWGF/canyin/list" target="_blank">亚琛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8hngF/canyin/list" target="_blank">弗莱堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8hnwF/canyin/list" target="_blank">莱比锡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8hFXF/canyin/list" target="_blank">美因茨</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8hFoF/canyin/list" target="_blank">班贝格</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8hFGF/canyin/list" target="_blank">多特蒙德</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>俄罗斯</dt>
+                                        <dd>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWX2hnwF/canyin/list" target="_blank">莫斯科</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2hFXF/canyin/list" target="_blank">圣彼得堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2hFoF/canyin/list" target="_blank">海参崴</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4gWGF/canyin/list" target="_blank">伏尔加格勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4gngF/canyin/list" target="_blank">伊尔库茨克</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4gnwF/canyin/list" target="_blank">喀山</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4gFXF/canyin/list" target="_blank">叶卡捷琳堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4gFoF/canyin/list" target="_blank">新西伯利亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4gFGF/canyin/list" target="_blank">加里宁格勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4g2gF/canyin/list" target="_blank">克拉斯诺达尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4g2wF/canyin/list" target="_blank">弗拉基米尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4hWXF/canyin/list" target="_blank">苏兹达尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4hWoF/canyin/list" target="_blank">谢尔盖耶夫</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4hWGF/canyin/list" target="_blank">摩尔曼斯克</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4hngF/canyin/list" target="_blank">利斯特维扬卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4hnwF/canyin/list" target="_blank">海兰泡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4hFXF/canyin/list" target="_blank">阿纳帕</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4hFoF/canyin/list" target="_blank">基洛夫</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>法国</dt>
+                                        <dd>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWX2h2gF/canyin/list" target="_blank">巴黎</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2h2wF/canyin/list" target="_blank">尼斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2iWoF/canyin/list" target="_blank">马赛</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2iWGF/canyin/list" target="_blank">里昂</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2ingF/canyin/list" target="_blank">戛纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2inwF/canyin/list" target="_blank">普罗旺斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2gngF/canyin/list" target="_blank">斯特拉斯堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2gFXF/canyin/list" target="_blank">波尔多</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2g2gF/canyin/list" target="_blank">第戎</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2hWXF/canyin/list" target="_blank">阿维尼翁</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2hWoF/canyin/list" target="_blank">阿讷西</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3hFGF/canyin/list" target="_blank">凡尔赛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3h2gF/canyin/list" target="_blank">阿尔勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3h2wF/canyin/list" target="_blank">夏蒙尼</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3iWXF/canyin/list" target="_blank">圣马洛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3iWoF/canyin/list" target="_blank">图卢兹</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3iWGF/canyin/list" target="_blank">里尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3ingF/canyin/list" target="_blank">南特</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3inwF/canyin/list" target="_blank">蒙彼利埃</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4gWXF/canyin/list" target="_blank">枫丹白露</a>
+                                            <a  href="http://place.mxtrip.cn/kWk4gWoF/canyin/list" target="_blank">依云</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7h2wF/canyin/list" target="_blank">埃兹</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7iWXF/canyin/list" target="_blank">格拉斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7iWoF/canyin/list" target="_blank">尼姆</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUhWXF/canyin/list" target="_blank">鲁西永</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>荷兰</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX3gFoF/canyin/list" target="_blank">阿姆斯特丹</a>
+                                            <a  href="http://place.mxtrip.cn/kWX3g2wF/canyin/list" target="_blank">鹿特丹</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5hngF/canyin/list" target="_blank">海牙</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5hnwF/canyin/list" target="_blank">羊角村</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2gWGF/canyin/list" target="_blank">乌得勒支</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2gngF/canyin/list" target="_blank">代尔夫特</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2gnwF/canyin/list" target="_blank">马斯特里赫特</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2gFXF/canyin/list" target="_blank">莱顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2gFoF/canyin/list" target="_blank">埃因霍温</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2gFGF/canyin/list" target="_blank">鲁尔蒙德</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2g2gF/canyin/list" target="_blank">赞丹</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2g2wF/canyin/list" target="_blank">兹沃勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2hWXF/canyin/list" target="_blank">霍伦</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2hWoF/canyin/list" target="_blank">格罗宁根</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2hWGF/canyin/list" target="_blank">福伦丹</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>葡萄牙</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX4iWXF/canyin/list" target="_blank">里斯本</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4iWGF/canyin/list" target="_blank">波尔图</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4inwF/canyin/list" target="_blank">法鲁</a>
+                                            <a  href="http://place.mxtrip.cn/kWk5iWGF/canyin/list" target="_blank">辛特拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWk5ingF/canyin/list" target="_blank">卡斯凯什</a>
+                                            <a  href="http://place.mxtrip.cn/kWk5inwF/canyin/list" target="_blank">科英布拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6gWXF/canyin/list" target="_blank">埃武拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6gWoF/canyin/list" target="_blank">布拉加</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6gWGF/canyin/list" target="_blank">拉各斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6gngF/canyin/list" target="_blank">阿威罗</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6gnwF/canyin/list" target="_blank">丰沙尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6gFXF/canyin/list" target="_blank">阿尔布费拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6gFoF/canyin/list" target="_blank">波尔蒂芒</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6gFGF/canyin/list" target="_blank">塔布阿苏</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6g2gF/canyin/list" target="_blank">维亚纳堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6g2wF/canyin/list" target="_blank">奥比都斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6hWXF/canyin/list" target="_blank">巴塔利亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6hWoF/canyin/list" target="_blank">托马尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6hWGF/canyin/list" target="_blank">阿尔科巴萨</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6hngF/canyin/list" target="_blank">萨格里斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6hnwF/canyin/list" target="_blank">吉马良斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6hFXF/canyin/list" target="_blank">法蒂玛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6hFoF/canyin/list" target="_blank">塔维拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6hFGF/canyin/list" target="_blank">巴塞卢什</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>瑞士</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX5gWoF/canyin/list" target="_blank">苏黎世</a>
+                                            <a  href="http://place.mxtrip.cn/kWX5gWGF/canyin/list" target="_blank">日内瓦</a>
+                                            <a  href="http://place.mxtrip.cn/kWX5gngF/canyin/list" target="_blank">卢塞恩</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5hFXF/canyin/list" target="_blank">因特拉肯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6h2gF/canyin/list" target="_blank">伯尔尼</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6h2wF/canyin/list" target="_blank">洛桑</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6iWXF/canyin/list" target="_blank">蒙特勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6iWoF/canyin/list" target="_blank">巴塞尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6iWGF/canyin/list" target="_blank">采尔马特</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6ingF/canyin/list" target="_blank">施皮茨</a>
+                                            <a  href="http://place.mxtrip.cn/kWk6inwF/canyin/list" target="_blank">格林德瓦</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7gWXF/canyin/list" target="_blank">萨能</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7gWoF/canyin/list" target="_blank">萨斯费</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7gWGF/canyin/list" target="_blank">文根</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7gngF/canyin/list" target="_blank">蓬特雷西纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7gnwF/canyin/list" target="_blank">阿罗萨</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7gFXF/canyin/list" target="_blank">贝特默阿尔卑</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7gFoF/canyin/list" target="_blank">劳特布龙嫩</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7gFGF/canyin/list" target="_blank">米伦</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7g2gF/canyin/list" target="_blank">恩格尔贝格</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7g2wF/canyin/list" target="_blank">卢加诺</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7hWXF/canyin/list" target="_blank">沙夫豪森</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7hWoF/canyin/list" target="_blank">图恩</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7hWGF/canyin/list" target="_blank">圣加仑</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7hngF/canyin/list" target="_blank">沃韦</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7hnwF/canyin/list" target="_blank">圣莫里茨</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7hFXF/canyin/list" target="_blank">达沃斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7hFoF/canyin/list" target="_blank">弗里堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7hFGF/canyin/list" target="_blank">布里恩茨</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7h2gF/canyin/list" target="_blank">温特图尔</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>西班牙</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX5gFXF/canyin/list" target="_blank">马德里</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWX5gFoF/canyin/list" target="_blank">巴塞罗那</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5h2gF/canyin/list" target="_blank">塞维利亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5h2wF/canyin/list" target="_blank">格拉纳达</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8h2gF/canyin/list" target="_blank">托莱多</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8h2wF/canyin/list" target="_blank">塞哥维亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8iWXF/canyin/list" target="_blank">瓦伦西亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8iWoF/canyin/list" target="_blank">龙达</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8iWGF/canyin/list" target="_blank">科尔多瓦</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8ingF/canyin/list" target="_blank">马拉加</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8inwF/canyin/list" target="_blank">萨拉曼卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSgWXF/canyin/list" target="_blank">萨拉戈萨</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSgWoF/canyin/list" target="_blank">毕尔巴鄂</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSgWGF/canyin/list" target="_blank">阿维拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSgngF/canyin/list" target="_blank">马洛卡帕尔马</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSgnwF/canyin/list" target="_blank">卡尔维亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSgFXF/canyin/list" target="_blank">圣塞瓦斯蒂安</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSgFoF/canyin/list" target="_blank">特内里费岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSgFGF/canyin/list" target="_blank">马斯帕洛马斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSg2gF/canyin/list" target="_blank">拉斯帕尔马斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSg2wF/canyin/list" target="_blank">圣地亚哥-德孔波斯特拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWoShWXF/canyin/list" target="_blank">阿利坎特</a>
+                                            <a  href="http://place.mxtrip.cn/kWoShWoF/canyin/list" target="_blank">加的斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoShWGF/canyin/list" target="_blank">卢戈</a>
+                                            <a  href="http://place.mxtrip.cn/kWoShngF/canyin/list" target="_blank">锡切斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoShnwF/canyin/list" target="_blank">塔拉戈纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWoShFXF/canyin/list" target="_blank">昆卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWoShFoF/canyin/list" target="_blank">贝尼多姆</a>
+                                            <a  href="http://place.mxtrip.cn/kWoShFGF/canyin/list" target="_blank">利亚内斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSh2gF/canyin/list" target="_blank">马贝拉</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>希腊</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX5hWXF/canyin/list" target="_blank">雅典</a>
+                                            <a  href="http://place.mxtrip.cn/kWX5hWGF/canyin/list" target="_blank">圣托里尼</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUhWoF/canyin/list" target="_blank">奥林匹亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUhWGF/canyin/list" target="_blank">德尔斐</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUhngF/canyin/list" target="_blank">伊拉克利翁</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUhnwF/canyin/list" target="_blank">帕罗斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUhFXF/canyin/list" target="_blank">迈泰奥拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUhFoF/canyin/list" target="_blank">比雷埃夫斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUhFGF/canyin/list" target="_blank">干尼亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUh2gF/canyin/list" target="_blank">纳夫普利翁</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUh2wF/canyin/list" target="_blank">雷斯蒙</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUiWXF/canyin/list" target="_blank">纳克索斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUiWoF/canyin/list" target="_blank">普雷韦扎</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUiWGF/canyin/list" target="_blank">扎金索斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUingF/canyin/list" target="_blank">塞萨洛尼基</a>
+                                            <a  href="http://place.mxtrip.cn/kWoUinwF/canyin/list" target="_blank">克里特岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2gWXF/canyin/list" target="_blank">米科诺斯岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2gWoF/canyin/list" target="_blank">罗得岛</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>意大利</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX5iWGF/canyin/list" target="_blank">罗马</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWX5ingF/canyin/list" target="_blank">威尼斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWX5inwF/canyin/list" target="_blank">米兰</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWX6gWoF/canyin/list" target="_blank">佛罗伦萨</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6gWGF/canyin/list" target="_blank">比萨</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2hFGF/canyin/list" target="_blank">那不勒斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2h2gF/canyin/list" target="_blank">维罗纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2h2wF/canyin/list" target="_blank">热那亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2iWXF/canyin/list" target="_blank">锡耶纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2iWoF/canyin/list" target="_blank">博洛尼亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3gngF/canyin/list" target="_blank">都灵</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3gnwF/canyin/list" target="_blank">西西里岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3gFXF/canyin/list" target="_blank">阿马尔菲</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3gFoF/canyin/list" target="_blank">卢卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7iWGF/canyin/list" target="_blank">五渔村</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7ingF/canyin/list" target="_blank">庞贝</a>
+                                            <a  href="http://place.mxtrip.cn/kWk7inwF/canyin/list" target="_blank">科莫</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8gWXF/canyin/list" target="_blank">索伦托</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8gWoF/canyin/list" target="_blank">拉斯佩齐亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8gWGF/canyin/list" target="_blank">圣吉米尼亚诺</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8gngF/canyin/list" target="_blank">陶尔米纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8gnwF/canyin/list" target="_blank">撒丁岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8gFXF/canyin/list" target="_blank">巴勒莫</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8gFoF/canyin/list" target="_blank">卡普里岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWk8gFGF/canyin/list" target="_blank">卡塔尼亚</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>英国</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX6gFXF/canyin/list" target="_blank">伦敦</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6gFGF/canyin/list" target="_blank">剑桥</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6g2gF/canyin/list" target="_blank">牛津</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6g2wF/canyin/list" target="_blank">曼彻斯特</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6hWXF/canyin/list" target="_blank">约克</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6hWoF/canyin/list" target="_blank">巴斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5hFoF/canyin/list" target="_blank">爱丁堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5hFGF/canyin/list" target="_blank">贝尔法斯特</a>
+                                            <a  href="http://place.mxtrip.cn/kWkTiWoF/canyin/list" target="_blank">伯明翰</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2hngF/canyin/list" target="_blank">利物浦</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2hnwF/canyin/list" target="_blank">格拉斯哥</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2hFXF/canyin/list" target="_blank">布莱顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2hFoF/canyin/list" target="_blank">英国湖区</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2iWGF/canyin/list" target="_blank">诺丁汉</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2ingF/canyin/list" target="_blank">利兹</a>
+                                            <a  href="http://place.mxtrip.cn/kWk2inwF/canyin/list" target="_blank">谢菲尔德</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3gWXF/canyin/list" target="_blank">纽卡斯尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3gWoF/canyin/list" target="_blank">南安普顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWk3gWGF/canyin/list" target="_blank">布里斯托</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>丹麦</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWZ6gnwF/canyin/list" target="_blank">哥本哈根</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3iWoF/canyin/list" target="_blank">赫尔辛格</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3iWGF/canyin/list" target="_blank">欧登塞</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3ingF/canyin/list" target="_blank">奥胡斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3inwF/canyin/list" target="_blank">奥尔堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4gWXF/canyin/list" target="_blank">比隆</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4gWoF/canyin/list" target="_blank">罗斯基勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4gWGF/canyin/list" target="_blank">斯卡恩</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4gngF/canyin/list" target="_blank">海宁</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4gnwF/canyin/list" target="_blank">腓特烈港</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>芬兰</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg5ingF/canyin/list" target="_blank">赫尔辛基</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4gFXF/canyin/list" target="_blank">罗瓦涅米</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4gFoF/canyin/list" target="_blank">图尔库</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4gFGF/canyin/list" target="_blank">凯米</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4g2gF/canyin/list" target="_blank">坦佩雷</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4g2wF/canyin/list" target="_blank">奥卢</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4hWXF/canyin/list" target="_blank">伊纳里</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4hWoF/canyin/list" target="_blank">埃斯波</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4hWGF/canyin/list" target="_blank">库奥皮奥</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4hngF/canyin/list" target="_blank">拉彭兰塔</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>瑞典</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg6gngF/canyin/list" target="_blank">斯德哥尔摩</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6gnwF/canyin/list" target="_blank">哥德堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4hnwF/canyin/list" target="_blank">马尔默</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4hFXF/canyin/list" target="_blank">阿比斯库</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4hFoF/canyin/list" target="_blank">赫尔辛堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4hFGF/canyin/list" target="_blank">乌普萨拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4h2gF/canyin/list" target="_blank">隆德</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4h2wF/canyin/list" target="_blank">林雪平</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4iWXF/canyin/list" target="_blank">延雪平</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4iWoF/canyin/list" target="_blank">厄勒布鲁</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>挪威</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg6gWXF/canyin/list" target="_blank">奥斯陆</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6gWoF/canyin/list" target="_blank">卑尔根</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6gWGF/canyin/list" target="_blank">斯塔万格</a>
+                                            <a  href="http://place.mxtrip.cn/kWo4iWGF/canyin/list" target="_blank">弗洛姆  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo4ingF/canyin/list" target="_blank">特罗姆瑟 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo4inwF/canyin/list" target="_blank">特隆赫姆</a>
+                                            <a  href="http://place.mxtrip.cn/kWo5gWXF/canyin/list" target="_blank">博德</a>
+                                            <a  href="http://place.mxtrip.cn/kWo5gWoF/canyin/list" target="_blank">克里斯蒂安桑</a>
+                                            <a  href="http://place.mxtrip.cn/kWo5gWGF/canyin/list" target="_blank">罗弗敦群岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWo5gngF/canyin/list" target="_blank">沃斯  </a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>冰岛</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg5iWGF/canyin/list" target="_blank">雷克雅未克</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3hWGF/canyin/list" target="_blank">维克</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3hngF/canyin/list" target="_blank">阿克雷里</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3hnwF/canyin/list" target="_blank">赫本</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3hFXF/canyin/list" target="_blank">米湖</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3hFoF/canyin/list" target="_blank">凯夫拉维克</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3hFGF/canyin/list" target="_blank">胡萨维克</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3h2gF/canyin/list" target="_blank">埃伊尔斯塔济</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3h2wF/canyin/list" target="_blank">斯蒂基斯霍尔米</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3iWXF/canyin/list" target="_blank">伊萨菲厄泽</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>捷克</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg5inwF/canyin/list" target="_blank">布拉格</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSh2wF/canyin/list" target="_blank">克鲁姆洛夫</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSiWXF/canyin/list" target="_blank">卡罗维发利</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSiWoF/canyin/list" target="_blank">库特纳霍拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSiWGF/canyin/list" target="_blank">捷克布杰约维采</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSingF/canyin/list" target="_blank">布尔诺</a>
+                                            <a  href="http://place.mxtrip.cn/kWoSinwF/canyin/list" target="_blank">比尔森</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTgWXF/canyin/list" target="_blank">玛丽亚温泉市</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTgWoF/canyin/list" target="_blank">泰尔奇</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTgWGF/canyin/list" target="_blank">奥洛穆茨</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTgngF/canyin/list" target="_blank">俄斯特拉发</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTgnwF/canyin/list" target="_blank">利贝雷茨</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>匈牙利</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg6gFXF/canyin/list" target="_blank">布达佩斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTgFXF/canyin/list" target="_blank">圣安德烈</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTgFoF/canyin/list" target="_blank">佩奇</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTgFGF/canyin/list" target="_blank">埃格尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTg2gF/canyin/list" target="_blank">埃斯泰尔戈姆</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTg2wF/canyin/list" target="_blank">蒂豪尼</a>
+                                            <a  href="http://place.mxtrip.cn/kWoThWXF/canyin/list" target="_blank">杰尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWoThWoF/canyin/list" target="_blank">塞格德</a>
+                                            <a  href="http://place.mxtrip.cn/kWoThWGF/canyin/list" target="_blank">德布勒森</a>
+                                            <a  href="http://place.mxtrip.cn/kWoThngF/canyin/list" target="_blank">米什科尔茨</a>
+                                            <a  href="http://place.mxtrip.cn/kWoThnwF/canyin/list" target="_blank">维谢格拉德</a>
+                                            <a  href="http://place.mxtrip.cn/kWoThFXF/canyin/list" target="_blank">黑维兹</a>
+                                            <a  href="http://place.mxtrip.cn/kWoThFoF/canyin/list" target="_blank">希欧福克</a>
+                                            <a  href="http://place.mxtrip.cn/kWoThFGF/canyin/list" target="_blank">托考伊</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTh2gF/canyin/list" target="_blank">凯奇凯梅特</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTh2wF/canyin/list" target="_blank">豪伊杜索博斯洛</a>
+                                            <a  href="http://place.mxtrip.cn/kWoTiWXF/canyin/list" target="_blank">巴拉顿菲赖德</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>奥地利</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg5iWXF/canyin/list" target="_blank">维也纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWg5iWoF/canyin/list" target="_blank">萨尔茨堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2hngF/canyin/list" target="_blank">哈尔施塔特</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2hnwF/canyin/list" target="_blank">因斯布鲁克</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2hFXF/canyin/list" target="_blank">林茨</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2hFoF/canyin/list" target="_blank">巴德伊舍</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2hFGF/canyin/list" target="_blank">圣沃尔夫冈</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2h2gF/canyin/list" target="_blank">格拉茨</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2h2wF/canyin/list" target="_blank">梅尔克</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2iWXF/canyin/list" target="_blank">格蒙登</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2iWoF/canyin/list" target="_blank">圣吉尔根</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2iWGF/canyin/list" target="_blank">克拉根福</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2ingF/canyin/list" target="_blank">菲拉赫</a>
+                                            <a  href="http://place.mxtrip.cn/kWo2inwF/canyin/list" target="_blank">施拉德明</a>
+                                            <a  href="http://place.mxtrip.cn/kWo3gWXF/canyin/list" target="_blank">施瓦茨</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>爱尔兰</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg5hWGF/canyin/list" target="_blank">都柏林</a>
+                                            <a  href="http://place.mxtrip.cn/kWo5gnwF/canyin/list" target="_blank">科克 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5gFXF/canyin/list" target="_blank">高威  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5gFoF/canyin/list" target="_blank">基拉尼 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5gFGF/canyin/list" target="_blank">丁格尔  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5g2gF/canyin/list" target="_blank">沃特福德  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5g2wF/canyin/list" target="_blank">基尔根尼  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5hWXF/canyin/list" target="_blank">利默里克 </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5hWoF/canyin/list" target="_blank">威克洛郡  </a>
+                                            <a  href="http://place.mxtrip.cn/kWo5hWGF/canyin/list" target="_blank">布雷 </a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="area-mod">
+                                <div class="area-hd">
+                                    <a href="http://place.mxtrip.cn/c1_kWGF#place_nav" target="_blank">
+                                        <img src="img/Africa_2x.png" alt="非洲">
+                                    </a>
+                                </div>
+                                <div class="area-bd">
+                                    <dl>
+                                        <dt>埃及</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXUhngF/canyin/list" target="_blank">开罗</a>
+                                            <a  href="http://place.mxtrip.cn/kWXUhnwF/canyin/list" target="_blank">亚历山大</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6hWXF/canyin/list" target="_blank">阿斯旺</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6hWoF/canyin/list" target="_blank">卢克索</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hFZF/canyin/list" target="_blank">赫尔格达</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hFoF/canyin/list" target="_blank">沙姆沙伊赫</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hFwF/canyin/list" target="_blank">达哈卜</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hFGF/canyin/list" target="_blank">努韦巴</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2h2XF/canyin/list" target="_blank">苏伊士</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2h2ZF/canyin/list" target="_blank">马特鲁</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2h2kF/canyin/list" target="_blank">塔巴</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2h2wF/canyin/list" target="_blank">吉萨</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2h2GF/canyin/list" target="_blank">阿莱姆港 </a>
+                                            <a  href="http://place.mxtrip.cn/kWs2iWZF/canyin/list" target="_blank">塞得港</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2iWoF/canyin/list" target="_blank">伊斯梅利亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2iWwF/canyin/list" target="_blank">法尤姆</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2iWGF/canyin/list" target="_blank">萨法加</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2inXF/canyin/list" target="_blank">西奈山</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2inZF/canyin/list" target="_blank">锡瓦绿洲</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2inoF/canyin/list" target="_blank">古赛尔</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>肯尼亚</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX3hFGF/canyin/list" target="_blank">内罗毕</a>
+                                            <a  href="http://place.mxtrip.cn/kWX7hWGF/canyin/list" target="_blank">马赛马拉</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>毛里求斯</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWZ6gWXF/canyin/list" target="_blank">毛里求斯</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>南非</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX4hFoF/canyin/list" target="_blank">约翰内斯堡</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4hFGF/canyin/list" target="_blank">开普敦</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>塞舌尔</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg6hWGF/canyin/list" target="_blank">维多利亚</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="area-mod">
+                                <div class="area-hd">
+                                    <a href="http://place.mxtrip.cn/c1_kWX2ZS#place_nav" target="_blank">
+                                        <img src="img/Oceania_2x.png" alt="大洋洲">
+                                    </a>
+                                </div>
+                                <div class="area-bd">
+                                    <dl>
+                                        <dt>澳大利亚</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXUhFoF/canyin/list" target="_blank">悉尼</a>
+                                            <a  href="http://place.mxtrip.cn/kWXUhFGF/canyin/list" target="_blank">墨尔本</a>
+                                            <a  href="http://place.mxtrip.cn/kWXUh2gF/canyin/list" target="_blank">凯恩斯</a>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWXUh2wF/canyin/list" target="_blank">布里斯班</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6g2gF/canyin/list" target="_blank">黄金海岸</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6h2gF/canyin/list" target="_blank">堪培拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6h2wF/canyin/list" target="_blank">珀斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6iWXF/canyin/list" target="_blank">阿德莱德</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6iWoF/canyin/list" target="_blank">霍巴特</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6iWGF/canyin/list" target="_blank">卧龙岗</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6ingF/canyin/list" target="_blank">朗塞斯顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6inwF/canyin/list" target="_blank">拜伦湾</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7gWXF/canyin/list" target="_blank">达尔文</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7gWoF/canyin/list" target="_blank">阿波罗湾</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7gWGF/canyin/list" target="_blank">蓝山</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7gngF/canyin/list" target="_blank">爱丽丝泉</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7gnwF/canyin/list" target="_blank">库兰达</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7gFXF/canyin/list" target="_blank">纽卡斯尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7gFoF/canyin/list" target="_blank">塔斯马尼亚岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7gFGF/canyin/list" target="_blank">道格拉斯港</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>大溪地</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX2gFoF/canyin/list" target="_blank">大溪地</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>新西兰</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX5hFXF/canyin/list" target="_blank">皇后镇</a>
+                                            <a  href="http://place.mxtrip.cn/kWX5h2gF/canyin/list" target="_blank">基督城</a>
+                                            <a  href="http://place.mxtrip.cn/kWX5h2wF/canyin/list" target="_blank">奥克兰</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6g2wF/canyin/list" target="_blank">罗托鲁瓦</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTgWGF/canyin/list" target="_blank">但尼丁</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTgngF/canyin/list" target="_blank">惠灵顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTgnwF/canyin/list" target="_blank">瓦纳卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTgFXF/canyin/list" target="_blank">凯库拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTgFoF/canyin/list" target="_blank">汉密尔顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTgFGF/canyin/list" target="_blank">尼尔森</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTg2gF/canyin/list" target="_blank">陶波</a>
+                                            <a  href="http://place.mxtrip.cn/kWsTg2wF/canyin/list" target="_blank">奥马鲁</a>
+                                            <a  href="http://place.mxtrip.cn/kWsThWXF/canyin/list" target="_blank">蒂卡普湖</a>
+                                            <a  href="http://place.mxtrip.cn/kWsThWoF/canyin/list" target="_blank">因弗卡吉尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWsThWGF/canyin/list" target="_blank">皮克顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWsThngF/canyin/list" target="_blank">霍基蒂卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWsThnwF/canyin/list" target="_blank">格雷茅斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWsThFXF/canyin/list" target="_blank">箭镇</a>
+                                            <a  href="http://place.mxtrip.cn/kWsThFoF/canyin/list" target="_blank">蒂阿瑙</a>
+                                            <a  href="http://place.mxtrip.cn/kWsThFGF/canyin/list" target="_blank">格林诺奇</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>帕劳</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWZ6gWoF/canyin/list" target="_blank">帕劳</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>斐济</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWZ5inwF/canyin/list" target="_blank">斐济</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="area-mod">
+                                <div class="area-hd">
+                                    <a href="http://place.mxtrip.cn/c1_kWX6ZS#place_nav" target="_blank">
+                                        <img src="img/NorthAmerica_2x.png" alt="北美洲">
+                                    </a>
+                                </div>
+                                <div class="area-bd">
+                                    <dl>
+                                        <dt>加拿大</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX3hWoF/canyin/list" target="_blank">多伦多</a>
+                                            <a  href="http://place.mxtrip.cn/kWX3hWGF/canyin/list" target="_blank">温哥华</a>
+                                            <a  href="http://place.mxtrip.cn/kWX3hngF/canyin/list" target="_blank">渥太华</a>
+                                            <a  href="http://place.mxtrip.cn/kWX3hFXF/canyin/list" target="_blank">蒙特利尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWX7hWoF/canyin/list" target="_blank">尼亚加拉瀑布城</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7hFXF/canyin/list" target="_blank">魁北克市</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7hFoF/canyin/list" target="_blank">维多利亚市</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7hFGF/canyin/list" target="_blank">卡尔加里</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7h2gF/canyin/list" target="_blank">惠斯勒</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7h2wF/canyin/list" target="_blank">埃德蒙顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7iWXF/canyin/list" target="_blank">哈利法克斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7iWoF/canyin/list" target="_blank">金斯顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7iWGF/canyin/list" target="_blank">列治文</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7ingF/canyin/list" target="_blank">温尼伯</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7inwF/canyin/list" target="_blank">基洛纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8gWXF/canyin/list" target="_blank">汉密尔顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8gWoF/canyin/list" target="_blank">萨斯卡通</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8gWGF/canyin/list" target="_blank">密西沙加</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8gngF/canyin/list" target="_blank">温莎市</a>
+                                            <a  href="http://place.mxtrip.cn/kWo8gnwF/canyin/list" target="_blank">坎莫尔</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>美国</dt>
+                                        <dd>
+                                            <a class="hot" href="http://place.mxtrip.cn/kWX3ingF/canyin/list" target="_blank">纽约</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4gWXF/canyin/list" target="_blank">旧金山</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4gWoF/canyin/list" target="_blank">洛杉矶</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4gWGF/canyin/list" target="_blank">芝加哥</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4gngF/canyin/list" target="_blank">西雅图</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4gnwF/canyin/list" target="_blank">拉斯维加斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4gFXF/canyin/list" target="_blank">奥兰多</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4gFoF/canyin/list" target="_blank">迈阿密</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4gFGF/canyin/list" target="_blank">波士顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4g2gF/canyin/list" target="_blank">费城</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4hWXF/canyin/list" target="_blank">亚特兰大</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4hWoF/canyin/list" target="_blank">圣迭戈</a>
+                                            <a  href="http://place.mxtrip.cn/kWX4hWGF/canyin/list" target="_blank">塞班</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6hFGF/canyin/list" target="_blank">华盛顿</a>
+                                            <a  href="http://place.mxtrip.cn/kWX6h2gF/canyin/list" target="_blank">夏威夷</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6gFoF/canyin/list" target="_blank">关岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6iWGF/canyin/list" target="_blank">萨克拉门托</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6ingF/canyin/list" target="_blank">弗雷斯诺</a>
+                                            <a  href="http://place.mxtrip.cn/kWg6inwF/canyin/list" target="_blank">奥克兰</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7gWXF/canyin/list" target="_blank">伯克利</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7gWoF/canyin/list" target="_blank">圣克拉拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7gWGF/canyin/list" target="_blank">圣何塞</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7gngF/canyin/list" target="_blank">桑尼维尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7gnwF/canyin/list" target="_blank">库比蒂诺</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7gFXF/canyin/list" target="_blank">帕拉阿图</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7gFoF/canyin/list" target="_blank">圣克鲁斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7gFGF/canyin/list" target="_blank">蒙特雷</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7g2gF/canyin/list" target="_blank">纳帕</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7g2wF/canyin/list" target="_blank">长滩</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7hWXF/canyin/list" target="_blank">圣莫尼卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7hWoF/canyin/list" target="_blank">帕萨迪纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7hWGF/canyin/list" target="_blank">里弗赛德</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7hngF/canyin/list" target="_blank">阿纳海姆</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7hnwF/canyin/list" target="_blank">圣安娜</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7hFXF/canyin/list" target="_blank">尔湾</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7hFoF/canyin/list" target="_blank">贝克斯菲尔德</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7hFGF/canyin/list" target="_blank">圣罗莎</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7h2gF/canyin/list" target="_blank">圣塔芭芭拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7h2wF/canyin/list" target="_blank">阿拉梅达</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7iWXF/canyin/list" target="_blank">棕榈泉</a>
+                                            <a  href="http://place.mxtrip.cn/kWg7iWoF/canyin/list" target="_blank">圣路易奥比斯波</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hnkF/canyin/list" target="_blank">盐湖城</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hnsF/canyin/list" target="_blank">卡梅尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hnGF/canyin/list" target="_blank">布法罗</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hFXF/canyin/list" target="_blank">檀香山</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>巴哈马</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWg6gFGF/canyin/list" target="_blank">拿骚</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+
+                            <div class="area-mod">
+                                <div class="area-hd">
+                                    <a href="http://place.mxtrip.cn/c1_kWZTZS#place_nav" target="_blank">
+                                        <img src="img/SouthAmerica_2x.png" alt="南美洲">
+                                    </a>
+                                </div>
+                                <div class="area-bd">
+                                    <dl>
+                                        <dt>阿根廷</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXUg2wF/canyin/list" target="_blank">布宜诺斯艾利斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWXUhWoF/canyin/list" target="_blank">科尔多瓦</a>
+                                            <a  href="http://place.mxtrip.cn/kWX7g2wF/canyin/list" target="_blank">罗萨里奥</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7g2gF/canyin/list" target="_blank">伊瓜苏港</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7g2wF/canyin/list" target="_blank">埃尔卡拉法特</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7hWXF/canyin/list" target="_blank">圣卡洛斯-德巴里洛切</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7hWoF/canyin/list" target="_blank">门多萨</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7hWGF/canyin/list" target="_blank">乌斯怀亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7hngF/canyin/list" target="_blank">厄尔查尔坦</a>
+                                            <a  href="http://place.mxtrip.cn/kWo7hnwF/canyin/list" target="_blank">卡法亚特</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>巴西</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWXUingF/canyin/list" target="_blank">圣保罗</a>
+                                            <a  href="http://place.mxtrip.cn/kWXUinwF/canyin/list" target="_blank">巴西利亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWX2gWXF/canyin/list" target="_blank">里约热内卢</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6hWoF/canyin/list" target="_blank">伊瓜苏市</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6hWGF/canyin/list" target="_blank">萨尔瓦多</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6hngF/canyin/list" target="_blank">玛瑙斯市</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6hnwF/canyin/list" target="_blank">累西腓</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6hFXF/canyin/list" target="_blank">阿雷格里港</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6hFoF/canyin/list" target="_blank">纳塔尔</a>
+                                            <a  href="http://place.mxtrip.cn/kWo6hFGF/canyin/list" target="_blank">圣路易斯</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>哥伦比亚</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX3gWGF/canyin/list" target="_blank">波哥大</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3g2wF/canyin/list" target="_blank">麦德林</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3g20F/canyin/list" target="_blank">卡塔赫纳</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3hWXF/canyin/list" target="_blank">卡利</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3hWkF/canyin/list" target="_blank">圣玛尔塔</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3hWsF/canyin/list" target="_blank">巴兰基亚</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3hW0F/canyin/list" target="_blank">佩雷拉</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3hnCF/canyin/list" target="_blank">亚美尼亚城</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3hnXF/canyin/list" target="_blank">帕斯托</a>
+                                            <a  href="http://place.mxtrip.cn/kWs3hnZF/canyin/list" target="_blank">莱蒂西亚</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>秘鲁</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX4hnwF/canyin/list" target="_blank">利马</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2g2GF/canyin/list" target="_blank">库斯科  </a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hWXF/canyin/list" target="_blank">阿雷基帕</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hWZF/canyin/list" target="_blank">普诺</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hWoF/canyin/list" target="_blank">纳斯卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hW0F/canyin/list" target="_blank">伊卡</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hWGF/canyin/list" target="_blank">马尔多纳多港</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hnCF/canyin/list" target="_blank">马丘比丘</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hnXF/canyin/list" target="_blank">乌鲁班巴</a>
+                                            <a  href="http://place.mxtrip.cn/kWs2hngF/canyin/list" target="_blank">特鲁希略</a>
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>智利</dt>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWX6hngF/canyin/list" target="_blank">圣地亚哥</a>
+                                            <a  href="http://place.mxtrip.cn/kWs4g2ZF/canyin/list" target="_blank">瓦尔帕莱索 </a>
+                                            <a  href="http://place.mxtrip.cn/kWs4g2oF/canyin/list" target="_blank">圣佩德罗德阿塔卡马</a>
+                                            <a  href="http://place.mxtrip.cn/kWs4g2sF/canyin/list" target="_blank">蓬塔阿雷纳斯</a>
+                                            <a  href="http://place.mxtrip.cn/kWs4g20F/canyin/list" target="_blank">纳塔莱斯港</a>
+                                            <a  href="http://place.mxtrip.cn/kWs4hWCF/canyin/list" target="_blank">伊基克</a>
+                                            <a  href="http://place.mxtrip.cn/kWs4hWZF/canyin/list" target="_blank">卡拉马</a>
+                                            <a  href="http://place.mxtrip.cn/kWs4hWkF/canyin/list" target="_blank">蒙特港</a>
+                                            <a  href="http://place.mxtrip.cn/kWs4hWsF/canyin/list" target="_blank">复活节岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWs4hW0F/canyin/list" target="_blank">百内国家公园</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="area-mod">
+                                <div class="area-hd">
+                                    <a href="http://place.mxtrip.cn/c1_kWZ4ZS#place_nav" target="_blank">
+                                        <img src="img/Antarctica_2x.png" alt="南极洲">
+                                    </a>
+                                </div>
+                                <div class="area-bd">
+                                    <dl>
+                                        <dd>
+                                            <a  href="http://place.mxtrip.cn/kWZ5iWGF/canyin/list" target="_blank">南极半岛</a>
+                                            <a  href="http://place.mxtrip.cn/kWZ5ingF/canyin/list" target="_blank">南设得兰群岛</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer clearfix">
+            <div class="ft-cont clearfix">
+                <div class="ft-links">
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd><a href="#">梦想旅行简介</a></dd>
+                        <dd><a href="#">关于团队</a></dd>
+                        <dd><a href="#">发展历程</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>帮助支持</dt>
+                        <dd><a href="#">意见反馈</a></dd>
+                        <dd><a href="#">联系我们</a></dd>
+                        <dd><a href="#">网站地图</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>网站条款</dt>
+                        <dd><a href="#">使用条款</a></dd>
+                        <dd><a href="#">隐私政策</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>加入我们</dt>
+                        <dd><a href="#">招聘职位</a></dd>
+                    </dl>
+                </div>
+                <dl class="follow-us">
+                    <dt>关注我们:</dt>
+                    <dd>
+                        <div id="wechat_share" style="display: none;">
+                            <img src="img/desktop_foot_share_wechat_code_2x.png" alt="">
+                        </div>
+                        <a href="javascript:;" id="ft_wechat">
+                            <img src="img/desktop_foot_share_wechat_2x.png" alt="微信公众号">
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="http://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=http%3A%2F%2Fweibo.com%2Fmxtrip&domain=.weibo.com&sudaref=http%3A%2F%2Fwww.mxtrip.cn%2F&ua=php-sso_sdk_client-0.6.16&_rand=1446035921.6235">
+                            <img src="img/desktop_foot_share_weibo_2x.png" alt="新浪微博">
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="http://qzone.qq.com/?s_url=http://user.qzone.qq.com/2935785166/main">
+                            <img src="img/desktop_foot_share_qqzone_2x.png" alt="QQ空间">
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+            <p class="copyright">
+                版权所有 ： 北京梦想智联科技有限公司 Copyright © 2015, mxtrip.cn. All rights reserved.<br/>京ICP备15012301号-1
+            </p>
+        </div>
+    </div>
+    <script>
+        $('.edit-zhongbao').mouseenter(function () {
+            $('.tips-zhongbao').css("display","block")
+        }).mouseleave(function () {
+            $('.tips-zhongbao').css("display","none")
+        });
+
+        //        wechat
+        $('#ft_wechat').click(function () {
+            $('#wechat_share').css({
+                "display":"block",
+                "opacity":"1"
+            });
+        }).mouseleave(function () {
+            $('#wechat_share').animate({
+                'opacity':'0'
+            },800,function () {
+                $(this).css("display","none")
+            })
+        });
+
+    </script>
+</body>
+</html>

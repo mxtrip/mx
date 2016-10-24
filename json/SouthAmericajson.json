@@ -1,0 +1,862 @@
+[
+  {
+    "city": "圣保罗",
+    "cityEnglishName": "Sao Paulo",
+    "country": "巴西",
+    "food": "65K",
+    "shopping": "53K",
+    "scenic": "43K",
+    "hotel": "2K",
+    "img": "a1d3884c58408bc62169fa6f9176cc99.jpeg"
+  },
+  {
+    "city": "里约热内卢",
+    "cityEnglishName": "Rio de Janeiro",
+    "country": "巴西",
+    "food": "25K",
+    "shopping": "20K",
+    "scenic": "19K",
+    "hotel": "4K",
+    "img": "f3c3da50e4372c9c1765886b94471f1d.jpeg"
+  },
+  {
+    "city": "圣地亚哥",
+    "cityEnglishName": "Santiago",
+    "country": "智利",
+    "food": "12K",
+    "shopping": "11K",
+    "scenic": "12K",
+    "hotel": "2K",
+    "img": "d1cca0868c98cf6193c9ec7210d2ea7a.jpeg"
+  },
+  {
+    "city": "布宜诺斯艾利斯",
+    "cityEnglishName": "Buenos Aires",
+    "country": "阿根廷",
+    "food": "16K",
+    "shopping": "12K",
+    "scenic": "10K",
+    "hotel": "2K",
+    "img": "a3a6203b00842d06539bc96d8a00da0e.jpeg"
+  },
+  {
+    "city": "利马",
+    "cityEnglishName": "Lima",
+    "country": "秘鲁",
+    "food": "6K",
+    "shopping": "3K",
+    "scenic": "6K",
+    "hotel": "2K",
+    "img": "50a61083ca34cf6ca38716073ff70702.jpeg"
+  },
+  {
+    "city": "巴西利亚",
+    "cityEnglishName": "Brasília",
+    "country": "巴西",
+    "food": "13K",
+    "shopping": "10K",
+    "scenic": "6K",
+    "hotel": "376",
+    "img": "7d73f5034b9e5ad1d10c2bbe5b42bc6c.jpeg"
+  },
+  {
+    "city": "波哥大",
+    "cityEnglishName": "Bogotá",
+    "country": "哥伦比亚",
+    "food": "6K",
+    "shopping": "2K",
+    "scenic": "4K",
+    "hotel": "913",
+    "img": "e0aec2639a62bc2ee96f5982f11a8847.jpeg"
+  },
+  {
+    "city": "萨尔瓦多",
+    "cityEnglishName": "Salvador",
+    "country": "巴西",
+    "food": "9K",
+    "shopping": "745",
+    "scenic": "2K",
+    "hotel": "509",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "罗萨里奥",
+    "cityEnglishName": "Rosario",
+    "country": "阿根廷",
+    "food": "2K",
+    "shopping": "3K",
+    "scenic": "2K",
+    "hotel": "196",
+    "img": "75c8bf21ec9fae321d81119154f3917c.jpeg"
+  },
+  {
+    "city": "玛瑙斯市",
+    "cityEnglishName": "Manaus ",
+    "country": "巴西",
+    "food": "4K",
+    "shopping": "446",
+    "scenic": "964",
+    "hotel": "229",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "科尔多瓦",
+    "cityEnglishName": "Córdoba",
+    "country": "阿根廷",
+    "food": "775",
+    "shopping": "679",
+    "scenic": "948",
+    "hotel": "125",
+    "img": "ab56d9ffef9583df9e5d4287ed51702a.jpeg"
+  },
+  {
+    "city": "纳塔尔",
+    "cityEnglishName": "Natal",
+    "country": "巴西",
+    "food": "3K",
+    "shopping": "392",
+    "scenic": "889",
+    "hotel": "351",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "麦德林",
+    "cityEnglishName": "Medellin",
+    "country": "哥伦比亚",
+    "food": "2K",
+    "shopping": "258",
+    "scenic": "531",
+    "hotel": "334",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "加拉加斯",
+    "cityEnglishName": "Caracas",
+    "country": "委内瑞拉",
+    "food": "766",
+    "shopping": "139",
+    "scenic": "411",
+    "hotel": "106",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "卡利",
+    "cityEnglishName": "Cali",
+    "country": "哥伦比亚",
+    "food": "974",
+    "shopping": "180",
+    "scenic": "383",
+    "hotel": "240",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "卡塔赫纳",
+    "cityEnglishName": "Cartagena",
+    "country": "哥伦比亚",
+    "food": "769",
+    "shopping": "117",
+    "scenic": "381",
+    "hotel": "399",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "瓜亚基尔",
+    "cityEnglishName": "Guayaquil",
+    "country": "厄瓜多尔",
+    "food": "548",
+    "shopping": "122",
+    "scenic": "284",
+    "hotel": "110",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "马拉开波",
+    "cityEnglishName": "Maracaibo",
+    "country": "委内瑞拉",
+    "food": "595",
+    "shopping": "206",
+    "scenic": "281",
+    "hotel": "21",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "伊瓜苏市",
+    "cityEnglishName": "Iguazu",
+    "country": "巴西",
+    "food": "2K",
+    "shopping": "64",
+    "scenic": "246",
+    "hotel": "260",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "阿雷格里港",
+    "cityEnglishName": "Porto Alegre",
+    "country": "巴西",
+    "food": "7K",
+    "shopping": "49",
+    "scenic": "221",
+    "hotel": "192",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "累西腓",
+    "cityEnglishName": "Recife",
+    "country": "巴西",
+    "food": "5K",
+    "shopping": "28",
+    "scenic": "216",
+    "hotel": "217",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "蒙得维的亚",
+    "cityEnglishName": "Montevideo",
+    "country": "乌拉圭",
+    "food": "734",
+    "shopping": "39",
+    "scenic": "200",
+    "hotel": "193",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "佩雷拉",
+    "cityEnglishName": "Pereira",
+    "country": "哥伦比亚",
+    "food": "332",
+    "shopping": "61",
+    "scenic": "199",
+    "hotel": "103",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "圣玛尔塔",
+    "cityEnglishName": "Santa Marta",
+    "country": "哥伦比亚",
+    "food": "315",
+    "shopping": "44",
+    "scenic": "176",
+    "hotel": "227",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "圣卡洛斯-德巴里洛切",
+    "cityEnglishName": " San Carlos de Bariloche ",
+    "country": "阿根廷",
+    "food": "304",
+    "shopping": "37",
+    "scenic": "168",
+    "hotel": "470",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "伊基克",
+    "cityEnglishName": "Iquique",
+    "country": "智利",
+    "food": "295",
+    "shopping": "61",
+    "scenic": "166",
+    "hotel": "94",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "巴兰基亚",
+    "cityEnglishName": "Barranquilla",
+    "country": "哥伦比亚",
+    "food": "474",
+    "shopping": "87",
+    "scenic": "157",
+    "hotel": "108",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "玛格丽塔岛",
+    "cityEnglishName": "Isla de Margarita",
+    "country": "委内瑞拉",
+    "food": "241",
+    "shopping": "53",
+    "scenic": "150",
+    "hotel": "100",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "基多",
+    "cityEnglishName": "Quito",
+    "country": "厄瓜多尔",
+    "food": "676",
+    "shopping": "21",
+    "scenic": "110",
+    "hotel": "367",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "阿雷基帕",
+    "cityEnglishName": "Arequipa",
+    "country": "秘鲁",
+    "food": "315",
+    "shopping": "24",
+    "scenic": "100",
+    "hotel": "368",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "门多萨",
+    "cityEnglishName": "Mendoza",
+    "country": "阿根廷",
+    "food": "451",
+    "shopping": "25",
+    "scenic": "98",
+    "hotel": "299",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "伊卡",
+    "cityEnglishName": "Ica",
+    "country": "秘鲁",
+    "food": "162",
+    "shopping": "21",
+    "scenic": "93",
+    "hotel": "71",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "埃斯特角城",
+    "cityEnglishName": "Punta del Este",
+    "country": "乌拉圭",
+    "food": "226",
+    "shopping": "18",
+    "scenic": "90",
+    "hotel": "120",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "特鲁希略",
+    "cityEnglishName": "Trujillo",
+    "country": "秘鲁",
+    "food": "299",
+    "shopping": "27",
+    "scenic": "83",
+    "hotel": "137",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "复活节岛",
+    "cityEnglishName": "Easter Island",
+    "country": "智利",
+    "food": "55",
+    "shopping": "6",
+    "scenic": "82",
+    "hotel": "92",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "乌斯怀亚",
+    "cityEnglishName": "Ushuaia",
+    "country": "阿根廷",
+    "food": "124",
+    "shopping": "9",
+    "scenic": "74",
+    "hotel": "153",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "圣路易斯",
+    "cityEnglishName": "City of Saint Louis",
+    "country": "巴西",
+    "food": "2K",
+    "shopping": "4",
+    "scenic": "69",
+    "hotel": "114",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "昆卡",
+    "cityEnglishName": "Cuenca",
+    "country": "厄瓜多尔",
+    "food": "297",
+    "shopping": "18",
+    "scenic": "69",
+    "hotel": "141",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "亚松森",
+    "cityEnglishName": "Asuncion",
+    "country": "巴拉圭",
+    "food": "309",
+    "shopping": "12",
+    "scenic": "67",
+    "hotel": "107",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "亚美尼亚城",
+    "cityEnglishName": "Armenia",
+    "country": "哥伦比亚",
+    "food": "159",
+    "shopping": "24",
+    "scenic": "65",
+    "hotel": "91",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "蓬塔阿雷纳斯",
+    "cityEnglishName": "Punta Arenas",
+    "country": "智利",
+    "food": "141",
+    "shopping": "5",
+    "scenic": "64",
+    "hotel": "113",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "拉巴斯",
+    "cityEnglishName": "La Paz",
+    "country": "玻利维亚",
+    "food": "221",
+    "shopping": "10",
+    "scenic": "59",
+    "hotel": "129",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "库斯科  ",
+    "cityEnglishName": "City of Cuzco",
+    "country": "秘鲁",
+    "food": "92",
+    "shopping": "11",
+    "scenic": "58",
+    "hotel": "261",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "苏克雷",
+    "cityEnglishName": "Sucre",
+    "country": "玻利维亚",
+    "food": "98",
+    "shopping": "6",
+    "scenic": "57",
+    "hotel": "61",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "圣佩德罗德阿塔卡马",
+    "cityEnglishName": "San Pedro de Atacama",
+    "country": "智利",
+    "food": "39",
+    "shopping": "0",
+    "scenic": "51",
+    "hotel": "166",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "普诺",
+    "cityEnglishName": "Puno",
+    "country": "秘鲁",
+    "food": "78",
+    "shopping": "2",
+    "scenic": "47",
+    "hotel": "189",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "纳斯卡",
+    "cityEnglishName": "Nazca",
+    "country": "秘鲁",
+    "food": "57",
+    "shopping": "6",
+    "scenic": "45",
+    "hotel": "66",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "卡法亚特",
+    "cityEnglishName": "Cafayate",
+    "country": "阿根廷",
+    "food": "69",
+    "shopping": "6",
+    "scenic": "44",
+    "hotel": "83",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "埃尔卡拉法特",
+    "cityEnglishName": "El calafate",
+    "country": "阿根廷",
+    "food": "103",
+    "shopping": "8",
+    "scenic": "41",
+    "hotel": "162",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "巴尼奥斯",
+    "cityEnglishName": "Baños",
+    "country": "厄瓜多尔",
+    "food": "102",
+    "shopping": "3",
+    "scenic": "40",
+    "hotel": "92",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "科恰班巴",
+    "cityEnglishName": "Cochabamba",
+    "country": "玻利维亚",
+    "food": "135",
+    "shopping": "1",
+    "scenic": "34",
+    "hotel": "53",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "纳塔莱斯港",
+    "cityEnglishName": "Puerto Natales",
+    "country": "智利",
+    "food": "84",
+    "shopping": "4",
+    "scenic": "33",
+    "hotel": "130",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "伊瓜苏港",
+    "cityEnglishName": "Puerto Iguazu",
+    "country": "阿根廷",
+    "food": "103",
+    "shopping": "17",
+    "scenic": "32",
+    "hotel": "214",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "马尔多纳多",
+    "cityEnglishName": "Maldonado ",
+    "country": "乌拉圭",
+    "food": "111",
+    "shopping": "4",
+    "scenic": "30",
+    "hotel": "75",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "波托西",
+    "cityEnglishName": "Potosi",
+    "country": "玻利维亚",
+    "food": "48",
+    "shopping": "1",
+    "scenic": "28",
+    "hotel": "32",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "乔治敦",
+    "cityEnglishName": "Georgetown",
+    "country": "圭亚那",
+    "food": "70",
+    "shopping": "3",
+    "scenic": "28",
+    "hotel": "39",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "帕斯托",
+    "cityEnglishName": "Pasto",
+    "country": "哥伦比亚",
+    "food": "49",
+    "shopping": "1",
+    "scenic": "26",
+    "hotel": "38",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "厄尔查尔坦",
+    "cityEnglishName": "El chalten",
+    "country": "阿根廷",
+    "food": "49",
+    "shopping": "2",
+    "scenic": "26",
+    "hotel": "69",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "奥鲁罗",
+    "cityEnglishName": "Oruro",
+    "country": "玻利维亚",
+    "food": "47",
+    "shopping": "4",
+    "scenic": "25",
+    "hotel": "13",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "莱蒂西亚",
+    "cityEnglishName": "Leticia",
+    "country": "哥伦比亚",
+    "food": "33",
+    "shopping": "4",
+    "scenic": "24",
+    "hotel": "60",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "帕拉马里博",
+    "cityEnglishName": "Paramaribo",
+    "country": "苏里南",
+    "food": "80",
+    "shopping": "1",
+    "scenic": "24",
+    "hotel": "71",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "蒙特港",
+    "cityEnglishName": "Puerto Montt",
+    "country": "智利",
+    "food": "116",
+    "shopping": "2",
+    "scenic": "23",
+    "hotel": "98",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "拉帕洛马",
+    "cityEnglishName": "La Paloma",
+    "country": "乌拉圭",
+    "food": "61",
+    "shopping": "9",
+    "scenic": "23",
+    "hotel": "58",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "百内国家公园",
+    "cityEnglishName": "Torres del Paine National Park",
+    "country": "智利",
+    "food": "11",
+    "shopping": "0",
+    "scenic": "22",
+    "hotel": "24",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "奥塔瓦洛",
+    "cityEnglishName": "Otavalo",
+    "country": "厄瓜多尔",
+    "food": "31",
+    "shopping": "9",
+    "scenic": "20",
+    "hotel": "21",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "马尔多纳多港",
+    "cityEnglishName": "Puerto Maldonado ",
+    "country": "秘鲁",
+    "food": "32",
+    "shopping": "0",
+    "scenic": "20",
+    "hotel": "50",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "洛哈",
+    "cityEnglishName": "Loja",
+    "country": "厄瓜多尔",
+    "food": "67",
+    "shopping": "1",
+    "scenic": "19",
+    "hotel": "27",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "特纳",
+    "cityEnglishName": "Tena",
+    "country": "厄瓜多尔",
+    "food": "17",
+    "shopping": "0",
+    "scenic": "19",
+    "hotel": "19",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "马丘比丘",
+    "cityEnglishName": "Machu Picchu",
+    "country": "秘鲁",
+    "food": "18",
+    "shopping": "1",
+    "scenic": "19",
+    "hotel": "39",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "乌尤尼",
+    "cityEnglishName": "Uyuni",
+    "country": "玻利维亚",
+    "food": "20",
+    "shopping": "1",
+    "scenic": "18",
+    "hotel": "28",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "瓦尔帕莱索 ",
+    "cityEnglishName": "Valparaiso",
+    "country": "智利",
+    "food": "65",
+    "shopping": "2",
+    "scenic": "17",
+    "hotel": "90",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "里奥班巴",
+    "cityEnglishName": "Riobamba",
+    "country": "厄瓜多尔",
+    "food": "63",
+    "shopping": "1",
+    "scenic": "17",
+    "hotel": "30",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "乌鲁班巴",
+    "cityEnglishName": "Urubamba",
+    "country": "秘鲁",
+    "food": "64",
+    "shopping": "3",
+    "scenic": "17",
+    "hotel": "57",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "卡梅洛",
+    "cityEnglishName": "Carmelo",
+    "country": "乌拉圭",
+    "food": "17",
+    "shopping": "1",
+    "scenic": "16",
+    "hotel": "21",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "东方市",
+    "cityEnglishName": "Ciudad del Este",
+    "country": "巴拉圭",
+    "food": "65",
+    "shopping": "12",
+    "scenic": "15",
+    "hotel": "19",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "卡拉马",
+    "cityEnglishName": "Calama",
+    "country": "智利",
+    "food": "46",
+    "shopping": "1",
+    "scenic": "12",
+    "hotel": "52",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "巴伦西亚",
+    "cityEnglishName": "Valencia ",
+    "country": "委内瑞拉",
+    "food": "63",
+    "shopping": "1",
+    "scenic": "9",
+    "hotel": "21",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "科帕卡瓦纳",
+    "cityEnglishName": "Copacabana",
+    "country": "玻利维亚",
+    "food": "28",
+    "shopping": "1",
+    "scenic": "8",
+    "hotel": "22",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "安巴托",
+    "cityEnglishName": "Ambato",
+    "country": "厄瓜多尔",
+    "food": "37",
+    "shopping": "2",
+    "scenic": "8",
+    "hotel": "21",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "玻利瓦尔城",
+    "cityEnglishName": "Ciudad Bolivar",
+    "country": "委内瑞拉",
+    "food": "25",
+    "shopping": "0",
+    "scenic": "8",
+    "hotel": "12",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "曼塔 ",
+    "cityEnglishName": "Manta",
+    "country": "厄瓜多尔",
+    "food": "9",
+    "shopping": "0",
+    "scenic": "4",
+    "hotel": "8",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "太阳岛",
+    "cityEnglishName": "Isla del Sol ",
+    "country": "玻利维亚",
+    "food": "7",
+    "shopping": "0",
+    "scenic": "3",
+    "hotel": "5",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "索拉塔",
+    "cityEnglishName": "Sorata",
+    "country": "玻利维亚",
+    "food": "3",
+    "shopping": "0",
+    "scenic": "3",
+    "hotel": "12",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "康塞普西翁",
+    "cityEnglishName": "Concepcion",
+    "country": "巴拉圭",
+    "food": "1",
+    "shopping": "0",
+    "scenic": "3",
+    "hotel": "2",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "圣克鲁斯",
+    "cityEnglishName": "Santa Cruz",
+    "country": "玻利维亚",
+    "food": "21",
+    "shopping": "0",
+    "scenic": "0",
+    "hotel": "16",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "阿尔比纳",
+    "cityEnglishName": "Albina",
+    "country": "苏里南",
+    "food": "1",
+    "shopping": "0",
+    "scenic": "0",
+    "hotel": "5",
+    "img": "city-demo.jpg"
+  }
+]

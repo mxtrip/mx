@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们－梦想旅行</title>
+    <link href="img/favicon.ico" rel="shortcut icon"type="image/x-icon">
+    <script  src="js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="js/artTemplate.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <style>
+        *{  margin: 0;  padding: 0;  text-decoration: none;  list-style-type: none;  }
+        body{
+            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+            font-size: 14px;
+            color: #333;
+            line-height: 14px;
+        }
+        h2, h3, h4, h5, h6{
+            font-weight: 100;
+        }
+        i,em{
+            font-style: normal;
+        }
+        .clearfix:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .fl{
+            float: left;
+        }
+        /*                       header                */
+        .wrap {
+            width: 100%;
+            padding-top: 79px;
+            background: url(img/about/background.jpg) center top no-repeat;
+        }
+        .header{
+            position: fixed;
+            z-index: 100001;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 78px;
+            border-bottom: 1px solid #ddd;
+
+        }
+        .top-bar {
+            margin: 0 auto;
+            height: 100%;
+            width: 1200px;
+        }
+        .logo{
+            float: left;
+            margin-right: 10px;
+            width: 155px;
+            height: 45px;
+            padding: 17px 0 16px;
+        }
+        .logo img{
+            display: block;
+            width: 155px;
+            height: 45px;
+        }
+        .top-nav{
+            float: right;
+            width: 835px;
+            height: 78px;
+        }
+        .top-nav li{
+            float: right;
+            padding: 0 22px;
+            line-height: 78px;
+            font-size: 16px;
+        }
+        .top-nav .edit_zhongbao{
+            position: relative;
+            z-index: 100085;
+            padding-right: 0;
+        }
+        .top-nav a{
+            color: #888;
+        }
+        .top-nav li a:hover{
+            color: #00b7a8;
+        }
+        .edit_zhongbao span{
+            float: right;
+            margin: 23px 5px 10px 13px;
+            height: 20px;
+            padding: 0 6px;
+            border-radius: 4px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+            background: red;
+            text-align: center;
+        }
+        .tips-zhongbao{
+            position: absolute;
+            z-index: 10086;
+            top: 59px;
+            right: -50px;
+            width: 277px;
+            height: 45px;
+            padding-top: 5px;
+            line-height: 45px;
+            background: url(img/textbox.png) no-repeat;
+            text-align: center;
+        }
+/*                                 content                     */
+        .center{
+            width: 100%;
+        }
+        .about-wrap{
+            margin: 50px 0;
+            width: 100%;
+            position: relative;
+        }
+        .s-mod{
+            position: relative;
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .s-mod .hd{
+            padding-bottom: 53px;
+            /*line-height: 40px;*/
+            font-size: 34px;
+            color: #000;
+            text-align: center;
+        }
+        .s-mod .hd img{
+            width: 150px;
+            height: 74px;
+        }
+        .office-pic{
+            position: absolute;
+            top: 100px;
+            left: 659px;
+            width: 610px;
+            height: 405px;
+        }
+        .about-company{
+            width: 642px;
+            padding-left: 24px;
+            padding-bottom: 98px;
+        }
+        .about .title{
+            margin-bottom: 19px;
+            height: 20px;
+            padding-bottom: 10px;
+            line-height: 20px;
+        }
+        .about .title span,.bottom-wrap .title span, .cooperation-cont .title span{
+            float: left;
+            width: 1px;
+            height: 20px;
+            line-height: 20px;
+            background: #00b7a8;
+        }
+        .about .title strong,.bottom-wrap .title strong,.cooperation-cont .title strong{
+            float: left;
+            padding: 0 12px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .about .title em,.bottom-wrap .title em,.cooperation-cont .title em{
+            font-size: 15px;
+            color: #989898;
+        }
+        .about-logo{
+            height: 35px;
+            padding-bottom: 36px;
+        }
+        .about-logo img{
+            width: 256px;
+            height: 35px;
+        }
+        .about-company h1 {
+            font-size: 24px;
+            color: #000;
+        }
+        .about-company h1 img {
+            width: 475px;
+            height: 25px;
+        }
+        .about-company p{
+            margin-top: 14px;
+            padding-right: 49px;
+            line-height: 18px;
+            font-size: 12px;
+            color: #999;
+        }
+        .about-company p em{
+            display: inline-block;
+            padding-top: 28px;
+            padding-bottom: 10px;
+            line-height: 19px;
+            font-size: 14px;
+            color: #00b7a8;
+        }
+
+        .about-leader{
+            width: 768px;
+            float: left;
+        }
+        .about-leader dl {
+            float: left;
+            margin-right: 33px;
+            width: 351px;
+        }
+        .about-leader dl dt img {
+            display: block;
+            width: 351px;
+            height: 210px;
+        }
+        .about-leader dl dd.title {
+            margin: 0;
+            height: 60px;
+            padding: 0;
+            line-height: 60px;
+            color: #030303;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .about-leader dl dd.resume {
+            margin-bottom: 20px;
+            line-height: 19px;
+            color: #030303;
+            font-size: 15px;
+        }
+        .about-leader dl dd.view {
+            line-height: 18px;
+            color: #999;
+            font-size: 12px;
+        }
+        .about-team {
+            width: 432px;
+            overflow: hidden;
+            float: left;
+        }
+        .about-team .title, .about-team p {
+            padding-left: 17px;
+        }
+        .about-team p {
+            line-height: 19px;
+            color: #999;
+            font-size: 12px;
+        }
+        .about-team p strong {
+            line-height: 23px;
+            color: #000;
+            font-size: 14px;
+        }
+        .about-team ul {
+            margin: 30px 0;
+            width: 100%;
+            overflow: hidden;
+        }
+        .about-team ul li {
+            float: left;
+            margin-left: 17px;
+            width: 90px;
+            height: 90px;
+        }
+        .about-team ul li a, .about-team ul li img {
+            display: block;
+            width: 90px;
+            height: 90px;
+        }
+        .about-team p {
+            line-height: 19px;
+            color: #999;
+            font-size: 12px;
+        }
+/*                               bottom                                            */
+        .bottom {
+            background: #f3f5f6;
+        }
+        .bottom-wrap {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .bottom-wrap .title {
+            margin: 0 auto 20px;
+            width: 250px;
+            padding-top: 65px;
+            text-align: center;
+            height: 20px;
+            padding-bottom: 10px;
+            line-height: 20px;
+        }
+        .bottom-wrap p {
+            line-height: 15px;
+            font-size: 12px;
+            color: #aaa;
+            text-align: center;
+        }
+
+        .bottom-wrap img {
+            display: block;
+            margin: 20px auto;
+            width: 330px;
+            height: 24px;
+        }
+        .bottom-img {
+            position: relative;
+            max-width: 100%;
+            min-width: 1200px;
+            display: block;
+        }
+        .bottom-img, .bottom-img img {
+            width: 100%;
+            margin-bottom: -3px;
+        }
+        .bottom-img a.baike, .bottom-img a.itunes, .bottom-img a.kr36, .bottom-img a.wangyi {
+            position: absolute;
+            z-index: 99;
+            display: block;
+        }
+        .bottom-img a.itunes {
+            top: 33%;
+            left: 34%;
+            width: 9%;
+            height: 66%;
+        }
+        .bottom-img a.baike {
+            top: 33%;
+            left: 43%;
+            width: 9%;
+            height: 66%;
+        }
+        .bottom-img a.wangyi {
+            top: 31%;
+            left: 52%;
+            width: 9%;
+            height: 68%;
+        }
+        .bottom-img a.kr36 {
+            top: 0;
+            right: 0;
+            width: 11%;
+            height: 100%;
+        }
+
+/*                                  cooperation-wrap                           */
+        .cooperation-wrap {
+            width: 100%;
+            background: #fff;
+        }
+        .cooperation-cont {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .cooperation-cont .title {
+            margin: 0 auto 25px;
+            width: 250px;
+            padding-top: 65px;
+            text-align: center;
+        }
+        .cooperation-cont p {
+            margin-bottom: 41px;
+            color: #999;
+            line-height: 15px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .cooperation-cont p a {
+            color: #999;
+        }
+        .cooperation-cont p:hover,.cooperation-cont p:hover a{
+            color: #00b7a8;
+        }
+        .cooperation-item {
+            float: left;
+            margin-bottom: 10px;
+            width: 20%;
+            text-align: center;
+        }
+        .cooperation-item a {
+            display: block;
+            margin: 0 auto;
+            width: 220px;
+            height: 120px;
+            -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+        }
+        .cooperation-item span {
+            display: block;
+            height: 22px;
+            line-height: 22px;
+            color: #1e1e1e;
+            font-size: 12px;
+        }
+        .coo-item1 a {
+            background: url(img/about/coo-item1.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item1 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item2 a {
+            background: url(img/about/coo-item2.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item2 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item3 a {
+            background: url(img/about/coo-item3.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item3 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item4 a {
+            background: url(img/about/coo-item4.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item4 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item5 a {
+            background: url(img/about/coo-item5.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item5 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item6 a {
+            background: url(img/about/coo-item6.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item6 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item7 a {
+            background: url(img/about/coo-item7.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item7 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item8 a {
+            background: url(img/about/coo-item8.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item8 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item9 a {
+            background: url(img/about/coo-item9.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item9 a:hover{
+            background-position: 0 -120px ;
+        }
+        .coo-item10 a {
+            background: url(img/about/coo-item10.png) no-repeat;
+            background-size: 220px 240px;
+        }
+        .coo-item10 a:hover{
+            background-position: 0 -120px ;
+        }
+        /*                                 footer                        */
+        .footer{
+            padding-top: 10px;
+            color: #fff;
+            background: #333;
+            clear: both;
+        }
+        .ft-cont{
+            margin: 0 auto;
+            width: 1200px;
+            clear: both;
+        }
+
+
+        /*                      解决无法被子元素撑开高度          */
+        .ft-cont:after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .ft-links{
+            float: left;
+            width: 800px;
+        }
+        .ft-links dl {
+            float: left;
+            margin: 17px 75px 0 12px;
+            font-size: 15px;
+        }
+        .ft-links dl dt {
+            padding-bottom: 6px;
+            line-height: 28px;
+        }
+        .ft-links dl dd {
+            line-height: 28px;
+        }
+        .ft-links dl dd a {
+            color: #aaa;
+        }
+        .follow-us {
+            float: right;
+            position: relative;
+            margin-left: 10px;
+            width: 200px;
+            padding: 17px 0 16px;
+
+        }
+        .follow-us dd {
+            float: left;
+            margin-top: 27px;
+            margin-right: 14px;
+
+        }
+        .follow-us .wechat_share{
+            position: absolute;
+            z-index:9999;
+            top: -210px;
+            left: -110px;
+            width: 264px;
+            height: 264px;
+        }
+        .follow-us dd img {
+            display: block;
+            width: 48px;
+            height: 48px;
+        }
+        .follow-us .wechat_share img{
+            display: block;
+            width: 264px;
+            height: 264px;
+        }
+        .footer .copyright {
+            margin: 15px auto 0;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px 0;
+            border-top: 1px solid #000;
+            line-height: 22px;
+            color: #757575;
+            font-size: 13px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+        <div class="top-bar">
+            <h2 class="logo">
+                <a href="#" title="梦想旅行">
+                    <img src="img/logo.png" alt="梦想旅行">
+                </a>
+            </h2>
+            <ul class="top-nav">
+                <li class="edit_zhongbao">
+                    <a href="zhongbao.html" class="login-layer">内容众包</a>
+                    <span>赚钱</span>
+                    <div class="tips-zhongbao" style="display:none">写旅游地信息，做赚钱小编</div>
+                </li>
+                <li>
+                    <a href="joinUs.html">加入我们</a>
+                </li>
+                <li>
+                    <a href="support.html">帮助支持</a>
+                </li>
+                <li>
+                    <a href="about.html">关于我们</a>
+                </li>
+                <li>
+                    <a href="productsIntro.html">产品介绍</a>
+                </li>
+                <li>
+                    <a href="index.html">目的地</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="center">
+        <div class="about-wrap">
+            <div class="s-mod about">
+                <div class="hd">
+                    <img src="img/about/title-about.png" alt="关于我们">
+                </div>
+                <img src="img/about/about_office.jpg" class="office-pic">
+                <div class="bd">
+                    <div class="about-company">
+                        <div class="title">
+                            <span></span>
+                            <strong>关于公司</strong>
+                            <em>About Company</em>
+                        </div>
+                        <div class="about-logo">
+                            <img src="img/about/about-logo.png" alt="北京梦想智联科技有限公司">
+                        </div>
+                        <h1>
+                            <img src="img/about/about-h2-icon.png" alt="">
+                        </h1>
+                        <p>
+                            <em>北京梦想智联科技有限公司，源于互联网一群极客的旅游梦想。我们将数据挖掘技术、互联网的思维植入在线旅游，结合大数据，颠覆了国人的境外旅游方式。</em>
+                        </p>
+                        <p>
+                            梦想旅行致力于传递一种全新理念，打破旅行前做攻略、做计划，订酒店等旅行习惯，让旅行真正成为一种自由的，不被计划所束缚、放松心灵的历程。梦想旅行覆盖了全球150个热门城市，100万个POI，上亿条口碑点评，将庞大的数据量化繁为简为标签，便于每个人选择自己的所爱。
+                        </p>
+                        <p id="team">
+                            梦想的2位创始人创立之初，其理念便获得了投资方认可，获得了1200万元的天使投资。梦想旅行Android和IOS客户端于4月上线，四个月累计用户突破十万人，先后被36氪、猎云网、网易新闻、重庆晚报等媒体报道推广。
+
+                        </p>
+                    </div>
+                    <div class="clearfix">
+                        <div class="about-leader">
+                            <dl class="fl">
+                                <dt>
+                                    <img src="img/about/about_boss_guo.jpg" alt="">
+                                </dt>
+                                <dd class="title">郭宁 CEO</dd>
+                                <dd class="resume">曾任阿里技术总监，负责搜索和广告算法业务，后于360统筹和管理搜索广告和大数据业务。</dd>
+                                <dd class="view">从无到有建设了360广告系统、大数据平台，负责了阿里巴巴B2B最早的机器学习排序MLR，这些巨大的成功，都将成为梦想旅行技术高度的坚实起点。在信息检索、计算广告、机器学习、大数据等领域有着非常丰富经验的他亲自统筹把控“梦想旅行”的前后端开发，带领合作多年的技术干将们，将产品的技术性能推向巅峰。</dd>
+                            </dl>
+                            <dl class="fl">
+                                <dt>
+                                    <img src="img/about/about_boss_hui.jpg" alt="">
+                                </dt>
+                                <dd class="title">俞辉 (Oasis) COO</dd>
+                                <dd class="resume">曾任腾讯产品总监，负责广点通和QQ认证空间业务，为腾讯的社交广告体系奠定了基础。</dd>
+                                <dd class="view">曾负责的广点通和QQ认证空间业务，梦想旅行中的足迹功能，也将传承这一大优势，将更别致的社交途径带给用户。擅长产品管理及品牌运营推广的他，本次亲自把控产品端和运营端，致力于塑造最好的用户体验和企业品牌。</dd>
+                            </dl>
+                        </div>
+                        <div class="about-team">
+                            <div class="title">
+                                <span></span>
+                                <strong>关于团队</strong>
+                                <em>About Team</em>
+                            </div>
+                            <p>
+                                <strong>
+                                    北京梦想智联科技有限公司是由来自阿里巴巴，腾讯，百度等互联网公司的技术、产品和运营组成，其中有9位技术人员来自2位创始人手下，技术力量占团队比重50%。
+                                </strong>
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="javascript:;" target="_blank">
+                                        <img src="img/about/about_team_join.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                        <img src="img/about/about_team_tian.jpg" alt="">
+                                </li>
+                                <li>
+                                        <img src="img/about/about_team_song.jpg" alt="">
+                                </li>
+                                <li>
+                                        <img src="img/about/about_team_webr.jpg" alt="">
+                                </li>
+                            </ul>
+                            <p>
+
+                                这个团队喜欢旅行、热爱生活，因对无拘束旅行的执爱集结到一起，要做成这件有意思的事。我们没有级别之见，没有技术、设计之差，每个人都可畅言对梦想旅行的憧憬。无论之前来自BAT还是4A，到了这里，我们都有了共同的企业精神：”超越期待“！顶级的技术、产品、设计、商务人员，为了共同的目标一起努力，过去的成功都变成了此刻的基石。或许是缘分使然，许多人此前是互相熟知的，这也让我们的配合更加默契。自觉地加班与无限量的零食福利，成了进度的助推器，迸发出了令人侧目的实力与激情。
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-wrap">
+            <div id="development" class="title">
+                <span></span>
+                <strong>发展历程</strong>
+                <em>Development Path</em>
+            </div>
+            <p>
+                梦想已然诞生，一群怀着梦想的人将用一款App去帮助更多人完成出境梦想~我们将创意与诚意融入一个个版本中。<br>
+                为成为国内顶级出境游App不懈努力，良好的口碑、正劲的发展是必然亦是馈赠。
+            </p>
+            <img src="img/about/about_development_2x.png" alt="">
+        </div>
+        <div class="bottom-img">
+            <img src="img/about/about_timeline_2x.png" alt="梦想旅行发展历程">
+            <a href="https://Appsto.re/cn/fyjJ6.i" target="_blank" class="itunes"></a>
+            <a href="http://baike.baidu.com/link?url=ZOdz_qln4oW0pLg2JAF9iuTSbi5BfbmaxbEYUbzDcM9zThRZ1X3Pw3hzYto6X2hX1XfH0vifJmkL3vjLFRF1q3OYKPVICibHNfjpxzdafLfHeeHxtPf6NxqRpJUwYiYY" target="_blank" class="baike"></a>
+            <a href="http://news.163.com/15/0603/22/AR7J52SN00014AED.html" target="_blank" class="wangyi"></a>
+            <a href="https://36kr.com/p/5035199.html" target="_blank" class="kr36"></a>
+
+        </div>
+
+    </div>
+    <div class="cooperation-wrap">
+        <div class="cooperation-cont">
+            <div class="title" id="partner">
+                <span></span>
+                <strong>合作商家</strong>
+                <em>Cooperative Partner</em>
+            </div>
+            <p>
+                欲寻求商务合作请联系邮箱：
+                <a href="mailto:business@mxtrip.cn" target="_blank">business@mxtrip.cn</a>
+            </p>
+            <div class="cooperation-item coo-item1">
+                <a href="http://www.kingpoweronline.com/cn" target="_blank"></a>
+                <span>泰国最大免税店</span>
+            </div>
+            <div class="cooperation-item coo-item2">
+                <a href="http://www.alamocn.com/transfer/?agent_key=2EK7-S4A6-65KL" target="_blank"></a>
+                <span>全球最大的租车公司</span>
+            </div>
+            <div class="cooperation-item coo-item3">
+                <a href="http://www.matsuya.com/" target="_blank"></a>
+                <span>日本松屋银座</span>
+            </div>
+            <div class="cooperation-item coo-item4">
+                <a href="http://www.biccamera.co.jp" target="_blank"></a>
+                <span>日本大型购物中心必酷 Bic Camera</span>
+            </div>
+            <div class="cooperation-item coo-item5">
+                <a href="http://link.hertz.com/link.html?id=53549&LinkType=HZLK&TargetType=Homepage" target="_blank"></a>
+                <span>Hertz汽车租赁公司</span>
+            </div>
+            <div class="cooperation-item coo-item6">
+                <a href="http://www.sofmap.com/" target="_blank"></a>
+                <span>日本电器购物sofmap</span>
+            </div>
+            <div class="cooperation-item coo-item7">
+                <a href="http://info.keionet.com" target="_blank"></a>
+                <span>京王百货</span>
+            </div>
+            <div class="cooperation-item coo-item8">
+                <a href="http://www.alamocn.com/transfer/?agent_key=2EK7-S4A6-65KL" target="_blank"></a>
+                <span>ALAMO旗下品牌</span>
+            </div>
+            <div class="cooperation-item coo-item9">
+                <a href="http://www.europcar.cn/" target="_blank"></a>
+                <span>欧洲最大的租车公司</span>
+            </div>
+            <div class="cooperation-item coo-item10">
+                <a href="http://www.7zhou.com" target="_blank"></a>
+                <span>国内首家全球当地游玩平台</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="ft-cont">
+            <div class="ft-links">
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd>
+                        <a href="productsIntro.html" target="_blank">梦想旅行简介</a>
+                    </dd>
+                    <dd>
+                        <a href="about.html#team" target="_blank">关于团队</a>
+                    </dd>
+                    <dd>
+                        <a href="about.html#development" target="_blank">发展历程</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>帮助支持</dt>
+                    <dd>
+                        <a href="support.html#feedback" target="_blank">意见反馈</a>
+                    </dd>
+                    <dd>
+                        <a href="support.html" target="_blank">联系我们</a>
+                    </dd>
+                    <dd>
+                        <a href="webMap.html" target="_blank">网站地图</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>网站条款</dt>
+                    <dd>
+                        <a href="usage.html" target="_blank">使用条款</a>
+                    </dd>
+                    <dd>
+                        <a href="privacy.html" target="_blank">隐私政策</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>加入我们</dt>
+                    <dd>
+                        <a href="http://www.lagou.com/gongsi/62565.html" target="_blank">招聘职位</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="follow-us">
+                <dt>关注我们:</dt>
+                <dd >
+                    <div class="wechat_share" style="display:none">
+                        <img src="img/wechat_code.png">
+                    </div>
+                    <a href="javascript:;">
+                        <img src="img/wechat.png">
+                    </a>
+                </dd>
+                <dd>
+                    <a href="http://weibo.com/mxtrip">
+                        <img src="img/weibo.png">
+                    </a>
+                </dd>
+                <dd>
+                    <a href="http://qzone.qq.com/?s_url=http://user.qzone.qq.com/2935785166/main">
+                        <img src="img/qqzone.png">
+                    </a>
+                </dd>
+            </div>
+        </div>
+        <p class="copyright">
+            版权所有 ： 北京梦想智联科技有限公司 Copyright © 2015, mxtrip.cn. All rights reserved.<br>
+            京ICP备15012301号-1
+        </p>
+
+    </div>
+</div>
+<script>
+    $(function () {
+        /*              header内容众包mouseenter事件                */
+        $(".edit_zhongbao").mouseenter(function () {
+            $(".tips-zhongbao").css("display","block")
+        }).mouseleave(function () {
+            $(".tips-zhongbao").css("display","none")
+        })
+        $(".list-city dl").mouseenter(function () {
+            $(this).children("dd").css("display","block")
+        }).mouseleave(function () {
+            $(this).children("dd").css("display","none")
+        })
+        /*        footer 微信点击出现二维码           */
+        $(".follow-us dd").eq(0).find("a").click(function () {
+            $(".follow-us dd").eq(0).find("a").siblings("div").css({
+                "display":"block",
+                opacity:1
+            })
+        })
+        $(".follow-us dd").eq(0).find("a").mouseleave(function () {
+            $(".follow-us dd").eq(0).find("a").siblings("div").animate({
+                opacity:0
+            },1000,function () {
+                $(this).css("display","none")
+            })
+        })
+     /*   onscroll事件改变header背景色   */
+        window.onscroll=function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            if(t>120){
+                $(".header").stop().animate({backgroundColor:"white"},1000);
+            }else{
+                $(".header").stop().animate({backgroundColor:"transparent"},1000);
+            }
+
+        }
+
+    })
+</script>
+
+</body>
+</html>
+
+<!--改变背景色，引用jquery-ui      每次scroll都使动画反复触发，解决这个问题使用动画的 stop()-->

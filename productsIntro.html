@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梦想旅行－带你遇见美好的出境旅行</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+        }
+        /*@media screen and (min-width: 768px){
+            .header{
+                width: 768px;
+            }
+        }*/
+        .header {
+            position: fixed;
+            z-index: 1000;
+            width: 100%;
+            height: 79px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .header .hd-logo img {
+            display: inline-block;
+            margin-left: 140px;
+            margin-top: 16px;
+            width: 155px;
+            height: 45px;
+        }
+        .header .hd-nav {
+            position: absolute;
+            right: 160px;
+            top: 30px;
+        }
+        .header .hd-nav ul {
+            list-style-type: none;
+        }
+        .hd-nav ul li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+        .hd-nav ul li a {
+            text-decoration: none;
+            color: #888;
+            font-size: 16px;
+        }
+        .hd-nav ul li a:hover {
+            color: #00b7a8;
+        }
+        .hd-nav ul li .red {
+            position: absolute;
+            top: -5px;
+            right: -17px;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: white;
+            background-color: red;
+        }
+        .tips-zhongbao {
+            position: absolute;
+            top: 27px;
+            right: -70px;
+            width: 277px;
+            height: 45px;
+            padding-top: 7px;
+            text-align: center;
+            line-height: 45px;
+            background: url(img/title1_1x.png) no-repeat;
+        }
+        .section,
+        .section1,
+        .section2,
+        .section3,
+        .section4,
+        .section5,
+        .section6 {
+            margin: 0 auto;
+            width: 100%;
+        }
+        .section1 img {
+            width: 100%;
+            margin-top: 79px;
+        }
+        .section1 .ios,
+        .section1 .android {
+            position: absolute;
+            left: 11%;
+            width: 15%;
+            height: 7.8%;
+        }
+        .section1 .ios {
+            top: 55%;
+        }
+        .section1 .android {
+            top: 65%;
+        }
+        /*-----------section2------------*/
+
+        .section2-content,
+        .section3-content {
+            position: relative;
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .section2 h3 {
+            padding: 66px 0 50px 0;
+            text-align: center;
+        }
+        .section2 h3 img {
+            width: 503px;
+            height: 137px;
+        }
+        .section2 .bg {
+            float: left;
+            width: 560px;
+            height: 280px;
+            background: url(img/s2-bg.jpg);
+            background-size: 560px 280px;
+        }
+        .section2 .txt {
+            margin: 29px 20px 0 100px;
+            width: 520px;
+            float: left;
+        }
+        .section2 .txt dt,
+        .section3 .txt dt,
+        .section4 .s4-dl1 dt,
+        .section4 .s4-dl2 dt {
+            line-height: 25px;
+            font-size: 15px;
+        }
+        .section2 .txt dt em,
+        .section3 .txt dt em,
+        .section4 .s4-dl1 dt em,
+        .section4 .s4-dl2 dt em {
+            float: left;
+            width: 30px;
+            height: 30px;
+            margin: 0 12px 0 0;
+            border-radius: 50%;
+            font-size: 24px;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+            font-style: normal;
+            background: #00b7a8;
+        }
+        .section2 .txt dd,
+        .section4 .s4-dl1 dd,
+        .section4 .s4-dl2 dd {
+            padding: 0 42px;
+            border-right: 1px solid #00b7a8;
+            line-height: 19px;
+            font-size: 12px;
+            color: #999;
+        }
+        .section2 .txt dd strong,
+        .section3 .txt dd strong,
+        .section4 .txt dd strong {
+            display: block;
+            margin: 20px 0;
+            line-height: 24px;
+            font-size: 18px;
+            color: #00b7a8;
+        }
+        .section2 img.pic {
+            position: absolute;
+            z-index: 10;
+            top: 350px;
+            left: 192px;
+            width: 478px;
+            height: 318px;
+        }
+        /*-------section3-------*/
+        .section3 .bg {
+            float: right;
+            width: 640px;
+            height: 476px;
+            background: url(img/s3-bg.jpg)no-repeat;
+            background-size: 640px 476px;
+        }
+        .section3 .txt {
+            float: left;
+            margin: 170px 45px 0 51px;
+            width: 444px;
+        }
+        .section3 .txt dt em {
+            margin-bottom: 30px;
+        }
+        .section3 .txt dd {
+            margin-left: 10px;
+            padding-left: 42px;
+            border-left: 1px solid #00b7a8;
+            line-height: 19px;
+            font-size: 12px;
+            color: #999;
+        }
+        .section3 img.pic {
+            position: absolute;
+            z-index: 10;
+            top: 271px;
+            left: 904px;
+            width: 389px;
+            height: 331px;
+        }
+        /*---------section4--------*/
+        .section4-content,
+        .section5-content,
+        .section6-content,
+        .ft-cont {
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .section4 .bg {
+            float: left;
+            width: 360px;
+            height: 725px;
+            background: url(img/s4-bg.jpg)no-repeat;
+
+        }
+        .section4 .txt {
+            float: left;
+            margin-top: 44px;
+            width: 456px;
+        }
+        .section4 .s4-dl1 {
+            margin-left: 32px;
+            margin-right: 105px;
+        }
+        .section4 .s4-dl1 dt em,
+        .section4 .s4-dl2 dt em {
+            margin-bottom: 60px;
+        }
+        .section4 .s4-dl1 dd strong {
+            margin-top: 30px;
+        }
+        .section4 .s4-dl2 {
+            margin-top: 120px;
+            margin-right: 40px;
+        }
+        .section4 .s4-dl2 dt {
+            padding-left: 132px;
+        }
+        .section4 .s4-dl2 dd {
+            border: none;
+            padding: 0;
+        }
+        .section4 .s4-dl2 dd strong {
+            margin: 30px 0 30px 142px;
+            border-left: 1px solid #00b7a8;
+            padding-left: 28px;
+        }
+        .section4 .s4-dl2 dd p {
+            border-left: 1px solid #00b7a8;
+            padding-left: 20px;
+        }
+        .section4 img {
+            float: right;
+            margin-top: 145px;
+            width: 382px;
+            height: 600px;
+        }
+        /*-----------section5----------*/
+        .section5 {
+            /*clear: both;*/
+            margin-top: 105px;
+            background: url(img/intro_charact_wave_1x.jpg) left bottom repeat-x;
+        }
+        .section5 .blank {
+            height: 105px;
+            width: 100%;
+            background: #fff;
+            border: none;
+        }
+        .section5-content {
+            padding-bottom: 411px;
+            background: url(img/intro_charact_interface_2x.png) center bottom no-repeat;
+            background-size: 1200px 411px;
+        }
+        .section5 h3 {
+            padding-top: 78px;
+            text-align: center;
+        }
+        .section5 h3 img {
+            width: 575px;
+            height: 24px;
+        }
+        .section5 strong {
+            display: block;
+            margin: 16px auto 56px;
+            font-size: 15px;
+            color: #fff79f;
+            text-align: center;
+        }
+        .poi-view {
+            overflow: hidden;
+            margin-left: -66px;
+            width: 1266px;
+        }
+        .section5 dl {
+            float: left;
+            margin-left: 60px;
+            margin-bottom: 42px;
+            width: 362px;
+        }
+        .section5 dl dt {
+            float: left;
+            width: 80px;
+            height: 80px;
+            background: url(img/intro_charact_icons_2x.png) no-repeat;
+            background-size: 240px 160px;
+        }
+        .section5 .dl1 dt {
+            background-position: 0 0;
+        }
+        .section5 dl dd.title {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+        .section5 dl dd {
+            float: right;
+            width: 270px;
+            padding-left: 12px;
+            line-height: 18px;
+            font-size: 12px;
+            color: #0d6760;
+        }
+        .section5 .dl2 dt {
+            background-position: -80px 0;
+        }
+        .section5 .dl3 dt {
+            background-position: -160px 0;
+        }
+        .section5 .dl4 dt {
+            background-position: 0 -80px;
+        }
+        .section5 .dl5 dt {
+            background-position: -80px -80px;
+        }
+        .section5 .dl6 dt {
+            background-position: -160px -80px;
+        }
+        /*----------section6---------*/
+        .section6 {
+            padding-bottom: 85px;
+            overflow: hidden;
+        }
+        .section6 h3 {
+            padding-top: 74px;
+            text-align: center;
+        }
+        .section6 h3 img {
+            width: 358px;
+            height: 24px;
+        }
+        .section6 strong {
+            display: block;
+            margin: 20px auto 40px;
+            font-size: 15px;
+            color: #1cc2b2;
+            text-align: center;
+        }
+        .section6 .case,
+        .section6 .mini-img {
+            float: left;
+            width: 600px;
+            height: 258px;
+        }
+        .section6 .mini-img {
+            width: 528px;
+            height: 240px;
+            padding: 16px 52px 0 20px;
+        }
+        .case .pic,
+        .case .pic img {
+            width: 250px;
+            height: 250px;
+        }
+        .case .pic,
+        .case .txt {
+            float: left;
+        }
+        .case .txt {
+            width: 350px;
+        }
+        .case .txt h4 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+            line-height: 25px;
+            font-size: 18px;
+        }
+        .case .txt p {
+            margin-bottom: 22px;
+            line-height: 17px;
+            font-size: 13px;
+            color: #333;
+        }
+        .case .txt dl {
+            padding-right: 55px;
+        }
+        .case .txt dt {
+            margin-bottom: 10px;
+            padding-bottom: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1cc1b1;
+            border-bottom: 1px solid #fdb813;
+        }
+        .case .txt dd {
+            line-height: 16px;
+            color: #999;
+            font-size: 12px;
+        }
+        /*-----------footer----------*/
+        .footer {
+            clear: both;
+            min-width: 1200px;
+            padding-top: 10px;
+            color: #fff;
+            background: #333;
+        }
+        .ft-cont {
+            clear: both;
+            position: relative;
+        }
+        .ft-cont .ft-links {
+            float: left;
+            width: 800px;
+        }
+        .ft-cont .ft-links dl {
+            display: block;
+            float: left;
+            margin: 17px 75px 0 12px;
+            font-size: 15px;
+        }
+        .ft-cont .ft-links dl dt {
+            padding-bottom: 6px;
+            line-height: 28px;
+        }
+        dd {
+            display: block;
+        }
+        .ft-cont .ft-links dl dd {
+            line-height: 28px;
+        }
+        .ft-cont .ft-links dl dd a {
+            color: #aaa;
+            text-decoration: none;
+        }
+        .ft-cont .follow-us {
+            float: right;
+            position: relative;
+            margin-left: 10px;
+            width: 200px;
+            padding: 17px 0 16px;
+            font-size: 14px;
+        }
+        .ft-cont .follow-us dd {
+            float: left;
+            margin-top: 27px;
+            margin-right: 14px;
+        }
+        .ft-cont .follow-us dd img {
+            display: block;
+            width: 48px;
+            height: 48px;
+        }
+        #wechat_share {
+            position: absolute;
+            z-index: 999;
+            top: -210px;
+            left: -110px;
+            width: 264px;
+            height: 264px;
+        }
+        #wechat_share img {
+            display: block;
+            width: 264px;
+            height: 264px;
+        }
+        .footer .copyright {
+            margin: 150px auto 0;
+            width: 100%;
+            max-width: 1200px;
+            padding: 10px 0;
+            border-top: 1px solid #000;
+            line-height: 22px;
+            color: #757575;
+            font-size: 13px;
+            text-align: center;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="header-wrap">
+        <div class="hd-logo">
+            <a href="#"><img src="img/nav_logo_2x.png" alt=""></a>
+        </div>
+        <div class="hd-nav">
+            <ul>
+                <li><a href="index.html">目的地</a></li>
+                <li><a href="productsIntro.html">产品介绍</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="support.html">帮助支持</a></li>
+                <li><a href="joinUs.html">加入我们</a></li>
+                <li class="edit-zhongbao">
+                    <a href="zhongbao.html">内容众包</a>
+                    <span class="red">赚钱</span>
+                    <div class="tips-zhongbao" style="display: none">
+                        写旅游地信息，做赚钱小编
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <script>
+        $('.edit-zhongbao').mouseenter(function () {
+            $('.tips-zhongbao').css("display","block")
+        }).mouseleave(function () {
+            $('.tips-zhongbao').css("display","none")
+        })
+    </script>
+    <div class="center">
+        <div class="section section1">
+            <img src="img/s1-bg.jpeg" alt="">
+            <a href="#" class="ios"></a>
+            <a href="#" class="android"></a>
+        </div>
+        <div class="section section2 clearfix">
+            <div class="section2-content">
+                <h3><img src="img/intro_title02_2x.png" alt=""></h3>
+                <div class="bg"></div>
+                <div class="fl txt">
+                    <dl>
+                        <dt>
+                            <em>1</em> 作为重度吃货，落地后的第一件事就是找当地既有特色又靠谱的餐馆饱餐一顿。可是初来乍到，该从何入手呢？
+                        </dt>
+                        <dd>
+                            <strong>找到您的个人喜好，找到您想去地方！</strong>
+                            <p>“梦想旅行”收录全球数百万家美食、店铺、景点资讯，米其林餐厅还是路边大排档，奥特莱斯还是711便利店，尽收其中。您是想找特色菜、日料、披萨大吃一顿，或者找个甜品店、咖啡厅小憩一会，在这里总能找到一款适合你的梦想style。</p>
+                        </dd>
+                    </dl>
+                </div>
+                <img src="img/intro_pic_macaron_2x.png" alt="" class="pic">
+            </div>
+        </div>
+        <div class="section section3 clearfix">
+            <div class="section3-content">
+                <div class="bg"></div>
+                <div class="fl txt">
+                    <dl>
+                        <dt>
+                            <em>2</em> 航班晚点三小时，对于这说长不短闲暇时光，真不知该如何消磨…等等，机场附近也有好玩好吃的地方，攻略里怎么完全没提过啊？
+                        </dt>
+                        <dd>
+                            <strong>Cover你身边每一公里，即刻变身当地人！</strong><br/>
+                            <p>用“标签”对每一处信息点进行画像，陌路从此变熟识。不论你喜欢宁静淡雅的艺术展览，还是非比寻常的特色体验，都可以基于自己的爱好将这些地点发掘出来。即使只是片刻逗留，也能助你‘偷得浮生半日闲’。</p>
+                        </dd>
+                    </dl>
+                </div>
+                <img src="img/intro_pic_balloon_2x.png" alt="" class="pic">
+            </div>
+        </div>
+        <div class="section section4 clearfix">
+            <div class="section4-content">
+                <div class="bg"></div>
+                <div class="fl txt">
+                    <dl class="s4-dl1">
+                        <dt>
+                            <em>3</em> 目的地名字打不出来在地图里搜都搜不到！盯着满屏幕的外星文字地标，既不知道现在在哪儿，也不知道怎么过去，真是急死人！
+                        </dt>
+                        <dd>
+                            <strong>从现在开始，出国旅行你只需要一款App。</strong>
+                            <p>相比其他应用，找到一个地方->切换地图应用->输入地址->用导航过去这样繁琐的操作相比，梦想旅行可以让你在找到一个地方的同时，浏览评价，并直接在应用内打开导航并引导你前去。再也不用担心找不到地啦！</p>
+                        </dd>
+                    </dl>
+                    <dl class="s4-dl2">
+                        <dt>
+                            <em>4</em>找到了攻略中的目的地，却发现店铺没开，既扫兴又不甘心，行程全部被打乱！更重要的是，接下来该怎么办？
+                        </dt>
+                        <dd>
+                            <strong>梦想旅行，让您轻松应对旅行的千变万化。</strong>
+                            <p>即使出行前计划的再周密，也难免会有意料之外的事情发生。“梦想旅行”帮助你随时规划，下一秒的行程都在上一秒决定，让旅途中只有惊喜，没有意外。攻略留给别人，你值得拥有的，是属于自己的梦想旅行。</p>
+                        </dd>
+                    </dl>
+                </div>
+                <img src="img/s4-pic.jpeg" alt="">
+            </div>
+        </div>
+        <div class="section section5">
+            <div class="section5-content">
+                <h3><img src="img/intro_title03_2x.png" alt=""></h3>
+                <strong>多维信息视角，多元旅行体验</strong>
+                <div class="poi-view">
+                    <dl class="dl1">
+                        <dt></dt>
+                        <dd class="title">提前了解，随意规划</dd>
+                        <dd>无论是最实用的城市地图、交通信息，还是您最关心的吃、玩、购及优惠信息，在“梦想旅行”中都可轻松找到。手指一滑，即可提前了解城市信息，不再依赖攻略，各路信息供你随意规划。</dd>
+                    </dl>
+                    <dl class="dl2">
+                        <dt></dt>
+                        <dd class="title">海量数据，化繁为简</dd>
+                        <dd>我们将数据挖掘技术植入在线旅游，覆盖了全球150个热门城市，100万个POI点。每个介绍及用户点评，都从一条条无序的数据被简化成了一个个标签，以求让用户更简便地查看所需信息。</dd>
+                    </dl>
+                    <dl class="dl3">
+                        <dt></dt>
+                        <dd class="title">定位当前，尽在掌握</dd>
+                        <dd>App内置有定位服务系统，随时随地定位当前所在，智能筛选并推荐周边一切信息。不必再费力查询店面，也不必舟车劳顿赶赴远处，“梦想旅行”将身边最好的都呈现给你。</dd>
+                    </dl>
+                    <dl class="dl4">
+                        <dt></dt>
+                        <dd class="title">国人视角，最佳体验</dd>
+                        <dd>国内产品信息不全，国外产品不符体验？“梦想旅行”收集最全中文信息，并带有实时翻译功能，评论一看便知。国人自己设计得旅游神器，贴合国人使用习惯，实现您的最佳出境游体验。</dd>
+                    </dl>
+                    <dl class="dl5">
+                        <dt></dt>
+                        <dd class="title">足不出户，遍游全球</dd>
+                        <dd>“梦想旅行”覆盖了全球各个热门旅游目的地，大量精美图片，海量点评信息，想看哪里即刻触发。更有编辑精心维护的推荐内容，足不出户也能让眼睛环游世界。</dd>
+                    </dl>
+                    <dl class="dl6">
+                        <dt></dt>
+                        <dd class="title">个性足迹，别样社交</dd>
+                        <dd>随时在你走过的地方留下图文，形成专属你的足迹，个人主页上将所有足迹串连起来，就是属于你的个性游记了。查看当前景点，亦可看见用户们在此处留下的所有足迹，旅行途中亦可社交。</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="section section6">
+            <div class="section6-content">
+                <h3><img src="img/intro_title04_2x.png"></h3>
+                <strong>有梦想，爱旅行，达人们如是说</strong>
+                <img class="mini-img" src="img/intro_illustrator_gallery_2x.png">
+                <div class="case">
+                    <div class="pic"><img src="img/intro_famous_person01_2x.png"></div>
+                    <div class="txt">
+                        <h4>“梦想旅行”是我绝不愿卸载的App</h4>
+                        <p>一直想通过自己的文字、照片，将更多美好传达给读者，“梦想旅行”的智能推荐就成了我最得力的助手。它可以随时随地找到我身边的美食、美景，让我真正享受旅途，并通过自己，将一切见闻分享给你们。</p>
+                        <dl>
+                            <dt>by 背包客小鹏</dt>
+                            <dd>职业旅行家，旅行作家，著有：《背包十年》、《我们为什么旅行》</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="case">
+                    <div class="pic"><img src="img/intro_famous_person02_2x.png"></div>
+                    <div class="txt">
+                        <h4>以后的旅途，我都愿带上“梦想旅行”</h4>
+                        <p>多年的行者经验让我相信自己，下载了“梦想旅行”后，我第一次去相信一款App。准确、便捷的自动导航功能，让我快速找到目标，用最短的时间，享受最多的精彩。</p>
+                        <dl>
+                            <dt>by 行者橙子</dt>
+                            <dd>公益驴友团队80公升创始人，著有：旅行摄影故事《远在天边近在眼前》，散文随笔《我们好像在哪里见过》；北京古诺树文化传播有限公司CEO。</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="case">
+                    <div class="pic"><img src="img/intro_famous_person03_2x.png"></div>
+                    <div class="txt">
+                        <h4>下载“梦想旅行”之前，我有很多期待，<br/>下载后它超越了我所有期待。</h4>
+                        <p>精致的页面设计，征服了对美感执着的我，翔实的中文数据和人性化的操作体验，让它成为最符合国人使用习惯的出境App。</p>
+                        <dl>
+                            <dt>by 安娜</dt>
+                            <dd>《优家画报》、《昕薇》合作撰稿人、搜狐博客千万博主、VOGUE 博主、Onlylady博主。</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="footer clearfix">
+    <div class="ft-cont clearfix">
+        <div class="ft-links">
+            <dl>
+                <dt>关于我们</dt>
+                <dd><a href="productsIntro.html" target="_blank">梦想旅行简介</a></dd>
+                <dd><a href="about.html#team" target="_blank">关于团队</a></dd>
+                <dd><a href="about.html#development" target="_blank">发展历程</a></dd>
+            </dl>
+            <dl>
+                <dt>帮助支持</dt>
+                <dd><a href="support.html#feedback" target="_blank">意见反馈</a></dd>
+                <dd><a href="support.html" target="_blank">联系我们</a></dd>
+                <dd><a href="webMap.html" target="_blank">网站地图</a></dd>
+            </dl>
+            <dl>
+                <dt>网站条款</dt>
+                <dd><a href="usage.html" target="_blank">使用条款</a></dd>
+                <dd><a href="privacy.html" target="_blank">隐私政策</a></dd>
+            </dl>
+            <dl>
+                <dt>加入我们</dt>
+                <dd><a href="http://www.lagou.com/gongsi/62565.html" target="_blank">招聘职位</a></dd>
+            </dl>
+        </div>
+        <dl class="follow-us">
+            <dt>关注我们:</dt>
+            <dd>
+                <div id="wechat_share" style="display: none;">
+                    <img src="img/desktop_foot_share_wechat_code_2x.png" alt="">
+                </div>
+                <a href="javascript:;" id="ft_wechat">
+                    <img src="img/desktop_foot_share_wechat_2x.png" alt="微信公众号">
+                </a>
+            </dd>
+            <dd>
+                <a href="http://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=http%3A%2F%2Fweibo.com%2Fmxtrip&domain=.weibo.com&sudaref=http%3A%2F%2Fwww.mxtrip.cn%2F&ua=php-sso_sdk_client-0.6.16&_rand=1446035921.6235">
+                    <img src="img/desktop_foot_share_weibo_2x.png" alt="新浪微博">
+                </a>
+            </dd>
+            <dd>
+                <a href="http://qzone.qq.com/?s_url=http://user.qzone.qq.com/2935785166/main">
+                    <img src="img/desktop_foot_share_qqzone_2x.png" alt="QQ空间">
+                </a>
+            </dd>
+        </dl>
+    </div>
+    <p class="copyright">
+        版权所有 ： 北京梦想智联科技有限公司 Copyright © 2015, mxtrip.cn. All rights reserved.<br/>京ICP备15012301号-1
+    </p>
+</div>
+    <script>
+        $('#ft_wechat').click(function () {
+            $('#wechat_share').css({
+                "display":"block",
+                "opacity":"1"
+            });
+        }).mouseleave(function () {
+            setTimeout(function () {
+                $('#wechat_share').animate({
+                    'opacity':'0'
+                },800,function () {
+                    $(this).css("display","none")
+                })
+            },800)
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

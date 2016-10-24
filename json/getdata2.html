@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.1.0.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    var Src = [{"city":"南极半岛","cityEnglishName":"Antarctic Peninsula","country":"南极洲","food":"0","shopping":"0","scenic":"11","hotel":"0","img":"4373a6af60ece4aa8d800dcfb094147b.jpeg"},{"city":"南设得兰群岛","cityEnglishName":"South Shetland Islands","country":"南极洲","food":"0","shopping":"0","scenic":"5","hotel":"0","img":"c69e54e84362deaf42633266688bc9f7.jpeg"}]
+
+    $.each(Src, function (i, ele) {
+        if (ele.img == "http://static.mxtrip.cn/.jpeg") {
+            Src[i].img = "city-demo.jpg"
+        }
+    })
+
+    var dataStr = '[';
+    $(Src).each(function (i, elem) {
+        dataStr += '{';
+        dataStr += '"city":"' + elem.city + '",';
+        dataStr += '"cityEnglishName":"' + elem.cityEnglishName + '",';
+        dataStr += '"country":"' + elem.country + '",';
+        dataStr += '"food":"' + elem.food + '",';
+        dataStr += '"shopping":"' + elem.shopping + '",';
+        dataStr += '"scenic":"' + elem.scenic + '",';
+        dataStr += '"hotel":"' + elem.hotel + '",';
+        dataStr += '"img":"' + elem.img + '"';
+        dataStr += '},';
+//            console.log($(elem).find("dt img").attr("src"));
+    });
+    dataStr += ']';
+    console.log(dataStr)
+</script>
+</html>

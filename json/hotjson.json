@@ -1,0 +1,202 @@
+[
+  {
+    "city": "纽约",
+    "cityEnglishName": "New York",
+    "country": "美国",
+    "food": "65K",
+    "shopping": "66K",
+    "scenic": "47K",
+    "hotel": "2K",
+    "img": "3bcf220470f366113a659fc5b54ee07d.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "曼谷",
+    "cityEnglishName": "Bangkok",
+    "country": "泰国",
+    "food": "78K",
+    "shopping": "13K",
+    "scenic": "25K",
+    "hotel": "3K",
+    "img": "0397b44eb04ca5755f18c3e2f023b248.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "巴黎",
+    "cityEnglishName": "Paris",
+    "country": "法国",
+    "food": "26K",
+    "shopping": "15K",
+    "scenic": "13K",
+    "hotel": "5K",
+    "img": "275e68f739e6872e75d04f087e7602a6.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "新加坡",
+    "cityEnglishName": "Singapore",
+    "country": "新加坡",
+    "food": "40K",
+    "shopping": "18K",
+    "scenic": "21K",
+    "hotel": "839",
+    "img": "17c1fcfff53d49097b87ae0f4083e908.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "迪拜",
+    "cityEnglishName": "Dubai",
+    "country": "阿联酋",
+    "food": "10K",
+    "shopping": "3K",
+    "scenic": "4K",
+    "hotel": "2K",
+    "img": "6cd8030be6484321bc84d636b1bec5ad.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "巴厘岛",
+    "cityEnglishName": "Bali",
+    "country": "印度尼西亚",
+    "food": "14K",
+    "shopping": "6K",
+    "scenic": "14K",
+    "hotel": "7K",
+    "img": "a999dfeb5a2d47c415e062f8a1be2f09.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "东京",
+    "cityEnglishName": "Tokyo",
+    "country": "日本",
+    "food": "125K",
+    "shopping": "71K",
+    "scenic": "37K",
+    "hotel": "2K",
+    "img": "68ebb97fe7b0125da5975ff8703a9c66.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "大阪",
+    "cityEnglishName": "Osaka",
+    "country": "日本",
+    "food": "72K",
+    "shopping": "64K",
+    "scenic": "23K",
+    "hotel": "481",
+    "img": "0713841776f4004d3eba4e42b4cb33cd.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "威尼斯",
+    "cityEnglishName": "Venice",
+    "country": "意大利",
+    "food": "6K",
+    "shopping": "5K",
+    "scenic": "5K",
+    "hotel": "2K",
+    "img": "3c889df08b479124d653c5025bd97ed9.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "柏林",
+    "cityEnglishName": "Berlin",
+    "country": "德国",
+    "food": "13K",
+    "shopping": "9K",
+    "scenic": "10K",
+    "hotel": "2K",
+    "img": "2db3273ce649c67a3b261b56539340e9.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "巴塞罗那",
+    "cityEnglishName": "Barcelona",
+    "country": "西班牙",
+    "food": "20K",
+    "shopping": "19K",
+    "scenic": "8K",
+    "hotel": "2K",
+    "img": "cc1bf6b36e838b6fd8d30842999cd4db.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "佛罗伦萨",
+    "cityEnglishName": "Firenze",
+    "country": "意大利",
+    "food": "5K",
+    "shopping": "6K",
+    "scenic": "4K",
+    "hotel": "3K",
+    "img": "8ebae17171419e1681a20510e39d6bf8.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "札幌",
+    "cityEnglishName": "Sapporo",
+    "country": "日本",
+    "food": "11K",
+    "shopping": "6K",
+    "scenic": "3K",
+    "hotel": "271",
+    "img": "c8ec7258cf59583c0d58831b820a358b.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "芭堤雅",
+    "cityEnglishName": "Pattaya",
+    "country": "泰国",
+    "food": "3K",
+    "shopping": "852",
+    "scenic": "2K",
+    "hotel": "2K",
+    "img": "ad89b2ac59feb7a53482f03ecbe5dd07.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "普吉岛",
+    "cityEnglishName": "Phuket",
+    "country": "泰国",
+    "food": "4K",
+    "shopping": "2K",
+    "scenic": "2K",
+    "hotel": "3K",
+    "img": "282ab707564d202a51a8e106c4209154.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "台北",
+    "cityEnglishName": "Taipei",
+    "country": "中国",
+    "food": "44K",
+    "shopping": "16K",
+    "scenic": "6K",
+    "hotel": "2K",
+    "img": "fe46a360b6a9eb2cf4669e254244f5b5.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "垦丁",
+    "cityEnglishName": "Kenting",
+    "country": "中国",
+    "food": "467",
+    "shopping": "31",
+    "scenic": "68",
+    "hotel": "0",
+    "img": "73cae1294cd69ed475655a774a23da66.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "伊斯坦布尔",
+    "cityEnglishName": "Istanbul",
+    "country": "土耳其",
+    "food": "43K",
+    "shopping": "25K",
+    "scenic": "51K",
+    "hotel": "5K",
+    "img": "6a009edad3f097d82b6b216e771cb189.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "布里斯班",
+    "cityEnglishName": "Brisbane",
+    "country": "澳大利亚",
+    "food": "9K",
+    "shopping": "9K",
+    "scenic": "7K",
+    "hotel": "404",
+    "img": "edbe81bb95ab069c0d4f6d5f44d9ccb2.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  },
+  {
+    "city": "莫斯科",
+    "cityEnglishName": "Moscow",
+    "country": "俄罗斯",
+    "food": "16K",
+    "shopping": "9K",
+    "scenic": "20K",
+    "hotel": "4K",
+    "img": "04b8bfd1b62d7cbddd495a11c4b7e3e5.jpg@270w_350h_100Q_1pr_1c_1e.jpg"
+  }
+]

@@ -1,0 +1,632 @@
+[
+  {
+    "city": "开普敦",
+    "cityEnglishName": "Cape Town",
+    "country": "南非",
+    "food": "4K",
+    "shopping": "3K",
+    "scenic": "4K",
+    "hotel": "3K",
+    "img": "0106fadd8de3e2a9683fa3a2301b99bf.jpeg"
+  },
+  {
+    "city": "约翰内斯堡",
+    "cityEnglishName": "Johannesburg",
+    "country": "南非",
+    "food": "3K",
+    "shopping": "3K",
+    "scenic": "3K",
+    "hotel": "704",
+    "img": "95c6f6b04c5c97c7c05f93c6b41c442f.jpeg"
+  },
+  {
+    "city": "内罗毕",
+    "cityEnglishName": "Nairobi",
+    "country": "肯尼亚",
+    "food": "2K",
+    "shopping": "725",
+    "scenic": "2K",
+    "hotel": "539",
+    "img": "53843001928870b278b79f1ec802c40c.jpeg"
+  },
+  {
+    "city": "毛里求斯",
+    "cityEnglishName": "Mauritius",
+    "country": "毛里求斯",
+    "food": "2K",
+    "shopping": "326",
+    "scenic": "787",
+    "hotel": "669",
+    "img": "5cc45928010fab46f48bb5acb3d11e1c.jpeg"
+  },
+  {
+    "city": "开罗",
+    "cityEnglishName": "Cairo",
+    "country": "埃及",
+    "food": "4K",
+    "shopping": "748",
+    "scenic": "769",
+    "hotel": "357",
+    "img": "5262f8f4beee4a313328a96f6418fa05.jpeg"
+  },
+  {
+    "city": "维多利亚",
+    "cityEnglishName": "Victoria",
+    "country": "塞舌尔",
+    "food": "208",
+    "shopping": "45",
+    "scenic": "274",
+    "hotel": "152",
+    "img": "8329c132871ce58e31ed11777c7a2283.jpeg"
+  },
+  {
+    "city": "亚历山大",
+    "cityEnglishName": "Alexander",
+    "country": "埃及",
+    "food": "2K",
+    "shopping": "289",
+    "scenic": "203",
+    "hotel": "116",
+    "img": "dbadc2cf6e8549ba5e68be45d4269a1a.jpeg"
+  },
+  {
+    "city": "阿斯旺",
+    "cityEnglishName": "Aswan",
+    "country": "埃及",
+    "food": "109",
+    "shopping": "40",
+    "scenic": "138",
+    "hotel": "56",
+    "img": "8f16b798eb7a925866055c0c37ec88ab.jpeg"
+  },
+  {
+    "city": "沙姆沙伊赫",
+    "cityEnglishName": "Sharm el sheikh",
+    "country": "埃及",
+    "food": "139",
+    "shopping": "8",
+    "scenic": "126",
+    "hotel": "223",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "赫尔格达",
+    "cityEnglishName": "Hurghada",
+    "country": "埃及",
+    "food": "118",
+    "shopping": "2",
+    "scenic": "116",
+    "hotel": "219",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "卢克索",
+    "cityEnglishName": "Luxor",
+    "country": "埃及",
+    "food": "165",
+    "shopping": "55",
+    "scenic": "102",
+    "hotel": "149",
+    "img": "bc3dfa3bf4c8098c02ae4610e37f3a12.jpeg"
+  },
+  {
+    "city": "马特鲁",
+    "cityEnglishName": "Matruh",
+    "country": "埃及",
+    "food": "122",
+    "shopping": "9",
+    "scenic": "87",
+    "hotel": "22",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "达哈卜",
+    "cityEnglishName": "Dahab",
+    "country": "埃及",
+    "food": "80",
+    "shopping": "4",
+    "scenic": "79",
+    "hotel": "72",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "吉萨",
+    "cityEnglishName": "Giza",
+    "country": "埃及",
+    "food": "889",
+    "shopping": "36",
+    "scenic": "55",
+    "hotel": "39",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "亚的斯亚贝巴",
+    "cityEnglishName": "Addis Ababa",
+    "country": "埃塞俄比亚",
+    "food": "250",
+    "shopping": "10",
+    "scenic": "52",
+    "hotel": "165",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "萨尔岛",
+    "cityEnglishName": "Sal Island",
+    "country": "佛得角",
+    "food": "78",
+    "shopping": "9",
+    "scenic": "51",
+    "hotel": "32",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "阿尔及尔",
+    "cityEnglishName": "Algiers",
+    "country": "阿尔及利亚",
+    "food": "302",
+    "shopping": "2",
+    "scenic": "45",
+    "hotel": "31",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "阿克拉",
+    "cityEnglishName": "Accra",
+    "country": "加纳",
+    "food": "203",
+    "shopping": "16",
+    "scenic": "34",
+    "hotel": "224",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "哈拉雷",
+    "cityEnglishName": "Harare",
+    "country": "津巴布韦",
+    "food": "120",
+    "shopping": "9",
+    "scenic": "29",
+    "hotel": "84",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "马赛马拉",
+    "cityEnglishName": "Masai Mara",
+    "country": "肯尼亚",
+    "food": "6",
+    "shopping": "1",
+    "scenic": "26",
+    "hotel": "189",
+    "img": "beccbdca1e0e9cc8a8d289e5c6d96e31.jpeg"
+  },
+  {
+    "city": "法尤姆",
+    "cityEnglishName": "Fayoum",
+    "country": "埃及",
+    "food": "48",
+    "shopping": "0",
+    "scenic": "25",
+    "hotel": "17",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "阿斯马拉",
+    "cityEnglishName": "Asmara",
+    "country": "厄立特里亚",
+    "food": "14",
+    "shopping": "2",
+    "scenic": "22",
+    "hotel": "13",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "罗安达",
+    "cityEnglishName": "Luanda",
+    "country": "安哥拉",
+    "food": "133",
+    "shopping": "1",
+    "scenic": "22",
+    "hotel": "49",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "奥兰",
+    "cityEnglishName": "Oran",
+    "country": "阿尔及利亚",
+    "food": "34",
+    "shopping": "1",
+    "scenic": "21",
+    "hotel": "28",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "利伯维尔",
+    "cityEnglishName": "Libreville",
+    "country": "加蓬",
+    "food": "72",
+    "shopping": "5",
+    "scenic": "20",
+    "hotel": "19",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "哈博罗内",
+    "cityEnglishName": "Gaborone",
+    "country": "博茨瓦纳",
+    "food": "84",
+    "shopping": "3",
+    "scenic": "20",
+    "hotel": "80",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "锡瓦绿洲",
+    "cityEnglishName": "Siwa oasis",
+    "country": "埃及",
+    "food": "12",
+    "shopping": "0",
+    "scenic": "19",
+    "hotel": "17",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "金沙萨",
+    "cityEnglishName": "Kinshasa",
+    "country": "刚果民主共和国",
+    "food": "99",
+    "shopping": "1",
+    "scenic": "18",
+    "hotel": "38",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "普拉亚",
+    "cityEnglishName": "Praia",
+    "country": "佛得角",
+    "food": "39",
+    "shopping": "2",
+    "scenic": "18",
+    "hotel": "22",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "拉利贝拉",
+    "cityEnglishName": "Lalibela",
+    "country": "埃塞俄比亚",
+    "food": "16",
+    "shopping": "0",
+    "scenic": "16",
+    "hotel": "13",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "马翁",
+    "cityEnglishName": "Maun",
+    "country": "博茨瓦纳",
+    "food": "18",
+    "shopping": "2",
+    "scenic": "16",
+    "hotel": "23",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "萨法加",
+    "cityEnglishName": "Safaga",
+    "country": "埃及",
+    "food": "3",
+    "shopping": "1",
+    "scenic": "14",
+    "hotel": "19",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "塞得港",
+    "cityEnglishName": "Port Said",
+    "country": "埃及",
+    "food": "34",
+    "shopping": "0",
+    "scenic": "13",
+    "hotel": "10",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "努韦巴",
+    "cityEnglishName": "Nuweiba",
+    "country": "埃及",
+    "food": "3",
+    "shopping": "0",
+    "scenic": "12",
+    "hotel": "22",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "洛美",
+    "cityEnglishName": "Lome",
+    "country": "多哥",
+    "food": "67",
+    "shopping": "3",
+    "scenic": "11",
+    "hotel": "37",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "布拉瓦约",
+    "cityEnglishName": "Bulawayo",
+    "country": "津巴布韦",
+    "food": "23",
+    "shopping": "0",
+    "scenic": "11",
+    "hotel": "51",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "班珠尔",
+    "cityEnglishName": "Banjul",
+    "country": "冈比亚",
+    "food": "27",
+    "shopping": "1",
+    "scenic": "11",
+    "hotel": "11",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "古赛尔",
+    "cityEnglishName": "Al Qusayr",
+    "country": "埃及",
+    "food": "5",
+    "shopping": "0",
+    "scenic": "10",
+    "hotel": "10",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "吉布提市",
+    "cityEnglishName": "Djibouti",
+    "country": "吉布提",
+    "food": "38",
+    "shopping": "2",
+    "scenic": "9",
+    "hotel": "13",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "阿莱姆港 ",
+    "cityEnglishName": "Marsa Alam",
+    "country": "埃及",
+    "food": "7",
+    "shopping": "0",
+    "scenic": "9",
+    "hotel": "9",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "科托努",
+    "cityEnglishName": "Cotonou",
+    "country": "贝宁",
+    "food": "60",
+    "shopping": "3",
+    "scenic": "9",
+    "hotel": "23",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "西奈山",
+    "cityEnglishName": "Mount Moses",
+    "country": "埃及",
+    "food": "5",
+    "shopping": "4",
+    "scenic": "9",
+    "hotel": "1",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "瓦加杜古",
+    "cityEnglishName": "Ouagadougou ",
+    "country": "布基纳法索",
+    "food": "95",
+    "shopping": "2",
+    "scenic": "9",
+    "hotel": "35",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "布琼布拉",
+    "cityEnglishName": "Bujumbura",
+    "country": "布隆迪",
+    "food": "31",
+    "shopping": "0",
+    "scenic": "8",
+    "hotel": "2",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "布拉柴维尔",
+    "cityEnglishName": "Brazzaville",
+    "country": "刚果",
+    "food": "18",
+    "shopping": "0",
+    "scenic": "8",
+    "hotel": "36",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "马萨瓦",
+    "cityEnglishName": "Massawa",
+    "country": "厄立特里亚",
+    "food": "5",
+    "shopping": "0",
+    "scenic": "8",
+    "hotel": "1",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "库马西",
+    "cityEnglishName": "Kumasi",
+    "country": "加纳",
+    "food": "25",
+    "shopping": "2",
+    "scenic": "8",
+    "hotel": "31",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "科纳克里",
+    "cityEnglishName": "Conakry",
+    "country": "几内亚",
+    "food": "32",
+    "shopping": "0",
+    "scenic": "8",
+    "hotel": "13",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "塔巴",
+    "cityEnglishName": "Taba",
+    "country": "埃及",
+    "food": "11",
+    "shopping": "0",
+    "scenic": "7",
+    "hotel": "18",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "波多诺伏",
+    "cityEnglishName": "Porto-Novo ",
+    "country": "贝宁",
+    "food": "2",
+    "shopping": "0",
+    "scenic": "7",
+    "hotel": "10",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "比绍",
+    "cityEnglishName": "Bissau",
+    "country": "几内亚比绍",
+    "food": "7",
+    "shopping": "3",
+    "scenic": "6",
+    "hotel": "12",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "马拉博",
+    "cityEnglishName": "Malabo",
+    "country": "赤道几内亚",
+    "food": "20",
+    "shopping": "0",
+    "scenic": "5",
+    "hotel": "9",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "黑角",
+    "cityEnglishName": "Pointe-Noire",
+    "country": "刚果",
+    "food": "39",
+    "shopping": "0",
+    "scenic": "4",
+    "hotel": "17",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "博博迪乌拉索",
+    "cityEnglishName": "Bobo Dioulasso ",
+    "country": "布基纳法索",
+    "food": "17",
+    "shopping": "3",
+    "scenic": "3",
+    "hotel": "7",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "帕利梅",
+    "cityEnglishName": "Kpalime ",
+    "country": "多哥",
+    "food": "6",
+    "shopping": "0",
+    "scenic": "3",
+    "hotel": "7",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "伊斯梅利亚",
+    "cityEnglishName": "Ismailia ",
+    "country": "埃及",
+    "food": "106",
+    "shopping": "0",
+    "scenic": "3",
+    "hotel": "13",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "布鲁夫特",
+    "cityEnglishName": "Brufut",
+    "country": "冈比亚",
+    "food": "3",
+    "shopping": "0",
+    "scenic": "2",
+    "hotel": "17",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "卢本巴希",
+    "cityEnglishName": "Lubumbashi",
+    "country": "刚果民主共和国",
+    "food": "17",
+    "shopping": "0",
+    "scenic": "2",
+    "hotel": "30",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "苏伊士",
+    "cityEnglishName": "Suez",
+    "country": "埃及",
+    "food": "44",
+    "shopping": "0",
+    "scenic": "2",
+    "hotel": "9",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "本吉拉",
+    "cityEnglishName": "Benguela",
+    "country": "安哥拉",
+    "food": "8",
+    "shopping": "0",
+    "scenic": "2",
+    "hotel": "15",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "奥耶姆",
+    "cityEnglishName": "Oyem",
+    "country": "加蓬",
+    "food": "0",
+    "shopping": "0",
+    "scenic": "1",
+    "hotel": "0",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "阿萨勒湖",
+    "cityEnglishName": "Lac Assal",
+    "country": "吉布提",
+    "food": "0",
+    "shopping": "0",
+    "scenic": "1",
+    "hotel": "0",
+    "img": "city-demo.jpg"
+  },
+  {
+    "city": "基比拉国家公园",
+    "cityEnglishName": "Kibira National Park ",
+    "country": "布隆迪",
+    "food": "0",
+    "shopping": "0",
+    "scenic": "0",
+    "hotel": "42",
+    "img": "city-demo.jpg"
+  }
+]
