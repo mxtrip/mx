@@ -2703,7 +2703,8 @@
             </div>
         </div>
     </div>
-    <a id="backtop" title="回到顶部" rel="nofollow" href="javascript:returnTop();"></a>
+    <a id="backtop" title="回到顶部" rel="nofollow" href="javascript:;"></a>
+    <!--<a id="backtop" title="回到顶部" rel="nofollow" href="javascript:returnTop();"></a>-->
     <div id="product-fk">
         <div id="feedback-icon">
             <div class="fb-icon"></div>
@@ -2868,13 +2869,16 @@
                 isTopBtnShow = false;
             }
         };
-        var sdelay=0;
-        function returnTop() {
-            window.scrollBy(0,-100);
-            if(document.body.scrollTop>0) {
-                sdelay= setTimeout('returnTop()',50);
-            }
-        }
+//        var sdelay=0;
+//        function returnTop() {
+//            window.scrollBy(0,-100);
+//            if(document.body.scrollTop>0) {
+//                sdelay= setTimeout('returnTop()',50);
+//            }
+//        }
+                $("#backtop").click(function () {
+                    $("html,body").animate({ scrollTop:0},1000);
+                })
 
 //        footer二维码
         $('.footer_app').mouseenter(function () {
