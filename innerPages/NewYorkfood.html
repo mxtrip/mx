@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../js/artTemplate.js"></script>
     <style>
         *{  margin: 0;  padding: 0;  text-decoration: none;  list-style-type: none;  }
-        body{
+        a,body{
             font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
             font-size: 14px;
             color: #333;
@@ -210,6 +210,7 @@
             height: 49px;
             background: #000;
             opacity: .5;
+            filter:alpha(opacity=50)
         }
 /*                   tips-selection-result                              */
         .tips-selection-result-wrap {
@@ -223,6 +224,149 @@
             width: 1200px;
             font-size: 16px;
         }
+        .tips-selection-result-cont dl {
+            float: left;
+            width: 950px;
+            padding-top: 29px;
+            color: #555;
+        }
+        .tips-selection-result-cont dl dd, .tips-selection-result-cont dl dt {
+            float: left;
+            line-height: 20px;
+        }
+        .tips-selection-result-cont dl dd {
+            font-size: 14px;
+        }
+        .tips-selection-result-cont dl dd strong {
+            font-weight: 700;
+        }
+        .tips-selection-result-cont .range-mode {
+            float: right;
+            margin: 25px 0 25px 10px;
+            width: 240px;
+            padding-top: 0;
+            line-height: 20px;
+            color: #555;
+        }
+        .tips-selection-result-cont .range-mode dd {
+            position: relative;
+            width: 155px;
+            height: 23px;
+            line-height: 24px;
+            border: 1px solid #717171;
+            font-size: 14px;
+            text-indent: 6px;
+        }
+        .tips-selection-result-cont .range-mode dd span {
+            position: absolute;
+            z-index: 102;
+            width: 149px;
+            height: 23px;
+            padding-left: 6px;
+        }
+        .range-mode dd ul {
+            display: none;
+            position: absolute;
+            z-index: 102;
+            top: 24px;
+            left: -1px;
+            width: 155px;
+            padding: 4px 0;
+            border: 1px solid #717171;
+            border-top: 0;
+            background: #fff;
+        }
+        .range-mode dd ul li {
+            display: block;
+            line-height: 25px;
+        }
+        .tips-selection-result-cont .range-mode dd a {
+            color: #555;
+        }
+        .range-mode dd ul li a {
+            display: block;
+            margin-right: 0;
+            padding-left: 6px;
+            height: 25px;
+        }
+        .range-mode dd ul li a:hover {
+            background: #eee;
+        }
+
+        .tips-selection-result-cont .range-mode dd i {
+            border-top: 5px solid #bbb;
+        }
+        .tips-selection-result-cont .range-mode dd.active i {
+            border-top: 0;
+            border-bottom: 5px solid #bbb;
+        }
+        .tips-selection-result-cont .range-mode dd i, .tips-selection-result-cont .range-mode dd.active i {
+            z-index: 101;
+            right: 5px;
+            top: 9px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            position: absolute;
+        }
+        .selection-result-cont {
+            position: relative;
+            margin: 0 auto;
+            width: 1200px;
+        }
+        .choice-cont {
+            width: 750px;
+            float: left;
+        }
+        .choice-list {
+            width: 100%;
+            min-height: 440px;
+            height: auto;
+        }
+        .item-poi {
+            margin-top: 25px;
+            width: 748px;
+            height: 150px;
+            border: 1px solid #fff;
+            background: #fff;
+            box-shadow: 2px 2px 5px #eee;
+        }
+        .item-poi .item-poi-pic {
+            float: left;
+            margin-right: 14px;
+            width: 200px!important;
+            height: 150px;
+            overflow: hidden;
+        }
+
+
+
+
+        .item-poi-txt .title {
+            width: 410px;
+            height: 20px;
+            padding: 5px 0;
+            line-height: 17px;
+            font-size: 16px;
+            overflow: hidden;
+        }
+        .item-poi-txt .title a {
+            height: 20px;
+            line-height: 20px;
+            color: #222;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .item-poi-txt .title i {
+            display: inline-block;
+            margin-left: 10px;
+            margin-top: 1px;
+            width: 18px;
+            height: 18px;
+            background: url(../img/cityInner/hot_icon_w18_h18_1x.png) no-repeat;
+        }
     </style>
 </head>
 <body>
@@ -231,7 +375,7 @@
           <div class="top-bar">
               <h2 class="logo">
                   <a href="#" title="梦想旅行">
-                      <img src="../img/logo.png" alt="梦想旅行">
+                      <img src="../img/logo.png" alt="梦想旅行" style="border: none">
                   </a>
               </h2>
               <ul class="top-nav">
@@ -260,7 +404,7 @@
       </div>
       <div class="center clearfix">
           <dl class="main-crumb clearfix">
-              <dd><a href="#" target="_blank">目的地</a>>></dd>
+              <dd><a href="..//" target="_blank">目的地</a>>></dd>
               <dd><a href="../NorthAmerica.html" target="_blank">北美洲</a>>></dd>
               <dd><a href="#" target="_blank">纽约</a>>></dd>
               <dd><a href="#" target="_blank">美食</a></dd>
@@ -289,19 +433,68 @@
               </ul>
               <div class="poi-class-bg"></div>
           </div>
-      </div>
-      <div class="tips-selection-result-wrap">
-          <div class="tips-selection-result-cont">
-
+          <div class="tips-selection-result-wrap">
+              <div class="tips-selection-result-cont" id="tips_selection_result_cont">
+                  <dl>
+                      <dt>纽约的美食列表：</dt>
+                      <dd> <strong>共240个结果</strong></dd>
+                  </dl>
+                  <dl class="range-mode">
+                      <dt><span>排序方式：</span></dt>
+                      <dd class>
+                          <span>默认排序</span>
+                          <ul style="display:none">
+                              <li><a href="#">默认排序</a></li>
+                              <li><a href="#">热度排序</a></li>
+                              <li><a href="">评分排序</a></li>
+                          </ul>
+                          <i></i>
+                      </dd>
+                  </dl>
+              </div>
+          </div>
+          <div class="selection-result-cont clearfix" id="selec_result_cont">
+              <div class="choice-cont">
+                  <div class="choice-list">
+                      <div class="item-poi">
+                          <a href="#" class="item-poi-pic"></a>
+                          <!--<h3 class="title">-->
+                              <!--<a href="#" target="_blank">Katz's Deli</a>-->
+                              <!--<i class="hot"></i>-->
+                          <!--</h3>-->
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
+
   </div>
 </body>
 <script>
+    /*              header内容众包mouseenter事件                */
     $(".edit_zhongbao").mouseenter(function () {
         $(".tips-zhongbao").css("display","block")
     }).mouseleave(function () {
         $(".tips-zhongbao").css("display","none")
     })
+
+
+  /*                 tips-selection-result下拉选项             */
+        $(".range-mode dd span").click(function () {
+           $(".range-mode dd").toggleClass("active");
+            if ( $(".range-mode dd").hasClass('active')) {
+                $('.range-mode dd ul').show();
+            }else {
+                $('.range-mode dd ul').hide();
+            }
+        })
+        $(".range-mode dd ul").mouseleave(function () {
+            $(this).fadeOut(500);
+            $(".range-mode dd").removeClass('active');
+        })
+
+
+
+
 </script>
 </html>
