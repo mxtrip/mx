@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../img/favicon.ico" rel="shortcut icon"type="image/x-icon">
+    <script  src="../js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="../js/artTemplate.js"></script>
+    <style>
+        *{  margin: 0;  padding: 0;  text-decoration: none;  list-style-type: none;  }
+        body{
+            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+            font-size: 14px;
+            color: #333;
+        }
+        h2, h3, h4, h5, h6{
+            font-weight: 100;
+        }
+        i,em{
+            font-style: normal;
+        }
+        a {
+            cursor: pointer;
+        }
+        .clearfix:after{
+            content:"";
+            display: block;
+            clear: both;
+        }
+        .wrap {
+            width: 100%;
+        }
+        /*                       header                */
+        .header{
+            width: 100%;
+            height: 78px;
+            border-bottom: 1px solid #ddd;
+
+        }
+        .top-bar {
+            margin: 0 auto;
+            height: 100%;
+            width: 1200px;
+        }
+        .logo{
+            float: left;
+            margin-right: 10px;
+            width: 155px;
+            height: 45px;
+            padding: 17px 0 16px;
+        }
+        .logo img{
+            display: block;
+            width: 155px;
+            height: 45px;
+        }
+        .top-nav{
+            float: right;
+            width: 835px;
+            height: 78px;
+        }
+        .top-nav li{
+            float: right;
+            padding: 0 22px;
+            line-height: 78px;
+            font-size: 16px;
+        }
+        .top-nav .edit_zhongbao{
+            position: relative;
+            z-index: 100085;
+            padding-right: 0;
+        }
+        .top-nav a{
+            color: #888;
+        }
+        .top-nav li a:hover{
+            color: #00b7a8;
+        }
+        .edit_zhongbao span{
+            float: right;
+            margin: 23px 5px 10px 13px;
+            height: 20px;
+            padding: 0 6px;
+            border-radius: 4px;
+            line-height: 20px;
+            font-size: 12px;
+            color: #fff;
+            background: red;
+            text-align: center;
+        }
+        .tips-zhongbao{
+            position: absolute;
+            z-index: 10086;
+            top: 59px;
+            right: -50px;
+            width: 277px;
+            height: 45px;
+            padding-top: 5px;
+            line-height: 45px;
+            background: url(../img/textbox.png) no-repeat;
+            text-align: center;
+        }
+
+/*                           center                                    */
+        .center {
+            background: #f2f2f2;
+        }
+        .main-crumb {
+            position: absolute;
+            z-index: 10;
+            top: 78px;
+            left: 50%;
+            margin-left: -600px;
+            width: 1200px;
+            color: #fff;
+            font-size: 14px;
+        }
+        .main-crumb dd, .main-crumb dt {
+            float: left;
+            line-height: 50px;
+            color: #cac4d4;
+        }
+        .main-crumb a {
+            padding: 0 4px;
+            color: #fff;
+        }
+        .focus {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: url(../img/cityInner/focus-bg.jpg) center center no-repeat;
+            background-size: cover;
+        }
+        .focus h1 {
+            position: absolute;
+            z-index: 4;
+            top: 104px;
+            width: 100%;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+        }
+        .focus h1 span {
+            display: block;
+            padding-top: 10px;
+            font-size: 24px;
+        }
+        .focus .poi-class {
+            position: absolute;
+            z-index: 5;
+            bottom: -1px;
+            left: 50%;
+            margin-left: -422px;
+            width: 844px;
+        }
+        .focus .poi-class li {
+            float: left;
+            width: 211px;
+            height: 49px;
+            line-height: 49px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .poi-class li.active {
+            background: #fff;
+        }
+        .poi-class li.active span.food, .poi-class li.active span.hotel, .poi-class li.active span.scenic, .poi-class li.active span.shopping {
+            background-image: url(../img/cityInner/poi_type_icon_active_w64_2x.png);
+        }
+        .poi-class li span {
+            float: left;
+            margin: 14px 10px 5px 65px;
+            width: 15px;
+            height: 20px;
+            background: url(../img/cityInner/poi_type_icon_default_w64_2x.png) no-repeat;
+            background-size: 64px 20px;
+        }
+        .poi-class li.active span.food {
+            background-position: 0 0;
+        }
+        .poi-class li.active a {
+            background: #fff;
+            color: #00b7a8;
+        }
+        .poi-class li a {
+            float: left;
+            display: inline;
+            width: auto!important;
+            height: 49px!important;
+            line-height: 49px;
+            color: #fff;
+        }
+        .poi-class li span.shopping {
+            background-position: -15px 0;
+        }
+        .poi-class li span.scenic {
+            width: 18px;
+            background-position: -31px 0;
+        }
+        .poi-class li span.hotel {
+            width: 14px;
+            background-position: -49px 0;
+        }
+        .poi-class-bg {
+            position: absolute;
+            z-index: 4;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 49px;
+            background: #000;
+            opacity: .5;
+        }
+/*                   tips-selection-result                              */
+        .tips-selection-result-wrap {
+            width: 100%;
+            height: 78px;
+            border-bottom: 1px solid #bababa;
+            background: #fff;
+        }
+        .tips-selection-result-cont {
+            margin: 0 auto;
+            width: 1200px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+  <div class="wrap">
+      <div class="header">
+          <div class="top-bar">
+              <h2 class="logo">
+                  <a href="#" title="梦想旅行">
+                      <img src="../img/logo.png" alt="梦想旅行">
+                  </a>
+              </h2>
+              <ul class="top-nav">
+                  <li class="edit_zhongbao">
+                      <a href="../zhongbao.html" class="login-layer">内容众包</a>
+                      <span>赚钱</span>
+                      <div class="tips-zhongbao" style="display:none">写旅游地信息，做赚钱小编</div>
+                  </li>
+                  <li>
+                      <a href="../joinUs.html">加入我们</a>
+                  </li>
+                  <li>
+                      <a href="../support.html">帮助支持</a>
+                  </li>
+                  <li>
+                      <a href="../about.html">关于我们</a>
+                  </li>
+                  <li>
+                      <a href="../productsIntro.html">产品介绍</a>
+                  </li>
+                  <li>
+                      <a href="../index.html">目的地</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="center clearfix">
+          <dl class="main-crumb clearfix">
+              <dd><a href="#" target="_blank">目的地</a>>></dd>
+              <dd><a href="../NorthAmerica.html" target="_blank">北美洲</a>>></dd>
+              <dd><a href="#" target="_blank">纽约</a>>></dd>
+              <dd><a href="#" target="_blank">美食</a></dd>
+          </dl>
+          <div class="focus">
+              <h1>纽约
+                  <span>New York</span>
+              </h1>
+              <ul class="poi-class" id="poi_class">
+                  <li class="active">
+                      <span class="food"></span>
+                      <a href="#">美食</a>
+                  </li>
+                  <li>
+                      <span class="shopping"></span>
+                      <a href="javascript:;">购物</a>
+                  </li>
+                  <li>
+                      <span class="scenic"></span>
+                      <a href="javascript:;">玩乐</a>
+                  </li>
+                  <li>
+                      <span class="hotel"></span>
+                      <a href="javascript:;">酒店</a>
+                  </li>
+              </ul>
+              <div class="poi-class-bg"></div>
+          </div>
+      </div>
+      <div class="tips-selection-result-wrap">
+          <div class="tips-selection-result-cont">
+
+          </div>
+      </div>
+  </div>
+</body>
+<script>
+    $(".edit_zhongbao").mouseenter(function () {
+        $(".tips-zhongbao").css("display","block")
+    }).mouseleave(function () {
+        $(".tips-zhongbao").css("display","none")
+    })
+</script>
+</html>
