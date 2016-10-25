@@ -2877,7 +2877,10 @@
 //            }
 //        }
                 $("#backtop").click(function () {
-                    $("html,body").animate({ scrollTop:0},1000);
+                    $(this).css("background-position",'right top')
+                    $("html,body").animate({ scrollTop:0},1000,function () {
+                        $("#backtop").css("background-position",'left top')
+                    });
                 })
 
 //        footer二维码
