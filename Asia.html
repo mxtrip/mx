@@ -416,13 +416,6 @@
             clear: both;
         }
 
-
-        /*                      解决无法被子元素撑开高度          */
-        .ft-cont:after{
-            content: "";
-            clear: both;
-            display: block;
-        }
         .ft-links{
             float: left;
             width: 800px;
@@ -488,7 +481,12 @@
         .pagination .pg{
             display: none;
         }
-
+        /*                      解决无法被子元素撑开高度          */
+        .ft-cont:after{
+            content: "";
+            clear: both;
+            display: block;
+        }
     </style>
 </head>
 <body>
