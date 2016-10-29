@@ -661,7 +661,7 @@
 <script id="listCityTemp" type="text/html">
     <dl>
         <dt>
-            <a href="javascript:;" title="{{city}}" target="_blank">
+            <a href="{{foodSrc}}" title="{{city}}" target="_blank">
                 <img src="img/Antarctica/{{img}}" alt="">
                 <p>
                     <strong>{{city}}</strong>
@@ -675,19 +675,19 @@
             <ul>
                 <li class="food">
                     <i></i>
-                    <a href="javascript:;" target="_blank">{{food}}</a>
+                    <a href="{{foodSrc}}" target="_blank">{{food}}</a>
                 </li>
                 <li class="shopping">
                     <i></i>
-                    <a href="javascript:;" target="_blank">{{shopping}}</a>
+                    <a href="{{shoppingSrc}}" target="_blank">{{shopping}}</a>
                 </li>
                 <li class="scenic">
                     <i></i>
-                    <a href="javascript:;" target="_blank">{{scenic}}</a>
+                    <a href="{{shoppingSrc}}" target="_blank">{{scenic}}</a>
                 </li>
                 <li class="hotel">
                     <i></i>
-                    <a href="javascript:;" target="_blank">{{hotel}}</a>
+                    <a href="{{shoppingSrc}}" target="_blank">{{hotel}}</a>
                 </li>
             </ul>
         </dd>
@@ -695,7 +695,7 @@
 </script>
 <script>
     $.ajax({
-        async:false,
+
         url: "json/Antarcticajson.json",
         dataType: "json",
         success: function (data){

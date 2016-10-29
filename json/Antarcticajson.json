@@ -1,5 +1,4 @@
-[
-  {
+[{
     "city": "南极半岛",
     "cityEnglishName": "Antarctic Peninsula",
     "country": "南极洲",
@@ -7,7 +6,11 @@
     "shopping": "0",
     "scenic": "11",
     "hotel": "0",
-    "img": "4373a6af60ece4aa8d800dcfb094147b.jpeg"
+    "img": "4373a6af60ece4aa8d800dcfb094147b.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWZ5iWGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWZ5iWGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWZ5iWGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWZ5iWGF/hotel/list"
   },
   {
     "city": "南设得兰群岛",
@@ -17,6 +20,10 @@
     "shopping": "0",
     "scenic": "5",
     "hotel": "0",
-    "img": "c69e54e84362deaf42633266688bc9f7.jpeg"
+    "img": "c69e54e84362deaf42633266688bc9f7.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWZ5ingF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWZ5ingF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWZ5ingF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWZ5ingF/hotel/list"
   }
 ]

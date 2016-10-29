@@ -7,7 +7,11 @@
     "shopping": "9K",
     "scenic": "7K",
     "hotel": "404",
-    "img": "edbe81bb95ab069c0d4f6d5f44d9ccb2.jpeg"
+    "img": "edbe81bb95ab069c0d4f6d5f44d9ccb2.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWXUh2wF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWXUh2wF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWXUh2wF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWXUh2wF/hotel/list"
   },
   {
     "city": "悉尼",
@@ -17,7 +21,11 @@
     "shopping": "18K",
     "scenic": "14K",
     "hotel": "636",
-    "img": "4578ed562e17fce6c4b0fcd3f2c605fc.jpeg"
+    "img": "4578ed562e17fce6c4b0fcd3f2c605fc.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWXUhFoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWXUhFoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWXUhFoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWXUhFoF/hotel/list"
   },
   {
     "city": "墨尔本",
@@ -27,7 +35,11 @@
     "shopping": "19K",
     "scenic": "12K",
     "hotel": "632",
-    "img": "a1091e6605ccc7888e692a778c7b0f81.jpeg"
+    "img": "a1091e6605ccc7888e692a778c7b0f81.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWXUhFGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWXUhFGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWXUhFGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWXUhFGF/hotel/list"
   },
   {
     "city": "奥克兰",
@@ -37,7 +49,11 @@
     "shopping": "4K",
     "scenic": "4K",
     "hotel": "722",
-    "img": "cfdfd9ba17bf3db721362d18a4a6a956.jpeg"
+    "img": "cfdfd9ba17bf3db721362d18a4a6a956.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWX5h2wF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWX5h2wF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWX5h2wF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWX5h2wF/hotel/list"
   },
   {
     "city": "黄金海岸",
@@ -47,7 +63,11 @@
     "shopping": "4K",
     "scenic": "3K",
     "hotel": "571",
-    "img": "1b21870c16dfdb257478508a6fcd78bb.jpeg"
+    "img": "1b21870c16dfdb257478508a6fcd78bb.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWg6g2gF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWg6g2gF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWg6g2gF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWg6g2gF/hotel/list"
   },
   {
     "city": "凯恩斯",
@@ -57,7 +77,11 @@
     "shopping": "2K",
     "scenic": "772",
     "hotel": "241",
-    "img": "17fafc0c850550c5c58bc093b9823ea4.jpeg"
+    "img": "17fafc0c850550c5c58bc093b9823ea4.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWXUh2gF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWXUh2gF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWXUh2gF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWXUh2gF/hotel/list"
   },
   {
     "city": "基督城",
@@ -67,7 +91,11 @@
     "shopping": "327",
     "scenic": "701",
     "hotel": "0",
-    "img": "bcb5e5020d6ea68a6ecd7cb22a4a4f2c.jpeg"
+    "img": "bcb5e5020d6ea68a6ecd7cb22a4a4f2c.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWX5h2gF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWX5h2gF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWX5h2gF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWX5h2gF/hotel/list"
   },
   {
     "city": "珀斯",
@@ -77,7 +105,11 @@
     "shopping": "456",
     "scenic": "625",
     "hotel": "149",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo6h2wF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo6h2wF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo6h2wF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo6h2wF/hotel/list"
   },
   {
     "city": "塔斯马尼亚岛",
@@ -87,7 +119,11 @@
     "shopping": "187",
     "scenic": "510",
     "hotel": "103",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo7gFoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo7gFoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo7gFoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo7gFoF/hotel/list"
   },
   {
     "city": "罗托鲁瓦",
@@ -97,7 +133,11 @@
     "shopping": "452",
     "scenic": "497",
     "hotel": "221",
-    "img": "5cde854e37ac04af46c586d9a6e89527.jpeg"
+    "img": "5cde854e37ac04af46c586d9a6e89527.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWg6g2wF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWg6g2wF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWg6g2wF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWg6g2wF/hotel/list"
   },
   {
     "city": "皇后镇",
@@ -107,7 +147,11 @@
     "shopping": "208",
     "scenic": "496",
     "hotel": "262",
-    "img": "8f6aaebdb2d27ee3d358fa8e5911d39e.jpeg"
+    "img": "8f6aaebdb2d27ee3d358fa8e5911d39e.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWX5hFXF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWX5hFXF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWX5hFXF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWX5hFXF/hotel/list"
   },
   {
     "city": "阿德莱德",
@@ -117,7 +161,11 @@
     "shopping": "410",
     "scenic": "486",
     "hotel": "123",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo6iWXF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo6iWXF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo6iWXF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo6iWXF/hotel/list"
   },
   {
     "city": "惠灵顿",
@@ -127,7 +175,11 @@
     "shopping": "114",
     "scenic": "405",
     "hotel": "151",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsTgngF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsTgngF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsTgngF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsTgngF/hotel/list"
   },
   {
     "city": "堪培拉",
@@ -137,7 +189,11 @@
     "shopping": "139",
     "scenic": "320",
     "hotel": "96",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo6h2gF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo6h2gF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo6h2gF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo6h2gF/hotel/list"
   },
   {
     "city": "斐济",
@@ -147,7 +203,11 @@
     "shopping": "95",
     "scenic": "204",
     "hotel": "147",
-    "img": "e266791cdbdbd774aa1db60372ceae4a.jpeg"
+    "img": "e266791cdbdbd774aa1db60372ceae4a.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWZ5inwF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWZ5inwF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWZ5inwF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWZ5inwF/hotel/list"
   },
   {
     "city": "大溪地",
@@ -157,7 +217,11 @@
     "shopping": "175",
     "scenic": "169",
     "hotel": "64",
-    "img": "c2071bf8332d7dfde3d208e6ea5d2fd4.jpeg"
+    "img": "c2071bf8332d7dfde3d208e6ea5d2fd4.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWX2gFoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWX2gFoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWX2gFoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWX2gFoF/hotel/list"
   },
   {
     "city": "达尔文",
@@ -167,7 +231,11 @@
     "shopping": "24",
     "scenic": "147",
     "hotel": "106",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo7gWXF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo7gWXF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo7gWXF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo7gWXF/hotel/list"
   },
   {
     "city": "蓝山",
@@ -177,7 +245,11 @@
     "shopping": "23",
     "scenic": "118",
     "hotel": "176",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo7gWGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo7gWGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo7gWGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo7gWGF/hotel/list"
   },
   {
     "city": "汉密尔顿",
@@ -187,7 +259,11 @@
     "shopping": "48",
     "scenic": "118",
     "hotel": "99",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsTgFoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsTgFoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsTgFoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsTgFoF/hotel/list"
   },
   {
     "city": "但尼丁",
@@ -197,7 +273,11 @@
     "shopping": "22",
     "scenic": "111",
     "hotel": "156",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsTgWGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsTgWGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsTgWGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsTgWGF/hotel/list"
   },
   {
     "city": "尼尔森",
@@ -207,7 +287,11 @@
     "shopping": "31",
     "scenic": "90",
     "hotel": "139",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsTgFGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsTgFGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsTgFGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsTgFGF/hotel/list"
   },
   {
     "city": "帕劳",
@@ -217,7 +301,11 @@
     "shopping": "21",
     "scenic": "86",
     "hotel": "4",
-    "img": "0f8ddb294284cb066eeb20140d461129.jpeg"
+    "img": "0f8ddb294284cb066eeb20140d461129.jpeg",
+    "foodSrc": "http://place.mxtrip.cn/kWZ6gWoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWZ6gWoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWZ6gWoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWZ6gWoF/hotel/list"
   },
   {
     "city": "拜伦湾",
@@ -227,7 +315,11 @@
     "shopping": "18",
     "scenic": "80",
     "hotel": "133",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo6inwF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo6inwF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo6inwF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo6inwF/hotel/list"
   },
   {
     "city": "道格拉斯港",
@@ -237,7 +329,11 @@
     "shopping": "9",
     "scenic": "80",
     "hotel": "110",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo7gFGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo7gFGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo7gFGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo7gFGF/hotel/list"
   },
   {
     "city": "瓦纳卡",
@@ -247,7 +343,11 @@
     "shopping": "3",
     "scenic": "75",
     "hotel": "118",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsTgnwF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsTgnwF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsTgnwF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsTgnwF/hotel/list"
   },
   {
     "city": "陶波",
@@ -257,7 +357,11 @@
     "shopping": "4",
     "scenic": "69",
     "hotel": "140",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsTg2gF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsTg2gF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsTg2gF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsTg2gF/hotel/list"
   },
   {
     "city": "卧龙岗",
@@ -267,7 +371,11 @@
     "shopping": "17",
     "scenic": "68",
     "hotel": "40",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo6iWGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo6iWGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo6iWGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo6iWGF/hotel/list"
   },
   {
     "city": "博拉博拉岛",
@@ -277,7 +385,11 @@
     "shopping": "17",
     "scenic": "62",
     "hotel": "27",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gn0F/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gn0F/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gn0F/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gn0F/hotel/list"
   },
   {
     "city": "莫雷阿岛",
@@ -287,7 +399,11 @@
     "shopping": "23",
     "scenic": "61",
     "hotel": "25",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gngF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gngF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gngF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gngF/hotel/list"
   },
   {
     "city": "霍巴特",
@@ -297,7 +413,11 @@
     "shopping": "20",
     "scenic": "57",
     "hotel": "108",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo6iWoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo6iWoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo6iWoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo6iWoF/hotel/list"
   },
   {
     "city": "拉罗汤加岛",
@@ -307,7 +427,11 @@
     "shopping": "15",
     "scenic": "55",
     "hotel": "66",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gWCF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gWCF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gWCF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gWCF/hotel/list"
   },
   {
     "city": "爱丽丝泉",
@@ -317,7 +441,11 @@
     "shopping": "4",
     "scenic": "55",
     "hotel": "46",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo7gngF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo7gngF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo7gngF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo7gngF/hotel/list"
   },
   {
     "city": "蒂阿瑙",
@@ -327,7 +455,11 @@
     "shopping": "1",
     "scenic": "50",
     "hotel": "75",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsThFoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsThFoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsThFoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsThFoF/hotel/list"
   },
   {
     "city": "凯库拉",
@@ -337,7 +469,11 @@
     "shopping": "6",
     "scenic": "48",
     "hotel": "86",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsTgFXF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsTgFXF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsTgFXF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsTgFXF/hotel/list"
   },
   {
     "city": "朗塞斯顿",
@@ -347,7 +483,11 @@
     "shopping": "25",
     "scenic": "44",
     "hotel": "77",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo6ingF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo6ingF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo6ingF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo6ingF/hotel/list"
   },
   {
     "city": "因弗卡吉尔",
@@ -357,7 +497,11 @@
     "shopping": "4",
     "scenic": "33",
     "hotel": "59",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsThWoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsThWoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsThWoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsThWoF/hotel/list"
   },
   {
     "city": "皮克顿",
@@ -367,7 +511,11 @@
     "shopping": "4",
     "scenic": "26",
     "hotel": "60",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsThWGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsThWGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsThWGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsThWGF/hotel/list"
   },
   {
     "city": "奥马鲁",
@@ -377,7 +525,11 @@
     "shopping": "6",
     "scenic": "25",
     "hotel": "62",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsTg2wF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsTg2wF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsTg2wF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsTg2wF/hotel/list"
   },
   {
     "city": "霍基蒂卡",
@@ -387,7 +539,11 @@
     "shopping": "9",
     "scenic": "23",
     "hotel": "38",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsThngF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsThngF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsThngF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsThngF/hotel/list"
   },
   {
     "city": "阿波罗湾",
@@ -397,7 +553,11 @@
     "shopping": "3",
     "scenic": "23",
     "hotel": "64",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo7gWoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo7gWoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo7gWoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo7gWoF/hotel/list"
   },
   {
     "city": "艾图塔基",
@@ -407,7 +567,11 @@
     "shopping": "1",
     "scenic": "21",
     "hotel": "14",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gWgF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gWgF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gWgF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gWgF/hotel/list"
   },
   {
     "city": "蒂卡普湖",
@@ -417,7 +581,11 @@
     "shopping": "0",
     "scenic": "21",
     "hotel": "39",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsThWXF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsThWXF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsThWXF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsThWXF/hotel/list"
   },
   {
     "city": "莫尔斯比港",
@@ -427,7 +595,11 @@
     "shopping": "1",
     "scenic": "18",
     "hotel": "26",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3hnsF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3hnsF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3hnsF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3hnsF/hotel/list"
   },
   {
     "city": "格雷茅斯",
@@ -437,7 +609,11 @@
     "shopping": "2",
     "scenic": "17",
     "hotel": "48",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsThnwF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsThnwF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsThnwF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsThnwF/hotel/list"
   },
   {
     "city": "库兰达",
@@ -447,7 +623,11 @@
     "shopping": "9",
     "scenic": "17",
     "hotel": "21",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo7gnwF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo7gnwF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo7gnwF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo7gnwF/hotel/list"
   },
   {
     "city": "箭镇",
@@ -457,7 +637,11 @@
     "shopping": "5",
     "scenic": "16",
     "hotel": "21",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsThFXF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsThFXF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsThFXF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsThFXF/hotel/list"
   },
   {
     "city": "塔哈岛",
@@ -467,7 +651,11 @@
     "shopping": "0",
     "scenic": "15",
     "hotel": "4",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gnsF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gnsF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gnsF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gnsF/hotel/list"
   },
   {
     "city": "格林诺奇",
@@ -477,7 +665,11 @@
     "shopping": "2",
     "scenic": "14",
     "hotel": "18",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWsThFGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWsThFGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWsThFGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWsThFGF/hotel/list"
   },
   {
     "city": "普纳奥亚",
@@ -487,7 +679,11 @@
     "shopping": "0",
     "scenic": "14",
     "hotel": "0",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gFoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gFoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gFoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gFoF/hotel/list"
   },
   {
     "city": "霍尼亚拉",
@@ -497,7 +693,11 @@
     "shopping": "4",
     "scenic": "13",
     "hotel": "8",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3inCF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3inCF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3inCF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3inCF/hotel/list"
   },
   {
     "city": "胡阿希内岛",
@@ -507,7 +707,11 @@
     "shopping": "3",
     "scenic": "13",
     "hotel": "14",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gFZF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gFZF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gFZF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gFZF/hotel/list"
   },
   {
     "city": "蒙达",
@@ -517,7 +721,11 @@
     "shopping": "0",
     "scenic": "9",
     "hotel": "6",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3inwF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3inwF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3inwF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3inwF/hotel/list"
   },
   {
     "city": "帕皮提",
@@ -527,7 +735,11 @@
     "shopping": "14",
     "scenic": "9",
     "hotel": "0",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gnXF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gnXF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gnXF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gnXF/hotel/list"
   },
   {
     "city": "新不列颠岛",
@@ -537,7 +749,11 @@
     "shopping": "0",
     "scenic": "7",
     "hotel": "7",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3hFwF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3hFwF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3hFwF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3hFwF/hotel/list"
   },
   {
     "city": "莫皮蒂岛",
@@ -547,7 +763,11 @@
     "shopping": "0",
     "scenic": "6",
     "hotel": "3",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gnoF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gnoF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gnoF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gnoF/hotel/list"
   },
   {
     "city": "阿洛陶",
@@ -557,7 +777,11 @@
     "shopping": "0",
     "scenic": "4",
     "hotel": "8",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3hnGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3hnGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3hnGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3hnGF/hotel/list"
   },
   {
     "city": "马当",
@@ -567,7 +791,11 @@
     "shopping": "0",
     "scenic": "3",
     "hotel": "6",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3hFkF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3hFkF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3hFkF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3hFkF/hotel/list"
   },
   {
     "city": "莱城",
@@ -577,7 +805,11 @@
     "shopping": "0",
     "scenic": "3",
     "hotel": "5",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3h2wF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3h2wF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3h2wF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3h2wF/hotel/list"
   },
   {
     "city": "戈罗卡",
@@ -587,7 +819,11 @@
     "shopping": "0",
     "scenic": "3",
     "hotel": "2",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3h2GF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3h2GF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3h2GF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3h2GF/hotel/list"
   },
   {
     "city": "毛凯岛",
@@ -597,7 +833,11 @@
     "shopping": "0",
     "scenic": "2",
     "hotel": "0",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gW0F/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gW0F/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gW0F/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gW0F/hotel/list"
   },
   {
     "city": "拉包尔",
@@ -607,7 +847,11 @@
     "shopping": "0",
     "scenic": "1",
     "hotel": "0",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3hFCF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3hFCF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3hFCF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3hFCF/hotel/list"
   },
   {
     "city": "瓦尼莫",
@@ -617,7 +861,11 @@
     "shopping": "0",
     "scenic": "1",
     "hotel": "10",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3hFgF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3hFgF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3hFgF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3hFgF/hotel/list"
   },
   {
     "city": "芒特哈根",
@@ -627,7 +875,11 @@
     "shopping": "1",
     "scenic": "1",
     "hotel": "1",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3h20F/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3h20F/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3h20F/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3h20F/hotel/list"
   },
   {
     "city": "吉佐",
@@ -637,7 +889,11 @@
     "shopping": "0",
     "scenic": "1",
     "hotel": "1",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3ingF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3ingF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3ingF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3ingF/hotel/list"
   },
   {
     "city": "阿蒂乌岛",
@@ -647,7 +903,11 @@
     "shopping": "1",
     "scenic": "1",
     "hotel": "1",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gWsF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gWsF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gWsF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gWsF/hotel/list"
   },
   {
     "city": "米蒂亚罗岛",
@@ -657,7 +917,11 @@
     "shopping": "0",
     "scenic": "1",
     "hotel": "0",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gnCF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gnCF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gnCF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gnCF/hotel/list"
   },
   {
     "city": "瓦伊塔佩",
@@ -667,7 +931,11 @@
     "shopping": "0",
     "scenic": "1",
     "hotel": "0",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gFCF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gFCF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gFCF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gFCF/hotel/list"
   },
   {
     "city": "韦瓦克",
@@ -677,7 +945,11 @@
     "shopping": "0",
     "scenic": "0",
     "hotel": "0",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3hFGF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3hFGF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3hFGF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3hFGF/hotel/list"
   },
   {
     "city": "门迪",
@@ -687,7 +959,11 @@
     "shopping": "0",
     "scenic": "0",
     "hotel": "4",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs3iWZF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs3iWZF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs3iWZF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs3iWZF/hotel/list"
   },
   {
     "city": "瓦胡卡岛",
@@ -697,7 +973,11 @@
     "shopping": "0",
     "scenic": "0",
     "hotel": "4",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWs4gF0F/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWs4gF0F/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWs4gF0F/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWs4gF0F/hotel/list"
   },
   {
     "city": "纽卡斯尔",
@@ -707,6 +987,10 @@
     "shopping": "1",
     "scenic": "0",
     "hotel": "4",
-    "img": "city-demo.jpg"
+    "img": "city-demo.jpg",
+    "foodSrc": "http://place.mxtrip.cn/kWo7gFXF/canyin/list",
+    "shoppingSrc": "http://place.mxtrip.cn/kWo7gFXF/gouwu/list",
+    "scenicSrc": "http://place.mxtrip.cn/kWo7gFXF/jingdian/list",
+    "hotelSrc": "http://place.mxtrip.cn/kWo7gFXF/hotel/list"
   }
 ]

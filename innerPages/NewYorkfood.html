@@ -3,82 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="../img/favicon.ico" rel="shortcut icon"type="image/x-icon">
-    <script  src="../js/jquery-3.1.0.js"></script>
+    <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="../js/jquery-3.1.0.js"></script>
     <script type="text/javascript" src="../js/artTemplate.js"></script>
     <style>
-        *{  margin: 0;  padding: 0;  text-decoration: none;  list-style-type: none;  }
-        body{
-            font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        body {
+            font-family: 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
             font-size: 14px;
             color: #333;
         }
-        h2, h3, h4, h5, h6{
+
+        h2, h3, h4, h5, h6 {
             font-weight: 100;
         }
-        i,em{
+
+        i, em {
             font-style: normal;
         }
+
         a {
             cursor: pointer;
             color: #333;
             cursor: pointer;
         }
-        .clearfix:after{
-            content:"";
+
+        .clearfix:after {
+            content: "";
             display: block;
             clear: both;
         }
+
         .wrap {
             width: 100%;
         }
+
         /*                       header                */
-        .header{
+        .header {
             width: 100%;
             height: 78px;
             border-bottom: 1px solid #ddd;
 
         }
+
         .top-bar {
             margin: 0 auto;
             height: 100%;
             width: 1200px;
         }
-        .logo{
+
+        .logo {
             float: left;
             margin-right: 10px;
             width: 155px;
             height: 45px;
             padding: 17px 0 16px;
         }
-        .logo img{
+
+        .logo img {
             display: block;
             width: 155px;
             height: 45px;
         }
-        .top-nav{
+
+        .top-nav {
             float: right;
             width: 835px;
             height: 78px;
         }
-        .top-nav li{
+
+        .top-nav li {
             float: right;
             padding: 0 22px;
             line-height: 78px;
             font-size: 16px;
         }
-        .top-nav .edit_zhongbao{
+
+        .top-nav .edit_zhongbao {
             position: relative;
             z-index: 100085;
             padding-right: 0;
         }
-        .top-nav a{
+
+        .top-nav a {
             color: #888;
         }
-        .top-nav li a:hover{
+
+        .top-nav li a:hover {
             color: #00b7a8;
         }
-        .edit_zhongbao span{
+
+        .edit_zhongbao span {
             float: right;
             margin: 23px 5px 10px 13px;
             height: 20px;
@@ -90,7 +111,8 @@
             background: red;
             text-align: center;
         }
-        .tips-zhongbao{
+
+        .tips-zhongbao {
             position: absolute;
             z-index: 10086;
             top: 59px;
@@ -103,10 +125,11 @@
             text-align: center;
         }
 
-/*                           center                                    */
+        /*                           center                                    */
         .center {
             background: #f2f2f2;
         }
+
         .main-crumb {
             position: absolute;
             z-index: 10;
@@ -117,15 +140,18 @@
             color: #fff;
             font-size: 14px;
         }
+
         .main-crumb dd, .main-crumb dt {
             float: left;
             line-height: 50px;
             color: #cac4d4;
         }
+
         .main-crumb a {
             padding: 0 4px;
             color: #fff;
         }
+
         .focus {
             position: relative;
             width: 100%;
@@ -133,6 +159,7 @@
             background: url(../img/cityInner/focus-bg.jpg) center center no-repeat;
             background-size: cover;
         }
+
         .focus h1 {
             position: absolute;
             z-index: 4;
@@ -142,11 +169,13 @@
             color: #fff;
             text-align: center;
         }
+
         .focus h1 span {
             display: block;
             padding-top: 10px;
             font-size: 24px;
         }
+
         .focus .poi-class {
             position: absolute;
             z-index: 5;
@@ -155,6 +184,7 @@
             margin-left: -422px;
             width: 844px;
         }
+
         .focus .poi-class li {
             float: left;
             width: 211px;
@@ -163,12 +193,15 @@
             font-size: 16px;
             text-align: center;
         }
+
         .poi-class li.active {
             background: #fff;
         }
+
         .poi-class li.active span.food, .poi-class li.active span.hotel, .poi-class li.active span.scenic, .poi-class li.active span.shopping {
             background-image: url(../img/cityInner/poi_type_icon_active_w64_2x.png);
         }
+
         .poi-class li span {
             float: left;
             margin: 14px 10px 5px 65px;
@@ -177,32 +210,39 @@
             background: url(../img/cityInner/poi_type_icon_default_w64_2x.png) no-repeat;
             background-size: 64px 20px;
         }
+
         .poi-class li.active span.food {
             background-position: 0 0;
         }
+
         .poi-class li.active a {
             background: #fff;
             color: #00b7a8;
         }
+
         .poi-class li a {
             float: left;
             display: inline;
-            width: auto!important;
-            height: 49px!important;
+            width: auto !important;
+            height: 49px !important;
             line-height: 49px;
             color: #fff;
         }
+
         .poi-class li span.shopping {
             background-position: -15px 0;
         }
+
         .poi-class li span.scenic {
             width: 18px;
             background-position: -31px 0;
         }
+
         .poi-class li span.hotel {
             width: 14px;
             background-position: -49px 0;
         }
+
         .poi-class-bg {
             position: absolute;
             z-index: 4;
@@ -212,42 +252,50 @@
             height: 49px;
             background: #000;
             opacity: .5;
-            filter:alpha(opacity=50)
+            filter: alpha(opacity=50)
         }
-/*                   tips-selection-result                              */
+
+        /*                   tips-selection-result                              */
         .tips-selection-result-wrap {
             width: 100%;
             height: 78px;
             border-bottom: 1px solid #bababa;
             background: #fff;
         }
+
         .tips-selection-result-cont {
             margin: 0 auto;
             width: 1200px;
             font-size: 16px;
         }
+
         .tips-selection-result-cont dl {
             float: left;
             width: 950px;
             padding-top: 29px;
             color: #555;
         }
+
         .tips-selection-result-cont dl dd, .tips-selection-result-cont dl dt {
             float: left;
             line-height: 20px;
         }
+
         .tips-selection-result-cont dl dd {
             font-size: 14px;
         }
+
         .tips-selection-result-cont .result1 dd span {
             display: inline-block;
             padding: 0 0 0 4px;
             background: #eee;
             margin: 0 5px;
         }
+
         .tips-selection-result-cont dl dd strong {
             font-weight: 700;
         }
+
         .tips-selection-result-cont .range-mode {
             float: right;
             margin: 25px 0 25px 10px;
@@ -256,6 +304,7 @@
             line-height: 20px;
             color: #555;
         }
+
         .tips-selection-result-cont .range-mode dd {
             position: relative;
             width: 155px;
@@ -265,6 +314,7 @@
             font-size: 14px;
             text-indent: 6px;
         }
+
         .tips-selection-result-cont .range-mode dd span {
             position: absolute;
             z-index: 102;
@@ -272,6 +322,7 @@
             height: 23px;
             padding-left: 6px;
         }
+
         .range-mode dd ul {
             display: none;
             position: absolute;
@@ -284,19 +335,23 @@
             border-top: 0;
             background: #fff;
         }
+
         .range-mode dd ul li {
             display: block;
             line-height: 25px;
         }
+
         .tips-selection-result-cont .range-mode dd a {
             color: #555;
         }
+
         .range-mode dd ul li a {
             display: block;
             margin-right: 0;
             padding-left: 6px;
             height: 25px;
         }
+
         .range-mode dd ul li a:hover {
             background: #eee;
         }
@@ -304,10 +359,12 @@
         .tips-selection-result-cont .range-mode dd i {
             border-top: 5px solid #bbb;
         }
+
         .tips-selection-result-cont .range-mode dd.active i {
             border-top: 0;
             border-bottom: 5px solid #bbb;
         }
+
         .tips-selection-result-cont .range-mode dd i, .tips-selection-result-cont .range-mode dd.active i {
             z-index: 101;
             right: 5px;
@@ -318,20 +375,24 @@
             border-right: 5px solid transparent;
             position: absolute;
         }
+
         .selection-result-cont {
             position: relative;
             margin: 0 auto;
             width: 1200px;
         }
+
         .choice-cont {
             width: 750px;
             float: left;
         }
+
         .choice-list {
             width: 100%;
             min-height: 440px;
             height: auto;
         }
+
         .item-poi {
             margin-top: 25px;
             width: 748px;
@@ -340,18 +401,21 @@
             background: #fff;
             box-shadow: 2px 2px 5px #eee;
         }
+
         .item-poi .item-poi-pic {
             float: left;
             margin-right: 14px;
-            width: 200px!important;
+            width: 200px !important;
             height: 150px;
             overflow: hidden;
         }
+
         .item-poi .item-poi-pic img {
             display: block;
             width: 200px;
             height: 150px;
         }
+
         .item-poi .item-poi-txt {
             float: left;
             position: relative;
@@ -367,6 +431,7 @@
             font-size: 16px;
             overflow: hidden;
         }
+
         .item-poi-txt .title a {
             height: 20px;
             line-height: 20px;
@@ -375,6 +440,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+
         .item-poi-txt .title i {
             display: inline-block;
             margin-left: 10px;
@@ -383,6 +449,7 @@
             height: 18px;
             background: url(../img/cityInner/hot_icon_w18_h18_1x.png) no-repeat;
         }
+
         .item-poi-txt .appraise {
             position: relative;
             width: 100%;
@@ -390,17 +457,20 @@
             line-height: 22px;
             overflow: hidden;
         }
+
         .poi-score-w {
             float: left;
             position: absolute;
             z-index: 98;
         }
+
         .star-rating-bg {
             width: 116px;
             height: 20px;
             background: url(../img/cityInner/star_detail_empty_w116_2x.png) no-repeat;
             background-size: 116px 20px;
         }
+
         .poi-score-w .star-rating-rank {
             position: absolute;
             z-index: 111;
@@ -411,6 +481,7 @@
             top: 0;
             left: 0;
         }
+
         .item-poi-txt .appraise .score-comment {
             position: absolute;
             left: 120px;
@@ -420,6 +491,7 @@
             color: #666;
             font-size: 13px;
         }
+
         .item-poi-txt .item-poi-feature {
             display: block;
             padding: 7px 0 0;
@@ -427,6 +499,13 @@
             color: #666;
             font-size: 12px;
             text-align: left;
+        }
+        .item-poi-txt .outline {
+            width: 480px;
+            padding: 27px 20px 19px 0;
+            line-height: 19px;
+            color: #999;
+            font-size: 13px;
         }
         .item-poi-txt dl {
             position: absolute;
@@ -439,6 +518,7 @@
             color: #fff;
             text-indent: 10px;
         }
+
         .item-poi-txt dl dd {
             height: 36px;
             padding-right: 10px;
@@ -446,6 +526,7 @@
             background: #3d3d3d;
             font-size: 20px;
         }
+
         .item-poi-txt dl dt {
             height: 26px;
             padding-right: 10px;
@@ -454,6 +535,7 @@
             font-size: 12px;
             background: #febe13;
         }
+
         .mx-pagination {
             width: 100%;
             font-size: 0;
@@ -461,25 +543,31 @@
             text-align: right;
             float: right;
         }
+
         .mx-pagination ul {
             margin: 40px auto 65px;
             width: 100%;
         }
+
         .pagination li.active, .pagination li:hover {
             border: 1px solid #00b7a8;
         }
+
         .pagination li, .pagination li.disabled:hover {
             display: inline-block;
             border: 1px solid #d0d0d0;
             font-size: 12px;
         }
+
         .pagination li {
             margin-left: -1px;
         }
+
         .pagination li.active a {
             color: #fff;
             background: #00b7a8;
         }
+
         .pagination li a {
             display: block;
             height: 32px;
@@ -487,10 +575,12 @@
             line-height: 32px;
             color: #636363;
         }
-        .pagination li a:hover{
+
+        .pagination li a:hover {
             color: #fff;
             background: #00b7a8;
         }
+
         #selection_tags_wrap {
             position: absolute;
             top: 0;
@@ -498,6 +588,7 @@
             bottom: 60px;
             margin: 25px 0 0;
         }
+
         #selection_tags_wrap.fixed {
             position: fixed;
             z-index: 999;
@@ -506,12 +597,14 @@
             bottom: 511px;
             margin-right: -600px;
         }
+
         #selection_tags_wrap.reposition {
             position: absolute;
             z-index: 999;
             top: 953px;
             right: 0;
         }
+
         #selection_tags_wrap, #selection_tags_wrap.reposition {
             width: 415px;
             height: 439px;
@@ -520,6 +613,7 @@
             background: #fff;
             overflow: hidden;
         }
+
         #selection_tags_wrap h4 {
             height: 57px;
             line-height: 57px;
@@ -528,6 +622,7 @@
             font-size: 16px;
             text-indent: 25px;
         }
+
         .selection-mod {
             margin: 0 21px;
             width: 373px;
@@ -536,19 +631,23 @@
             color: #555;
             overflow: hidden;
         }
+
         #score .title {
             padding-bottom: 16px;
         }
+
         .selection-mod .title {
             padding-bottom: 10px;
             line-height: 14px;
             color: #00b7a8;
             font-size: 14px;
         }
+
         .selection-mod ul {
             width: 100%;
             overflow: hidden;
         }
+
         .selection-mod ul li {
             float: left;
             margin: 0 10px 10px 0;
@@ -560,6 +659,7 @@
             cursor: pointer;
             text-align: center;
         }
+
         #score li {
             float: left;
             margin: 0 4px 0 0;
@@ -568,31 +668,39 @@
             height: 18px;
             background: url(../img/cityInner/star_gray_18.png) no-repeat;
         }
+
         #score li.active {
             background: url(../img/cityInner/star_yellow_18.png) no-repeat;
         }
+
         #score li a, #score li.active a {
             display: inline-block;
             width: 18px;
             height: 18px;
         }
+
         #opening-time .title {
             padding-bottom: 20px;
         }
+
         #opening-time li {
             margin-bottom: 0;
         }
+
         .selection-mod ul li.active {
             color: #fff;
             background: #00b7a8;
         }
+
         #consumption {
             border-bottom: none;
         }
+
         #consumption .title {
             padding-bottom: 5px;
         }
-        #consumption li{
+
+        #consumption li {
             float: left;
             margin: 5px 0;
             width: 50%;
@@ -602,88 +710,103 @@
             background: 0 0;
             text-align: left;
         }
+
         #consumption li {
             margin: 11px 0;
         }
-        #consumption li span{
+
+        #consumption li span {
             float: left;
             width: 10px;
             height: 10px;
             margin-right: 10px;
             border: 1px solid #d2d2d2;
         }
-        #consumption li.active span{
+
+        #consumption li.active span {
             background: #00b7a8;
         }
 
-/*                             seo-wrap                         */
+        /*                             seo-wrap                         */
         .seo-wrap {
             width: 100%;
             padding: 10px 0 30px;
         }
+
         .seo-content {
             margin: 0 auto;
             width: 1200px;
             overflow: hidden;
         }
+
         .seo-content dl {
             margin-top: 10px;
             width: 100%;
             overflow: hidden;
         }
+
         .seo-content dt {
             width: 100%;
             height: 26px;
             border-bottom: 1px solid #ccc;
         }
+
         .seo-content dd a, .seo-content dt a {
             display: inline-block;
             margin-right: 10px;
             line-height: 28px;
             color: #999;
         }
+
         .seo-content dd {
             width: 100%;
         }
+
         /*                                 footer                        */
-        .footer{
+        .footer {
             padding-top: 10px;
             color: #fff;
             background: #333;
             clear: both;
         }
-        .ft-cont{
+
+        .ft-cont {
             margin: 0 auto;
             width: 1200px;
             clear: both;
         }
 
-
         /*                      解决无法被子元素撑开高度          */
-        .ft-cont:after{
+        .ft-cont:after {
             content: "";
             clear: both;
             display: block;
         }
-        .ft-links{
+
+        .ft-links {
             float: left;
             width: 800px;
         }
+
         .ft-links dl {
             float: left;
             margin: 17px 75px 0 12px;
             font-size: 15px;
         }
+
         .ft-links dl dt {
             padding-bottom: 6px;
             line-height: 28px;
         }
+
         .ft-links dl dd {
             line-height: 28px;
         }
+
         .ft-links dl dd a {
             color: #aaa;
         }
+
         .follow-us {
             float: right;
             position: relative;
@@ -692,30 +815,35 @@
             padding: 17px 0 16px;
 
         }
+
         .follow-us dd {
             float: left;
             margin-top: 27px;
             margin-right: 14px;
 
         }
-        .follow-us .wechat_share{
+
+        .follow-us .wechat_share {
             position: absolute;
-            z-index:9999;
+            z-index: 9999;
             top: -210px;
             left: -110px;
             width: 264px;
             height: 264px;
         }
+
         .follow-us dd img {
             display: block;
             width: 48px;
             height: 48px;
         }
-        .follow-us .wechat_share img{
+
+        .follow-us .wechat_share img {
             display: block;
             width: 264px;
             height: 264px;
         }
+
         .footer .copyright {
             margin: 15px auto 0;
             width: 100%;
@@ -731,610 +859,536 @@
     </style>
 </head>
 <body>
-  <div class="wrap">
-      <div class="header">
-          <div class="top-bar">
-              <h2 class="logo">
-                  <a href="#" title="梦想旅行">
-                      <img src="../img/logo.png" alt="梦想旅行" style="border: none">
-                  </a>
-              </h2>
-              <ul class="top-nav">
-                  <li class="edit_zhongbao">
-                      <a href="../zhongbao.html" class="login-layer">内容众包</a>
-                      <span>赚钱</span>
-                      <div class="tips-zhongbao" style="display:none">写旅游地信息，做赚钱小编</div>
-                  </li>
-                  <li>
-                      <a href="../joinUs.html">加入我们</a>
-                  </li>
-                  <li>
-                      <a href="../support.html">帮助支持</a>
-                  </li>
-                  <li>
-                      <a href="../about.html">关于我们</a>
-                  </li>
-                  <li>
-                      <a href="../productsIntro.html">产品介绍</a>
-                  </li>
-                  <li>
-                      <a href="../index.html">目的地</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-      <div class="center clearfix">
-          <dl class="main-crumb clearfix">
-              <dd><a href="..//" target="_blank">目的地</a>>></dd>
-              <dd><a href="../NorthAmerica.html" target="_blank">北美洲</a>>></dd>
-              <dd><a href="#" target="_blank">纽约</a>>></dd>
-              <dd><a href="#" target="_blank">美食</a></dd>
-          </dl>
-          <div class="focus">
-              <h1>纽约
-                  <span>New York</span>
-              </h1>
-              <ul class="poi-class" id="poi_class">
-                  <li class="active">
-                      <span class="food"></span>
-                      <a href="#">美食</a>
-                  </li>
-                  <li>
-                      <span class="shopping"></span>
-                      <a href="javascript:;">购物</a>
-                  </li>
-                  <li>
-                      <span class="scenic"></span>
-                      <a href="javascript:;">玩乐</a>
-                  </li>
-                  <li>
-                      <span class="hotel"></span>
-                      <a href="javascript:;">酒店</a>
-                  </li>
-              </ul>
-              <div class="poi-class-bg"></div>
-          </div>
-          <div class="tips-selection-result-wrap">
-              <div class="tips-selection-result-cont" id="tips_selection_result_cont">
-                  <dl class="result1">
-                      <dt>纽约的美食列表：</dt>
-                      <dd> <strong>共240个结果</strong></dd>
-                  </dl>
-                  <dl class="range-mode">
-                      <dt><span>排序方式：</span></dt>
-                      <dd class>
-                          <span>默认排序</span>
-                          <ul style="display:none">
-                              <li><a href="#">默认排序</a></li>
-                              <li><a href="#">热度排序</a></li>
-                              <li><a href="#">评分排序</a></li>
-                          </ul>
-                          <i></i>
-                      </dd>
-                  </dl>
-              </div>
-          </div>
-          <div class="selection-result-cont clearfix" id="selec_result_cont">
-              <div class="choice-cont">
-                  <div class="choice-list">
-                      <div class="item-poi">
-                          <a href="#" class="item-poi-pic">
-                              <img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">
-                          </a>
-                          <div class="item-poi-txt">
-                              <h3 class="title">
-                                  <a href="#" target="_blank">Katz's Deli</a>
-                                  <i class="hot"></i>
-                              </h3>
-                              <div class="appraise">
-                                  <div class="star-rating rating-disabled poi-score-w">
-                                      <div class="star-rating-bg"></div>
-                                      <div class="star-rating-rank" style="width: 93.97%;"></div>
-                                  </div>
-                                  <div class="score-comment">
-                                      <em>16178</em>条评论
-                                  </div>
-                              </div>
-                              <span class="item-poi-feature">
-                                美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活
-                              </span>
-                              <p class="">
-                                  “&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”
-                              </p>
-                              <dl>
-                                  <dd>¥71</dd>
-                                  <dt>人均消费</dt>
-                              </dl>
-                          </div>
-
-
-                      </div>
-                      <div class="item-poi">
-                          <a href="#" class="item-poi-pic">
-                              <img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">
-                          </a>
-                          <div class="item-poi-txt">
-                              <h3 class="title">
-                                  <a href="#" target="_blank">Katz's Deli</a>
-                                  <i class="hot"></i>
-                              </h3>
-                              <div class="appraise">
-                                  <div class="star-rating rating-disabled poi-score-w">
-                                      <div class="star-rating-bg"></div>
-                                      <div class="star-rating-rank" style="width: 93.97%;"></div>
-                                  </div>
-                                  <div class="score-comment">
-                                      <em>16178</em>条评论
-                                  </div>
-                              </div>
-                              <span class="item-poi-feature">
-                                美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活
-                              </span>
-                              <p class="">
-                                  “&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”
-                              </p>
-                              <dl>
-                                  <dd>¥71</dd>
-                                  <dt>人均消费</dt>
-                              </dl>
-                          </div>
-
-
-                      </div>
-                      <div class="item-poi">
-                          <a href="#" class="item-poi-pic">
-                              <img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">
-                          </a>
-                          <div class="item-poi-txt">
-                              <h3 class="title">
-                                  <a href="#" target="_blank">Katz's Deli</a>
-                                  <i class="hot"></i>
-                              </h3>
-                              <div class="appraise">
-                                  <div class="star-rating rating-disabled poi-score-w">
-                                      <div class="star-rating-bg"></div>
-                                      <div class="star-rating-rank" style="width: 93.97%;"></div>
-                                  </div>
-                                  <div class="score-comment">
-                                      <em>16178</em>条评论
-                                  </div>
-                              </div>
-                              <span class="item-poi-feature">
-                                美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活
-                              </span>
-                              <p class="">
-                                  “&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”
-                              </p>
-                              <dl>
-                                  <dd>¥71</dd>
-                                  <dt>人均消费</dt>
-                              </dl>
-                          </div>
-
-
-                      </div>
-                      <div class="item-poi">
-                          <a href="#" class="item-poi-pic">
-                              <img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">
-                          </a>
-                          <div class="item-poi-txt">
-                              <h3 class="title">
-                                  <a href="#" target="_blank">Katz's Deli</a>
-                                  <i class="hot"></i>
-                              </h3>
-                              <div class="appraise">
-                                  <div class="star-rating rating-disabled poi-score-w">
-                                      <div class="star-rating-bg"></div>
-                                      <div class="star-rating-rank" style="width: 93.97%;"></div>
-                                  </div>
-                                  <div class="score-comment">
-                                      <em>16178</em>条评论
-                                  </div>
-                              </div>
-                              <span class="item-poi-feature">
-                                美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活
-                              </span>
-                              <p class="">
-                                  “&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”
-                              </p>
-                              <dl>
-                                  <dd>¥71</dd>
-                                  <dt>人均消费</dt>
-                              </dl>
-                          </div>
-
-
-                      </div>
-                      <div class="item-poi">
-                          <a href="#" class="item-poi-pic">
-                              <img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">
-                          </a>
-                          <div class="item-poi-txt">
-                              <h3 class="title">
-                                  <a href="#" target="_blank">Katz's Deli</a>
-                                  <i class="hot"></i>
-                              </h3>
-                              <div class="appraise">
-                                  <div class="star-rating rating-disabled poi-score-w">
-                                      <div class="star-rating-bg"></div>
-                                      <div class="star-rating-rank" style="width: 93.97%;"></div>
-                                  </div>
-                                  <div class="score-comment">
-                                      <em>16178</em>条评论
-                                  </div>
-                              </div>
-                              <span class="item-poi-feature">
-                                美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活
-                              </span>
-                              <p class="">
-                                  “&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”
-                              </p>
-                              <dl>
-                                  <dd>¥71</dd>
-                                  <dt>人均消费</dt>
-                              </dl>
-                          </div>
-
-
-                      </div>
-                      <div class="item-poi">
-                          <a href="#" class="item-poi-pic">
-                              <img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">
-                          </a>
-                          <div class="item-poi-txt">
-                              <h3 class="title">
-                                  <a href="#" target="_blank">Katz's Deli</a>
-                                  <i class="hot"></i>
-                              </h3>
-                              <div class="appraise">
-                                  <div class="star-rating rating-disabled poi-score-w">
-                                      <div class="star-rating-bg"></div>
-                                      <div class="star-rating-rank" style="width: 93.97%;"></div>
-                                  </div>
-                                  <div class="score-comment">
-                                      <em>16178</em>条评论
-                                  </div>
-                              </div>
-                              <span class="item-poi-feature">
-                                美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活
-                              </span>
-                              <p class="">
-                                  “&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”
-                              </p>
-                              <dl>
-                                  <dd>¥71</dd>
-                                  <dt>人均消费</dt>
-                              </dl>
-                          </div>
-
-
-                      </div>
-                      <div class="item-poi">
-                          <a href="#" class="item-poi-pic">
-                              <img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">
-                          </a>
-                          <div class="item-poi-txt">
-                              <h3 class="title">
-                                  <a href="#" target="_blank">Katz's Deli</a>
-                                  <i class="hot"></i>
-                              </h3>
-                              <div class="appraise">
-                                  <div class="star-rating rating-disabled poi-score-w">
-                                      <div class="star-rating-bg"></div>
-                                      <div class="star-rating-rank" style="width: 93.97%;"></div>
-                                  </div>
-                                  <div class="score-comment">
-                                      <em>16178</em>条评论
-                                  </div>
-                              </div>
-                              <span class="item-poi-feature">
-                                美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活
-                              </span>
-                              <p class="">
-                                  “&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”
-                              </p>
-                              <dl>
-                                  <dd>¥71</dd>
-                                  <dt>人均消费</dt>
-                              </dl>
-                          </div>
-
-
-                      </div>
-                      <div class="item-poi">
-                          <a href="#" class="item-poi-pic">
-                              <img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">
-                          </a>
-                          <div class="item-poi-txt">
-                              <h3 class="title">
-                                  <a href="#" target="_blank">Katz's Deli</a>
-                                  <i class="hot"></i>
-                              </h3>
-                              <div class="appraise">
-                                  <div class="star-rating rating-disabled poi-score-w">
-                                      <div class="star-rating-bg"></div>
-                                      <div class="star-rating-rank" style="width: 93.97%;"></div>
-                                  </div>
-                                  <div class="score-comment">
-                                      <em>16178</em>条评论
-                                  </div>
-                              </div>
-                              <span class="item-poi-feature">
-                                美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活
-                              </span>
-                              <p class="">
-                                  “&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”
-                              </p>
-                              <dl>
-                                  <dd>¥71</dd>
-                                  <dt>人均消费</dt>
-                              </dl>
-                          </div>
-
-
-                      </div>
-                      <div id="all_states_poi_page" class="mx-pagination clearfix">
-                        <ul class="pagination">
-                            <li><a href="javascript:;" class="prePage">上一页</a></li>
-                            <li class="active"><a href="javascript:;">1</a></li>
-                            <li ><a href="javascript:;">2</a></li>
-                            <li ><a href="javascript:;">3</a></li>
-                            <li ><a href="javascript:;">4</a></li>
-                            <li ><a href="javascript:;">5</a></li>
-                            <li ><a href="javascript:;">6</a></li>
-                            <li ><a href="javascript:;">7</a></li>
-                            <li ><a href="javascript:;">8</a></li>
-                            <li ><a href="javascript:;">9</a></li>
-                            <li ><a href="javascript:;">10</a></li>
-                            <!--<li ><a href="javascript:;">11</a></li>-->
-                            <!--<li ><a href="javascript:;">12</a></li>-->
-                            <!--<li ><a href="javascript:;">13</a></li>-->
-                            <!--<li ><a href="javascript:;">14</a></li>-->
-                            <!--<li ><a href="javascript:;">15</a></li>-->
-                            <!--<li ><a href="javascript:;">16</a></li>-->
-                            <!--<li ><a href="javascript:;">17</a></li>-->
-                            <!--<li ><a href="javascript:;">18</a></li>-->
-                            <!--<li ><a href="javascript:;">19</a></li>-->
-                            <!--<li ><a href="javascript:;">20</a></li>-->
-                            <!--<li ><a href="javascript:;">21</a></li>-->
-                            <!--<li ><a href="javascript:;">22</a></li>-->
-                            <!--<li ><a href="javascript:;">23</a></li>-->
-                            <!--<li ><a href="javascript:;">24</a></li>-->
-                            <!--<li ><a href="javascript:;">25</a></li>-->
-                            <!--<li ><a href="javascript:;">26</a></li>-->
-                            <!--<li ><a href="javascript:;">27</a></li>-->
-                            <!--<li ><a href="javascript:;">28</a></li>-->
-                            <!--<li ><a href="javascript:;">29</a></li>-->
-                            <!--<li ><a href="javascript:;">30</a></li>-->
-                            <li><a class="nextPage" href="javascript:;">下一页</a></li>
+<div class="wrap">
+    <div class="header">
+        <div class="top-bar">
+            <h2 class="logo">
+                <a href="#" title="梦想旅行">
+                    <img src="../img/logo.png" alt="梦想旅行" style="border: none">
+                </a>
+            </h2>
+            <ul class="top-nav">
+                <li class="edit_zhongbao">
+                    <a href="../zhongbao.html" class="login-layer">内容众包</a>
+                    <span>赚钱</span>
+                    <div class="tips-zhongbao" style="display:none">写旅游地信息，做赚钱小编</div>
+                </li>
+                <li>
+                    <a href="../joinUs.html">加入我们</a>
+                </li>
+                <li>
+                    <a href="../support.html">帮助支持</a>
+                </li>
+                <li>
+                    <a href="../about.html">关于我们</a>
+                </li>
+                <li>
+                    <a href="../productsIntro.html">产品介绍</a>
+                </li>
+                <li>
+                    <a href="../index.html">目的地</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="center clearfix">
+        <dl class="main-crumb clearfix">
+            <dd><a href="..//" target="_blank">目的地</a>>></dd>
+            <dd><a href="../NorthAmerica.html" target="_blank">北美洲</a>>></dd>
+            <dd><a href="#" target="_blank">纽约</a>>></dd>
+            <dd><a href="#" target="_blank">美食</a></dd>
+        </dl>
+        <div class="focus">
+            <h1>纽约
+                <span>New York</span>
+            </h1>
+            <ul class="poi-class" id="poi_class">
+                <li class="active">
+                    <span class="food"></span>
+                    <a href="#">美食</a>
+                </li>
+                <li>
+                    <span class="shopping"></span>
+                    <a href="http://place.mxtrip.cn/kWX3ingF/gouwu/list">购物</a>
+                </li>
+                <li>
+                    <span class="scenic"></span>
+                    <a href="http://place.mxtrip.cn/kWX3ingF/jingdian/list">玩乐</a>
+                </li>
+                <li>
+                    <span class="hotel"></span>
+                    <a href="http://place.mxtrip.cn/kWX3ingF/hotel/list">酒店</a>
+                </li>
+            </ul>
+            <div class="poi-class-bg"></div>
+        </div>
+        <div class="tips-selection-result-wrap">
+            <div class="tips-selection-result-cont" id="tips_selection_result_cont">
+                <dl class="result1">
+                    <dt>纽约的美食列表：</dt>
+                    <dd><strong>共240个结果</strong></dd>
+                </dl>
+                <dl class="range-mode">
+                    <dt><span>排序方式：</span></dt>
+                    <dd class>
+                        <span>默认排序</span>
+                        <ul style="display:none">
+                            <li><a href="#">默认排序</a></li>
+                            <li><a href="#">热度排序</a></li>
+                            <li><a href="#">评分排序</a></li>
                         </ul>
-                      </div>
-                  </div>
-              </div>
-              <div class="selection-tags-wrap" id="selection_tags_wrap">
-                  <h4>条件筛选</h4>
-                  <div class="selection-mod" id="score">
-                      <div class="title">餐厅评分</div>
-                      <ul data-select-type="score">
-                          <li data-score="评分不低于1星">
-                              <a href="javascript:;"></a>
-                          </li>
-                          <li data-score="评分不低于2星">
-                              <a href="javascript:;"></a>
-                          </li>
-                          <li data-score="评分不低于3星">
-                              <a href="javascript:;"></a>
-                          </li>
-                          <li data-score="评分不低于4星">
-                              <a href="javascript:;"></a>
-                          </li>
-                          <li data-score="评分不低于5星">
-                              <a href="javascript:;"></a>
-                          </li>
-                      </ul>
-                  </div>
-                  <div class="selection-mod" id="opening-time">
-                      <div class="title">营业时间</div>
-                      <ul data-select-type="opening-time">
-                          <li data-status="0">
-                              <a href="#">不限</a>
-                          </li>
-                          <li data-status="0">
-                              <a href="#">正在营业</a>
-                          </li>
-                      </ul>
-                  </div>
-                  <div class="selection-mod" id="consumption">
-                      <div class="title">人均消费</div>
-                      <ul data-select-type="consumption">
-                          <li>
-                              <a href="#poi_class"><span></span>不限</a>
-                          </li>
-                          <li>
-                              <a href="#poi_class"><span></span>¥500以下</a>
-                          </li>
-                          <li>
-                              <a href="#poi_class"><span></span>¥500至¥1k</a>
-                          </li>
-                          <li>
-                              <a href="#poi_class"><span></span>¥1k以上</a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-          <div class="seo-wrap">
-              <div class="seo-content">
-                  <dl>
-                      <dt><a href="javascript:;" title="纽约旅游攻略">纽约旅游攻略</a></dt>
-                      <dd>
-                          <a href="#" title="纽约美食攻略" target="_blank">纽约美食攻略</a>
-                          <a href="javascript:;" title="纽约美食攻略" target="_blank">纽约购物攻略</a>
-                          <a href="javascript:;" title="纽约美食攻略" target="_blank">纽约酒店攻略</a>
-                          <a href="javascript:;" title="纽约美食攻略" target="_blank">纽约景点攻略</a>
-                      </dd>
-                  </dl>
-                  <dl>
-                      <dt><a href="javascript:;" title="热门城市旅游推荐">热门城市旅游推荐</a></dt>
-                      <dd>
-                          <a href="javascript:;" title="纽约" target="_blank">纽约</a>
-                          <a href="javascript:;" title="曼谷" target="_blank">曼谷</a>
-                          <a href="javascript:;" title="巴黎" target="_blank">巴黎</a>
-                          <a href="javascript:;" title="新加坡" target="_blank">新加坡</a>
-                          <a href="javascript:;" title="迪拜" target="_blank">迪拜</a>
-                          <a href="javascript:;" title="巴厘岛" target="_blank">巴厘岛</a>
-                          <a href="javascript:;" title="东京" target="_blank">东京</a>
-                          <a href="javascript:;" title="大阪" target="_blank">大阪</a>
-                          <a href="javascript:;" title="威尼斯" target="_blank">威尼斯</a>
-                          <a href="javascript:;" title="柏林" target="_blank">柏林</a>
-                          <a href="javascript:;" title="巴塞罗那" target="_blank">巴塞罗那</a>
-                          <a href="javascript:;" title="佛罗伦萨" target="_blank">佛罗伦萨</a>
-                          <a href="javascript:;" title="札幌" target="_blank">札幌</a>
-                          <a href="javascript:;" title="芭堤雅" target="_blank">芭堤雅</a>
-                          <a href="javascript:;" title="普吉岛" target="_blank">普吉岛</a>
-                          <a href="javascript:;" title="台北" target="_blank">台北</a>
-                          <a href="javascript:;" title="垦丁" target="_blank">垦丁</a>
-                          <a href="javascript:;" title="伊斯坦布尔" target="_blank">伊斯坦布尔</a>
-                          <a href="javascript:;" title="布里斯班" target="_blank">布里斯班</a>
-                          <a href="javascript:;" title="莫斯科" target="_blank">莫斯科</a>
-                      </dd>
-                  </dl>
-              </div>
-          </div>
-      </div>
-      <div class="footer">
-          <div class="ft-cont">
-              <div class="ft-links">
-                  <dl>
-                      <dt>关于我们</dt>
-                      <dd>
-                          <a href="../productsIntro.html" target="_blank">梦想旅行简介</a>
-                      </dd>
-                      <dd>
-                          <a href="../about.html#team" target="_blank">关于团队</a>
-                      </dd>
-                      <dd>
-                          <a href="../about.html#development" target="_blank">发展历程</a>
-                      </dd>
-                  </dl>
-                  <dl>
-                      <dt>帮助支持</dt>
-                      <dd>
-                          <a href="../support.html#feedback" target="_blank">意见反馈</a>
-                      </dd>
-                      <dd>
-                          <a href="../support.html" target="_blank">联系我们</a>
-                      </dd>
-                      <dd>
-                          <a href="../webMap.html" target="_blank">网站地图</a>
-                      </dd>
-                  </dl>
-                  <dl>
-                      <dt>网站条款</dt>
-                      <dd>
-                          <a href="../usage.html" target="_blank">使用条款</a>
-                      </dd>
-                      <dd>
-                          <a href="../privacy.html" target="_blank">隐私政策</a>
-                      </dd>
-                  </dl>
-                  <dl>
-                      <dt>加入我们</dt>
-                      <dd>
-                          <a href="http://www.lagou.com/gongsi/62565.html" target="_blank">招聘职位</a>
-                      </dd>
-                  </dl>
-              </div>
-              <div class="follow-us">
-                  <dt>关注我们:</dt>
-                  <dd >
-                      <div class="wechat_share" style="display:none">
-                          <img src="../img/wechat_code.png">
-                      </div>
-                      <a href="javascript:;">
-                          <img src="../img/wechat.png">
-                      </a>
-                  </dd>
-                  <dd>
-                      <a href="http://weibo.com/mxtrip">
-                          <img src="../img/weibo.png">
-                      </a>
-                  </dd>
-                  <dd>
-                      <a href="http://qzone.qq.com/?s_url=http://user.qzone.qq.com/2935785166/main">
-                          <img src="../img/qqzone.png">
-                      </a>
-                  </dd>
-              </div>
-          </div>
-          <p class="copyright">
-              版权所有 ： 北京梦想智联科技有限公司 Copyright © 2015, mxtrip.cn. All rights reserved.<br>
-              京ICP备15012301号-1
-          </p>
+                        <i></i>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="selection-result-cont clearfix" id="selec_result_cont">
+            <div class="choice-cont">
+                <div class="choice-list">
+                    <!--<div class="item-poi">-->
+                        <!--<a href="#" class="item-poi-pic">-->
+                            <!--<img src="../img/cityInner/c2ec3571fb94f2783ae7dff9c411a453.jpg" alt="">-->
+                        <!--</a>-->
+                        <!--<div class="item-poi-txt">-->
+                            <!--<h3 class="title">-->
+                                <!--<a href="#" target="_blank">Katz's Deli</a>-->
+                                <!--<i class="hot"></i>-->
+                            <!--</h3>-->
+                            <!--<div class="appraise">-->
+                                <!--<div class="star-rating rating-disabled poi-score-w">-->
+                                    <!--<div class="star-rating-bg"></div>-->
+                                    <!--<div class="star-rating-rank" style="width: 93.97%;"></div>-->
+                                <!--</div>-->
+                                <!--<div class="score-comment">-->
+                                    <!--<em>16178</em>条评论-->
+                                <!--</div>-->
+                            <!--</div>-->
+                    <!--<span class="item-poi-feature">-->
+                    <!--美加风味,餐吧酒馆,犹太风味,熟食店,沙拉和三明治,美洲美食,休闲餐饮,中东美食,西式快餐,社区生活-->
+                    <!--</span>-->
+                            <!--<p class="outline">-->
+                                <!--“&nbsp;是纽约市非常有名的一家三明治店，味道鲜美，但是坏处是经常要排队，而且价钱稍微贵一些&nbsp;”-->
+                            <!--</p>-->
+                            <!--<dl>-->
+                                <!--<dd>¥71</dd>-->
+                                <!--<dt>人均消费</dt>-->
+                            <!--</dl>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div id="all_states_poi_page" class="mx-pagination clearfix">-->
+                        <!--<ul class="pagination">-->
+                            <!--<li><a href="javascript:;" class="prePage">上一页</a></li>-->
+                            <!--<li class="active"><a href="javascript:;">1</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">2</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">3</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">4</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">5</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">6</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">7</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">8</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">9</a></li>-->
+                            <!--<li><a href="javascript:;" class="page">10</a></li>-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">11</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">12</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">13</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">14</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">15</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">16</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">17</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">18</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">19</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">20</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">21</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">22</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">23</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">24</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">25</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">26</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">27</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">28</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">29</a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li ><a href="javascript:;" class="page">30</a></li>&ndash;&gt;-->
+                            <!--<li><a class="nextPage" href="javascript:;">下一页</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="selection-tags-wrap" id="selection_tags_wrap">
+                <h4>条件筛选</h4>
+                <div class="selection-mod" id="score">
+                    <div class="title">餐厅评分</div>
+                    <ul data-select-type="score">
+                        <li data-score="评分不低于1星">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li data-score="评分不低于2星">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li data-score="评分不低于3星">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li data-score="评分不低于4星">
+                            <a href="javascript:;"></a>
+                        </li>
+                        <li data-score="评分不低于5星">
+                            <a href="javascript:;"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="selection-mod" id="opening-time">
+                    <div class="title">营业时间</div>
+                    <ul data-select-type="opening-time">
+                        <li data-status="0">
+                            <a href="#">不限</a>
+                        </li>
+                        <li data-status="0">
+                            <a href="#">正在营业</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="selection-mod" id="consumption">
+                    <div class="title">人均消费</div>
+                    <ul data-select-type="consumption">
+                        <li>
+                            <a href="#poi_class"><span></span>不限</a>
+                        </li>
+                        <li>
+                            <a href="#poi_class"><span></span>¥500以下</a>
+                        </li>
+                        <li>
+                            <a href="#poi_class"><span></span>¥500至¥1k</a>
+                        </li>
+                        <li>
+                            <a href="#poi_class"><span></span>¥1k以上</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="seo-wrap">
+            <div class="seo-content">
+                <dl>
+                    <dt><a href="javascript:;" title="纽约旅游攻略">纽约旅游攻略</a></dt>
+                    <dd>
+                        <a href="#" title="纽约美食攻略" target="_blank">纽约美食攻略</a>
+                        <a href="http://place.mxtrip.cn/kWX3ingF/gouwu/list" title="纽约购物攻略" target="_blank">纽约购物攻略</a>
+                        <a href="http://place.mxtrip.cn/kWX3ingF/hotel/list" title="纽约酒店攻略" target="_blank">纽约酒店攻略</a>
+                        <a href="http://place.mxtrip.cn/kWX3ingF/jingdian/list" title="纽约景点攻略" target="_blank">纽约景点攻略</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><a href="javascript:;" title="热门城市旅游推荐">热门城市旅游推荐</a></dt>
+                    <dd>
+                        <a href="#" title="纽约" target="_blank">纽约</a>
+                        <a href="http://place.mxtrip.cn/kWkSZS/canyin/list" title="曼谷" target="_blank">曼谷</a>
+                        <a href="http://place.mxtrip.cn/kWX2h2gF/canyin/list" title="巴黎" target="_blank">巴黎</a>
+                        <a href="http://place.mxtrip.cn/kWZ7ZS/canyin/list" title="新加坡" target="_blank">新加坡</a>
+                        <a href="http://place.mxtrip.cn/kWXUgFoF/canyin/list" title="迪拜" target="_blank">迪拜</a>
+                        <a href="http://place.mxtrip.cn/kWXTgWoF/canyin/list" title="巴厘岛" target="_blank">巴厘岛</a>
+                        <a href="http://place.mxtrip.cn/kWwF/canyin/list" title="东京" target="_blank">东京</a>
+                        <a href="http://place.mxtrip.cn/kWXUZS/canyin/list" title="大阪" target="_blank">大阪</a>
+                        <a href="http://place.mxtrip.cn/kWX5ingF/canyin/list" title="威尼斯" target="_blank">威尼斯</a>
+                        <a href="http://place.mxtrip.cn/kWX2hWXF/canyin/list" title="柏林" target="_blank">柏林</a>
+                        <a href="http://place.mxtrip.cn/kWX5gFoF/canyin/list" title="巴塞罗那" target="_blank">巴塞罗那</a>
+                        <a href="http://place.mxtrip.cn/kWX6gWoF/canyin/list" title="佛罗伦萨" target="_blank">佛罗伦萨</a>
+                        <a href="http://place.mxtrip.cn/kWkF/canyin/list" title="札幌" target="_blank">札幌</a>
+                        <a href="http://place.mxtrip.cn/kWkUZS/canyin/list" title="芭堤雅" target="_blank">芭堤雅</a>
+                        <a href="http://place.mxtrip.cn/kWk2ZS/canyin/list" title="普吉岛" target="_blank">普吉岛</a>
+                        <a href="http://place.mxtrip.cn/kWZ8ZS/canyin/list" title="台北" target="_blank">台北</a>
+                        <a href="http://place.mxtrip.cn/kWgUZS/canyin/list" title="垦丁" target="_blank">垦丁</a>
+                        <a href="http://place.mxtrip.cn/kWXUgWoF/canyin/list" title="伊斯坦布尔" target="_blank">伊斯坦布尔</a>
+                        <a href="http://place.mxtrip.cn/kWXUh2wF/canyin/list" title="布里斯班" target="_blank">布里斯班</a>
+                        <a href="http://place.mxtrip.cn/kWX2hnwF/canyin/list" title="莫斯科" target="_blank">莫斯科</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="ft-cont">
+            <div class="ft-links">
+                <dl>
+                    <dt>关于我们</dt>
+                    <dd>
+                        <a href="../productsIntro.html" target="_blank">梦想旅行简介</a>
+                    </dd>
+                    <dd>
+                        <a href="../about.html#team" target="_blank">关于团队</a>
+                    </dd>
+                    <dd>
+                        <a href="../about.html#development" target="_blank">发展历程</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>帮助支持</dt>
+                    <dd>
+                        <a href="../support.html#feedback" target="_blank">意见反馈</a>
+                    </dd>
+                    <dd>
+                        <a href="../support.html" target="_blank">联系我们</a>
+                    </dd>
+                    <dd>
+                        <a href="../webMap.html" target="_blank">网站地图</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>网站条款</dt>
+                    <dd>
+                        <a href="../usage.html" target="_blank">使用条款</a>
+                    </dd>
+                    <dd>
+                        <a href="../privacy.html" target="_blank">隐私政策</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>加入我们</dt>
+                    <dd>
+                        <a href="http://www.lagou.com/gongsi/62565.html" target="_blank">招聘职位</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="follow-us">
+                <dt>关注我们:</dt>
+                <dd>
+                    <div class="wechat_share" style="display:none">
+                        <img src="../img/wechat_code.png">
+                    </div>
+                    <a href="javascript:;">
+                        <img src="../img/wechat.png">
+                    </a>
+                </dd>
+                <dd>
+                    <a href="http://weibo.com/mxtrip">
+                        <img src="../img/weibo.png">
+                    </a>
+                </dd>
+                <dd>
+                    <a href="http://qzone.qq.com/?s_url=http://user.qzone.qq.com/2935785166/main">
+                        <img src="../img/qqzone.png">
+                    </a>
+                </dd>
+            </div>
+        </div>
+        <p class="copyright">
+            版权所有 ： 北京梦想智联科技有限公司 Copyright © 2015, mxtrip.cn. All rights reserved.<br>
+            京ICP备15012301号-1
+        </p>
 
-      </div>
+    </div>
 
-  </div>
+</div>
 </body>
+<script id="listFoodTemp" type="text/html">
+    <div class="item-poi">
+        <a href="{{restaurantSrc}}" class="item-poi-pic">
+            <img src="../img/cityInner/{{img}}" alt="">
+        </a>
+        <div class="item-poi-txt">
+            <h3 class="title">
+                <a href="{{restaurantSrc}}" target="_blank">{{restaurantName}}</a>
+                <i class="hot"></i>
+            </h3>
+            <div class="appraise">
+                <div class="star-rating rating-disabled poi-score-w">
+                    <div class="star-rating-bg"></div>
+                    <div class="star-rating-rank" style="width:{{starPercent}};"></div>
+                </div>
+                <div class="score-comment">
+                    <em>{{comment}}</em>条评论
+                </div>
+            </div>
+                              <span class="item-poi-feature">
+                                {{feature}}
+                              </span>
+            <p class="outline">
+                {{outline}}
+            </p>
+            <dl>
+                <dd>{{spend}}</dd>
+                <dt>人均消费</dt>
+            </dl>
+        </div>
+    </div>
+</script>
 <script>
-    /*              header内容众包mouseenter事件                */
-    $(".edit_zhongbao").mouseenter(function () {
-        $(".tips-zhongbao").css("display","block")
-    }).mouseleave(function () {
-        $(".tips-zhongbao").css("display","none")
-    })
+    $.ajax({
+        url: "../json/NewYorkfoodjson.json",
+        dataType: "json",
+        success: function (data) {
+            var nowPage = 1;
+            var totalPage = Math.ceil(data.one.length / 8)
+            /*                            首页加载                                                           */
+            $.each(data.one, function (i, value) {
+                var $dl = $(template('listFoodTemp', value))
+                if(i<8){
+                    $dl.appendTo(".choice-list")
+                }
 
-/*                 score 星星点击事件                              */
-    $("#score ul li").click(function () {
-     var i= $(this).index("#score li")+1;
-        $("#score li").removeClass("active");
-        $("#score li").slice(0,i).addClass("active");
-        $(".tips-selection-result-cont dl dd span.starText").remove()
-        $("<span class='starText'></span>").text($(this).attr("data-score")+"  X").prependTo($(".tips-selection-result-cont dl dd")[0])
+            })
+            loadPage(1)
 
-    })
+            /*                        点击页码                       */
+      /*        解决动态加载无法执行点击事件方法               */
+            $(".choice-list").on("click",".pagination .page",function () {
+                deleteRestaurant();
+                nowPage = $(this).text()*1;
+                $.each(data.one, function (i, value) {
+                    if (i < nowPage * 8 && i >= nowPage * 8 - 8) {
+                        var $dl = $(template('listFoodTemp', value));
+                        $dl.appendTo(".choice-list")
+                    }
+                })
+                $(".pagination li.active").removeClass("active");
+                $(".pagination li").eq(nowPage).addClass("active");
+                $("#all_states_poi_page").remove()
+                loadPage(nowPage);
+            })
 
-/*               opening-time 营业时间点击事件                  */
-    $("#opening-time ul li").click(function () {
-        if( $(this).index("#opening-time ul li")!=0){
-            $(this).addClass("active");
-            $(".tips-selection-result-cont dl dd span.openText").remove()
-            $(".tips-selection-result-cont strong").before($("<span class='openText'></span>").text("营业时间:"+$(this).text()+"  X"))
-        }else{
-            $(this).siblings().removeClass("active");
-            $(".tips-selection-result-cont dl dd span.openText").remove()
+
+            /*                           点击上一页                                    */
+               $(".choice-list").on("click",".pagination .prePage",function () {
+                   deleteRestaurant();
+                   nowPage--;
+                   $.each(data.one, function (i, value) {
+                       if (i < nowPage * 8 && i >= nowPage * 8 - 8) {
+                           var $dl = $(template('listFoodTemp', value));
+                           $dl.appendTo(".choice-list")
+                       }
+                   })
+                   $(".pagination li.active").removeClass("active");
+                   $(".pagination li").eq(nowPage).addClass("active");
+                   $("#all_states_poi_page").remove()
+                   loadPage(nowPage);
+               })
+
+            /*                           点击下一页                                    */
+
+            $(".choice-list").on("click",".pagination .nextPage",function () {
+                deleteRestaurant();
+                nowPage++;
+                $.each(data.one, function (i, value) {
+                    if (i < nowPage * 8 && i >= nowPage * 8 - 8) {
+                        var $dl = $(template('listFoodTemp', value));
+                        $dl.appendTo(".choice-list")
+                    }
+                })
+                $(".pagination li.active").removeClass("active");
+                $(".pagination li").eq(nowPage).addClass("active");
+                $("#all_states_poi_page").remove()
+                loadPage(nowPage);
+            })
+
+
+
+            /*                        删除前面8个                           */
+            function deleteRestaurant() {
+                for (var i = 7; i >= 0; i--) {
+                    if ($(".choice-list").children().length != 0) {
+                        $(".choice-list").children().eq(i).remove()
+                    }
+                }
+            }
+//                            加载页码
+            function loadPage(nowPage) {
+                var mx_pagination = $('<div id="all_states_poi_page" class="mx-pagination clearfix"></div>');
+                var paginationUl = $('<ul class="pagination"></ul>');
+                if(nowPage<=6){
+                    for(var i=1;i<11;i++){
+                        var pageLi=$('<li><a href="#poi_class" class="page">'+i+'</a></li>');
+                        pageLi.appendTo(paginationUl);
+                    }
+                }else if(nowPage>6&&nowPage<totalPage-3){
+                    for(var i=nowPage-6;i<nowPage+5;i++){
+                        var pageLi=$('<li><a href="#poi_class" class="page">'+i+'</a></li>');
+                        pageLi.appendTo(paginationUl);
+                    }
+                }else if(nowPage>=totalPage-3){
+                    for(var i=totalPage-10;i<=totalPage;i++){
+                        var pageLi=$('<li><a href="#poi_class" class="page">'+i+'</a></li>');
+                        pageLi.appendTo(paginationUl);
+                    }
+                }
+                if(nowPage!=1){
+                    $('<li><a class="prePage" href="#poi_class">上一页</a></li>').prependTo(paginationUl);
+                }
+                if(nowPage!=totalPage)
+                $('<li><a class="nextPage" href="#poi_class">下一页</a></li>').appendTo(paginationUl);
+
+                paginationUl.appendTo(mx_pagination);
+                mx_pagination.appendTo(".choice-list");
+               $(".pagination li").each(function (i,ele) {
+                   if($(ele).children("a").text()*1==nowPage){
+                       $(ele).addClass(("active"))
+                   }
+               })
+            }
+
+
         }
     })
 
-  /*               consumption 人均消费点击事件                */
-  $("#consumption ul li a").click(function () {
-      if($(this).index("#consumption ul li a")!=0){
-          if($(this).parent().siblings().hasClass("active")){
-              $(this).parent().siblings().removeClass("active");
-          }
-          $(this).parent().addClass("active");
-          if($(".tips-selection-result-cont dl dd span").hasClass("conText")){
-              $(".tips-selection-result-cont dl dd span.conText").remove()
-          }
+
+</script>
+<script>
+    $(function () {
+        /*              header内容众包mouseenter事件                */
+        $(".edit_zhongbao").mouseenter(function () {
+            $(".tips-zhongbao").css("display", "block")
+        }).mouseleave(function () {
+            $(".tips-zhongbao").css("display", "none")
+        })
+
+        /*                 score 星星点击事件                              */
+        $("#score ul li").click(function () {
+            var i = $(this).index("#score li") + 1;
+            $("#score li").removeClass("active");
+            $("#score li").slice(0, i).addClass("active");
+            $(".tips-selection-result-cont dl dd span.starText").remove()
+            $("<span class='starText'></span>").text($(this).attr("data-score") + "  X").prependTo($(".tips-selection-result-cont dl dd")[0])
+
+        })
+
+        /*               opening-time 营业时间点击事件                  */
+        $("#opening-time ul li").click(function () {
+            if ($(this).index("#opening-time ul li") != 0) {
+                $(this).addClass("active");
+                $(".tips-selection-result-cont dl dd span.openText").remove()
+                $(".tips-selection-result-cont strong").before($("<span class='openText'></span>").text("营业时间:" + $(this).text() + "  X"))
+            } else {
+                $(this).siblings().removeClass("active");
+                $(".tips-selection-result-cont dl dd span.openText").remove()
+            }
+        })
+
+        /*               consumption 人均消费点击事件                */
+        $("#consumption ul li a").click(function () {
+            if ($(this).index("#consumption ul li a") != 0) {
+                if ($(this).parent().siblings().hasClass("active")) {
+                    $(this).parent().siblings().removeClass("active");
+                }
+                $(this).parent().addClass("active");
+                if ($(".tips-selection-result-cont dl dd span").hasClass("conText")) {
+                    $(".tips-selection-result-cont dl dd span.conText").remove()
+                }
 //          $("<span class='conText'></span>").text("人均消费:"+$(this).text()+"  X").prependTo($(".tips-selection-result-cont dl dd")[0])
-          if($(".tips-selection-result-cont dl dd span").hasClass("openText")){
-              $(".tips-selection-result-cont dl dd span.openText"). before($("<span class='conText'></span>").text("人均消费:"+$(this).text()+"  X"))
-          }else{
-              $(".tips-selection-result-cont strong").before($("<span class='conText'></span>").text("人均消费:"+$(this).text()+"  X"))
-          }
-      }else{
-          $(this).parent().siblings().removeClass("active");
-          $(".tips-selection-result-cont dl dd span.conText").remove()
-      }
-  })
+                if ($(".tips-selection-result-cont dl dd span").hasClass("openText")) {
+                    $(".tips-selection-result-cont dl dd span.openText").before($("<span class='conText'></span>").text("人均消费:" + $(this).text() + "  X"))
+                } else {
+                    $(".tips-selection-result-cont strong").before($("<span class='conText'></span>").text("人均消费:" + $(this).text() + "  X"))
+                }
+            } else {
+                $(this).parent().siblings().removeClass("active");
+                $(".tips-selection-result-cont dl dd span.conText").remove()
+            }
+        })
 
 
-  /*                 tips-selection-result下拉选项             */
+        /*                 tips-selection-result下拉选项             */
         $(".range-mode dd>span").click(function () {
-           $(".range-mode dd").toggleClass("active");
-            if ( $(".range-mode dd").hasClass('active')) {
+            $(".range-mode dd").toggleClass("active");
+            if ($(".range-mode dd").hasClass('active')) {
                 $('.range-mode dd ul').show();
-            }else {
+            } else {
                 $('.range-mode dd ul').hide();
             }
         })
@@ -1343,45 +1397,47 @@
             $(".range-mode dd").removeClass('active');
         })
 
-/*          range-mode 下拉框内容点击事件                    */
-    $(".range-mode ul li").click(function () {
-        $(".range-mode dd>span").text($(this).text())
+        /*          range-mode 下拉框内容点击事件                    */
+        $(".range-mode ul li").click(function () {
+            $(".range-mode dd>span").text($(this).text())
 
 //
-    })
+        })
 
 
-/*                      selection-tags-wrap滚动条浮动               */
-    window.onscroll=function () {
+        /*                      selection-tags-wrap滚动条浮动               */
+        window.onscroll = function () {
 //        console.log($("#selection_tags_wrap").offset().top)
-        var t = document.documentElement.scrollTop || document.body.scrollTop;
-        if(t>483&&t<1436){
-            $("#selection_tags_wrap").addClass("fixed");
-            $("#selection_tags_wrap").removeClass("reposition");
-        }else if(t>=1436){
-            $("#selection_tags_wrap").removeClass("fixed");
-            $("#selection_tags_wrap").addClass("reposition");
-        }else{
-            $("#selection_tags_wrap").removeClass("reposition");
-            $("#selection_tags_wrap").removeClass("fixed");
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            if (t > 483 && t < 1436) {
+                $("#selection_tags_wrap").addClass("fixed");
+                $("#selection_tags_wrap").removeClass("reposition");
+            } else if (t >= 1436) {
+                $("#selection_tags_wrap").removeClass("fixed");
+                $("#selection_tags_wrap").addClass("reposition");
+            } else {
+                $("#selection_tags_wrap").removeClass("reposition");
+                $("#selection_tags_wrap").removeClass("fixed");
+            }
         }
-    }
 
 
-    /*        footer 微信点击出现二维码           */
-    $(".follow-us dd").eq(0).find("a").click(function () {
-        $(".follow-us dd").eq(0).find("a").siblings("div").css({
-            "display":"block",
-            opacity:1
+        /*        footer 微信点击出现二维码           */
+        $(".follow-us dd").eq(0).find("a").click(function () {
+            $(".follow-us dd").eq(0).find("a").siblings("div").css({
+                "display": "block",
+                opacity: 1
+            })
+        })
+        $(".follow-us dd").eq(0).find("a").mouseleave(function () {
+            $(".follow-us dd").eq(0).find("a").siblings("div").animate({
+                opacity: 0
+            }, 1000, function () {
+                $(this).css("display", "none")
+            })
         })
     })
-    $(".follow-us dd").eq(0).find("a").mouseleave(function () {
-        $(".follow-us dd").eq(0).find("a").siblings("div").animate({
-            opacity:0
-        },1000,function () {
-            $(this).css("display","none")
-        })
-    })
+
 
 </script>
 </html>
