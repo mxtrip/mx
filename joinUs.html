@@ -2876,12 +2876,12 @@
 //                sdelay= setTimeout('returnTop()',50);
 //            }
 //        }
-                $("#backtop").click(function () {
-                    $(this).css("background-position",'right top')
-                    $("html,body").animate({ scrollTop:0},1000,function () {
-                        $("#backtop").css("background-position",'left top')
-                    });
-                })
+        $("#backtop").click(function () {
+            $(this).css("background-position",'right top');
+            $("html,body").animate({ scrollTop:0},1000,function () {
+                $("#backtop").css("background-position",'left top')
+            });
+        });
 
 //        footer二维码
         $('.footer_app').mouseenter(function () {
