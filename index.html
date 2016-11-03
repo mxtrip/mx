@@ -711,7 +711,7 @@
     </p>
 
 </div>
-<div class="autocomplete-suggestions" style="position: absolute; max-height: 300px; z-index: 9999; top: 419px; left: 514.5px; width: 418px; display: none;">
+<div class="autocomplete-suggestions" style="position: absolute; max-height: 300px; z-index: 9999; top: 419px; width: 418px; display: none;">
     <!--<div class="autocomplete-suggestion" data-index="0">-->
         <!--<a href="javascript:;">-->
             <!--<i class="city"></i>-->
@@ -734,17 +734,7 @@
     </div>
 </script>
 <script>
-    $.ajax({
-        url: "json/searchjson.json",
-        dataType: "json",
-        success: function (data){
-            $.each(data.data, function (i, value) {
-                $(template('autocompleteTemp',value))
-                        .appendTo(".autocomplete-suggestions").attr("data-index",i);
 
-            });
-        }
-    });
 </script>
 <script id="listCityTemp" type="text/html">
     <dl>
@@ -815,7 +805,8 @@
 </script>
      <script>
          $(function () {
-         /*              header内容众包mouseenter事件                */
+
+             /*              header内容众包mouseenter事件                */
              $(".edit_zhongbao").mouseenter(function () {
                  $(".tips-zhongbao").css("display","block")
              }).mouseleave(function () {
@@ -839,10 +830,37 @@
              })
           /*                      搜索          */
              $("#autocomplete_ajax").keyup(function(){
+                 var Strjson;
                   if($(this).val()=='日本'){
-                   $(".autocomplete-suggestions").show()
-                  }
+                      $(".autocomplete-suggestions").children().remove()
+                      Strjson="Japan";
+                      useAjax(Strjson);
+                  }else if($(this).val()=='中国'){
+                      $(".autocomplete-suggestions").children().remove()
+                      Strjson="China";
+                     useAjax(Strjson);
+                 }else if($(this).val()=='美国'){
+                      $(".autocomplete-suggestions").children().remove()
+                      Strjson="America";
+                      useAjax(Strjson);
+             }
              });
+
+               function useAjax(Strjson) {
+                   $.ajax({
+                       url: 'json/'+Strjson+'.json',
+                       dataType: "json",
+                       success: function (data){
+                           $.each(data.data, function (i, value) {
+                               $(template('autocompleteTemp',value))
+                                       .appendTo(".autocomplete-suggestions").attr("data-index",i);
+
+                           });
+                       }
+                   });
+                   $(".autocomplete-suggestions").show()
+               }
+
 
              $(".autocomplete-suggestion").mouseenter(function () {
                  $(this).addClass("autocomplete-selected").siblings().removeClass("autocomplete-selected")
@@ -851,6 +869,22 @@
           $("body").click(function () {
               $(".autocomplete-suggestions").hide()
           })
+
+
+        /*     搜索弹框位置*/
+            //刚打开页面时调用
+             autoLeft();
+             $(window).resize(autoLeft);
+             function autoLeft() {
+                 var toLeft =$("#autocomplete_ajax").offset().left;
+                 console.log($("#autocomplete_ajax").offset().left)
+                 $(".autocomplete-suggestions").css({
+                     position: "absolute",
+                     left:toLeft
+                 });
+             }
+
+
          })
      </script>
 </body>
