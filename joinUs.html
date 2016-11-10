@@ -1364,6 +1364,10 @@
          .navigator_container .nav_vline_bottom {
              bottom: 0;
          }
+         .fixedTop {
+             position: fixed;
+             top: 94px;
+         }
          #backtop {
              position: fixed;
              left: 50%;
@@ -1718,7 +1722,7 @@
                                 <a rel="nofollow" href="javascript:;" class="prev avalible" id="prev"></a>
                                 <a rel="nofollow" href="javascript:;" class="next avalible" id="next"></a>
                                 <div class="rotateImages_wrap">
-                                    <ul class="company_img" id="rotateImages">
+                                    <ul class="company_img" id="rotateImages" style="width: 2880px; left: 0">
                                         <li  class="rotate_item rotate_active">
                                             <img src="img/CgqKkVagnHKAFaNaAAD98ESST5I042.jpg" alt="">
                                         </li>
@@ -2611,9 +2615,9 @@
                 <div class="item_ltitle">管理团队</div>
                 <div class="company_mangers_item">
                     <div class="managelist_wrap">
-                        <ul class="manager_list">
+                        <ul class="manager_list" style="width: 735px; left: 0">
                             <li class="item_has rotate_item  rotate_active ">
-                                <img class="item_manger_photo_show" src="//www.lgstatic.com/thumbnail_200x200/i/image/M00/02/EA/CgqKkVagm06AJk5LAABOBg1Mn8Y277.jpg" alt="创始人头像" width="118" height="118" />
+                                <img class="item_manger_photo_show" src="img/CgqKkVagm06AJk5LAABOBg1Mn8Y277.jpg" alt="创始人头像"/>
                                 <p class="item_manager_name">
                                     <span>郭宁</span>
                                 </p>
@@ -2621,7 +2625,7 @@
                                 <div class="item_manager_content"><p>曾任阿里技术总监，负责搜索和广告算法业务，后于360统筹和管理搜索广告和大数据业务。</p></div>
                             </li>
                             <li class="item_has rotate_item ">
-                                <img class="item_manger_photo_show" src="//www.lgstatic.com/thumbnail_200x200/i/image/M00/02/EA/Cgp3O1agm4qAQp2PAACI8RHfcdE127.jpg" alt="创始人头像" width="118" height="118" />
+                                <img class="item_manger_photo_show" src="img/Cgp3O1agm4qAQp2PAACI8RHfcdE127.jpg" alt="创始人头像"/>
                                 <p class="item_manager_name">
                                     <span>Oasis</span>
                                 </p>
@@ -2676,13 +2680,13 @@
                 </div>
             </div>
 
-            <div class="navigator_container">
-                <div class="nav_item nav_selected" data-name="#company_products">
+            <div class="navigator_container fixedTop">
+                <div class="nav_item" data-name="#company_products">
                     <div class="nav_item_icon_wrap"><em class="nav_item_icon"></em></div>
                     <div class="nav_item_icon_wrap"><em class="nav_item_icon_up"></em></div>
                     <span class="nav_item_text">公司产品</span>
                 </div>
-                <div class="nav_item" data-name="#company_intro">
+                <div class="nav_item nav_selected" data-name="#company_intro">
                     <div class="nav_item_icon_wrap"><em class="nav_item_icon"></em></div>
                     <div class="nav_item_icon_wrap"><em class="nav_item_icon_up"></em></div>
                     <span class="nav_item_text">公司介绍</span>
@@ -2818,6 +2822,129 @@
             }else{
                 $(".company_navs").removeClass("ceiling");
                 $(".company_navs_shadow").css("display","none")
+            }
+        });
+
+//      左边的轮播事件
+        $(function () {
+            var imgs = $('#rotateImages li img');
+            var index = 0, imgCount = imgs.length, t;
+            function toggleImg() {
+                var $li = $('#rotateImages li');
+                $li.each(function (i,elem) {
+                    var $index= $('.index');
+                    if (i == index) {
+                        $(elem).fadeIn("fast");
+                        $index.eq(i).addClass('sel');
+                    } else {
+                        $(elem).fadeOut("fast");
+                        $index.eq(i).removeClass('sel');
+                    }
+                })
+            }
+            function scroll() {
+                index += 1;
+                if (index == imgCount) index = 0;
+                toggleImg();
+                t = setTimeout(scroll, 2000);
+            }
+            t = setTimeout(scroll, 2000);
+            var $btn = $('#prev, #next').on({
+                "click":function () {
+                    clearTimeout(t);
+                    if ($(this).attr('id') == 'prev') {
+                        index -= 1;
+                        if (index < 0) index = imgCount - 1;
+                    } else {
+                        index += 1;
+                        if (index > imgCount) index = 0;
+                    }
+                    toggleImg();
+                    t = setTimeout(scroll, 2000);
+                }
+            });
+            $('.index').click(function () {
+                clearTimeout(t);
+                index = $(this).index();
+                console.log($(this).index());
+                toggleImg();
+                t = setTimeout(scroll, 2000);
+            });
+
+        });
+
+//      右边的轮播
+        $(function () {
+            var nowImg = 0;
+            var $list = $('.manager_list');
+            function zuoyi() {
+                $list.animate({"left":nowImg*-245},1000)
+            }
+            var $btnL = $('.managers-previous');
+            var $btnR = $('.managers-next');
+            var $li = $('.manager_list li');
+            $('.manager_list li:first').clone().appendTo('.manager_list');
+            $btnR.click(btnRFunc);
+            function btnRFunc() {
+                if (!$list.is(":animated")) {
+                    if (nowImg < $li.length-1) {
+                        nowImg++;
+                        zuoyi();
+                    } else {
+                        nowImg = 0;
+                        $list.animate({"left":$li.length*-245},1000,function () {
+                            $list.css("left",0)
+                        })
+                    }
+                }
+            }
+            $btnL.click(function () {
+                if(!$btnL.is(":animated")) {
+                    if(nowImg>0) {
+                        nowImg--;
+                        zuoyi();
+                    } else {
+                        nowImg = $li.length-1;
+                        $list.css("left",$li.length*-245);
+                        zuoyi();
+                    }
+                }
+            });
+            var t = setInterval(btnRFunc,2800);
+            $('.managelist_wrap').mouseenter(function () {
+                clearInterval(t);
+            }).mouseleave(function () {
+                t = setInterval(btnRFunc,2800);
+            });
+        });
+
+//      右边的点击滚屏事件
+        $('.nav_item').click(function () {
+            if ($(this).is($('.nav_item').eq(0))) {
+                $('html,body').animate({scrollTop:300},500);
+            } else if ($(this).is($('.nav_item').eq(1))) {
+                $('html,body').animate({scrollTop:580},500,function () {
+                    $('.nav_item').eq(1).addClass('nav_selected').siblings().removeClass('nav_selected')
+                });
+            } else if ($(this).is($('.nav_item').eq(2))) {
+                $('html,body').animate({scrollTop:1280},500,function () {
+                    $('.nav_item').eq(2).addClass('nav_selected').siblings().removeClass('nav_selected')
+                });
+            } else if ($(this).is($('.nav_item').eq(3))) {
+                $('html,body').animate({scrollTop:3000},500,function () {
+                    $('.nav_item').eq(3).addClass('nav_selected').siblings().removeClass('nav_selected')
+                });
+            }
+        });
+        $(window).scroll(function () {
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            if(t>1280){
+                $(".navigator_container").addClass("fixedTop");
+                $('.nav_item').eq(2).addClass('nav_selected').siblings().removeClass('nav_selected')
+            }else if (t>1500) {
+                $('.nav_item').eq(3).addClass('nav_selected').siblings().removeClass('nav_selected')
+            }else {
+                $(".navigator_container").removeClass("fixedTop");
             }
         });
 
