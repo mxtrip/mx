@@ -172,10 +172,17 @@
             $(".login-user-item img").eq(1).attr("src","img/zhongbao/icon_password_activit_1x.png")
         })
           $("#submit").click(function () {
+//              console.log(localStorage.getItem(uName.val()))
+//              console.log(parseInt(upassword.val()))
               if(passWordJudge==true&&userNameJudge==true){
-                  $("html").css("display","none")
-                   $('#layui-layer-shade2',window.parent.document).css("display","none");
-                  $('#layui-layer2',window.parent.document).css("display","none");
+                  if(localStorage.getItem(uName.val())==String(upassword.val())){
+                      $("html").css("display","none")
+                      $('#layui-layer-shade2',window.parent.document).css("display","none");
+                      $('#layui-layer2',window.parent.document).css("display","none");
+                  }else{
+                      $("#tips").children().remove()
+                      $("<p> 密码错误</p>").appendTo("#tips")
+                  }
               }else if(uName.val()==""){
                   $("#tips").children().remove()
                   $("<p>帐号不能为空！</p>").appendTo("#tips")
