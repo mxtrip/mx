@@ -452,6 +452,74 @@
             font-size: 13px;
             text-align: center;
         }
+        /*                         搜索弹框                   */
+        .autocomplete-suggestions {
+            position: absolute;
+            z-index: 9999;
+            width: 420px!important;
+            border-top: 0;
+            box-shadow: 1px 1px 3px rgba(0,0,0,.3);
+            background: #fff;
+            overflow: scroll;
+        }
+        .autocomplete-suggestion {
+            width: 418px;
+            height: 45px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .autocomplete-suggestion a {
+            display: block;
+            width: 100%;
+            height: 45px;
+            color: #555;
+            overflow: hidden;
+        }
+        .autocomplete-suggestion a i {
+            float: left;
+            margin: 9px 12px 9px 10px;
+            width: 27px;
+            height: 27px;
+        }
+        .autocomplete-suggestion i.city {
+            background: url(img/suggest_icon_poi.png) no-repeat;
+            background-size: 27px 27px;
+        }
+        .autocomplete-suggestion em {
+            padding-top: 7px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+        }
+        .autocomplete-suggestion em, .autocomplete-suggestion span {
+            width: 320px;
+            padding-right: 5px;
+            line-height: 14px;
+            text-align: left;
+            float: left;
+            overflow: hidden;
+        }
+        .autocomplete-suggestion span {
+            padding-top: 3px;
+            font-size: 12px;
+            color: #999;
+        }
+        .autocomplete-suggestion span {
+            width: 320px;
+            padding-right: 5px;
+            line-height: 14px;
+            text-align: left;
+            float: left;
+            overflow: hidden;
+        }
+        .autocomplete-suggestions strong {
+            color: #00b7a8;
+            padding-right: 4px;
+        }
+        .autocomplete-selected {
+            background: #F0F0F0;
+        }
+
     </style>
 </head>
 <body>
@@ -657,7 +725,28 @@
     </p>
 
 </div>
-
+<div class="autocomplete-suggestions" style="position: absolute; max-height: 300px; z-index: 9999; top: 419px; width: 418px; display: none;">
+    <!--<div class="autocomplete-suggestion" data-index="0">-->
+    <!--<a href="javascript:;">-->
+    <!--<i class="city"></i>-->
+    <!--<em>日本 - 东京</em>-->
+    <!--<span>-->
+    <!--<strong>日本 - 东京</strong>-->
+    <!--</span>-->
+    <!--</a>-->
+    <!--</div>-->
+</div>
+<script id="autocompleteTemp" type="text/html">
+    <div class="autocomplete-suggestion">
+        <a href="{{link}}">
+            <i class="city"></i>
+            <em>{{country}} - {{city}}</em>
+            <span>
+            <strong>{{country}} - {{city}}</strong>
+            </span>
+        </a>
+    </div>
+</script>
 <script id="listCityTemp" type="text/html">
     <dl>
         <dt>
@@ -750,6 +839,64 @@
                 $(this).css("display","none")
             })
         })
+
+        /*                      搜索          */
+        $("#autocomplete_ajax").keyup(function(){
+            var Strjson;
+            if($(this).val()=='日本'){
+                $(".autocomplete-suggestions").children().remove()
+                Strjson="Japan";
+                useAjax(Strjson);
+            }else if($(this).val()=='中国'){
+                $(".autocomplete-suggestions").children().remove()
+                Strjson="China";
+                useAjax(Strjson);
+            }else if($(this).val()=='美国'){
+                $(".autocomplete-suggestions").children().remove()
+                Strjson="America";
+                useAjax(Strjson);
+            }
+        });
+
+        function useAjax(Strjson) {
+            $.ajax({
+                url: 'json/'+Strjson+'.json',
+                dataType: "json",
+                success: function (data){
+                    $.each(data.data, function (i, value) {
+                        $(template('autocompleteTemp',value))
+                                .appendTo(".autocomplete-suggestions").attr("data-index",i);
+
+                    });
+                }
+            });
+            $(".autocomplete-suggestions").show()
+        }
+
+
+        $(".autocomplete-suggestion").mouseenter(function () {
+            $(this).addClass("autocomplete-selected").siblings().removeClass("autocomplete-selected")
+        })
+
+        $("body").click(function () {
+            $(".autocomplete-suggestions").hide()
+        })
+
+
+        /*     搜索弹框位置*/
+        //刚打开页面时调用
+        autoLeft();
+        $(window).resize(autoLeft);
+        function autoLeft() {
+            var toLeft =$("#autocomplete_ajax").offset().left;
+            console.log($("#autocomplete_ajax").offset().left)
+            $(".autocomplete-suggestions").css({
+                position: "absolute",
+                left:toLeft
+            });
+        }
+
+
     })
 
 </script>
