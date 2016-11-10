@@ -2680,7 +2680,7 @@
                 </div>
             </div>
 
-            <div class="navigator_container fixedTop">
+            <div class="navigator_container">
                 <div class="nav_item" data-name="#company_products">
                     <div class="nav_item_icon_wrap"><em class="nav_item_icon"></em></div>
                     <div class="nav_item_icon_wrap"><em class="nav_item_icon_up"></em></div>
@@ -2938,11 +2938,14 @@
         });
         $(window).scroll(function () {
             var t = document.documentElement.scrollTop || document.body.scrollTop;
-            if(t>1280){
+            if(t>=1280){
                 $(".navigator_container").addClass("fixedTop");
-                $('.nav_item').eq(2).addClass('nav_selected').siblings().removeClass('nav_selected')
-            }else if (t>1500) {
-                $('.nav_item').eq(3).addClass('nav_selected').siblings().removeClass('nav_selected')
+                $('.nav_item').eq(2).addClass('nav_selected').siblings().removeClass('nav_selected');
+                if(t>2200) {
+                    $('.nav_item').eq(3).addClass('nav_selected').siblings().removeClass('nav_selected')
+                } else if (t<=700) {
+                    $('.nav_item').eq(1).addClass('nav_selected').siblings().removeClass('nav_selected')
+                }
             }else {
                 $(".navigator_container").removeClass("fixedTop");
             }
